@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-17"
+lastupdated: "2018-04-24"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2018-04-17"
 So you have a working dialog. Now you want to develop the application that will interact with your users and communicate with the {{site.data.keyword.conversationfull}} service.
 {: shortdesc}
 
-You can view this tutorial for Node.js (Javascript), Python, or Java by clicking the language selector in the upper right. For details about all supported languages, refer to the {{site.data.keyword.watson}} [SDKs ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/watson/getting-started-sdks.html#sdks){: new_window}.
+You can view this tutorial for Node.js (Javascript), Python 3, or Java by clicking the language selector in the upper right. For details about all supported languages, refer to the {{site.data.keyword.watson}} [SDKs ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/watson/getting-started-sdks.html#sdks){: new_window}.
 {: tip }
 
 ## Setting up the {{site.data.keyword.conversationshort}} service
@@ -166,7 +166,7 @@ After creating the service wrapper, we use it to send a message to the {{site.da
 Use the `node <filename.js>` command to run the example application.
 {: javascript}
 
-Use the `python <filename.py>` command to run the example application.
+Use the `python3 <filename.py>` command to run the example application.
 {: python}
 
 Paste the example code into a file named `AssistantSimpleExample.java`. You can then compile and run it.
@@ -194,7 +194,7 @@ This output tells us that we have successfully communicated with the {{site.data
 
 To be able to process user input, we need to add a user interface to our application. For this example, we'll keep things simple and use standard input and output.
 <span class="ph style-scope doc-content" data-hd-programlang="javascript">We can use the Node.js prompt-sync module to do this. (You can install prompt-sync using `npm install prompt-sync`.)</span>
-<span class="ph style-scope doc-content" data-hd-programlang="python">We can use the Python `input` function to do this.</span>
+<span class="ph style-scope doc-content" data-hd-programlang="python">We can use the Python 3 `input` function to do this.</span>
 <span class="ph style-scope doc-content" data-hd-programlang="java">We can use the Java `Console.readLine()` function to do this.</span>
 
 ```javascript
