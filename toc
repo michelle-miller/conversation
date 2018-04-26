@@ -87,6 +87,7 @@ Watson Assistant
     {: .navgroup id="help"}
     release-notes.md
     feedback.md
+    services-information.md
 
     {: .topicgroup}
     Developer community
