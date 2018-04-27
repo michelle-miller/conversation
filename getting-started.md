@@ -32,27 +32,22 @@ You'll need a service instance to start.
 
 <!-- Remove the text marked `download` after there's no g-s tab in the catalog dashboard -->
 
-You created your service instance. Click **Manage**, then **Launch Tool**. Go to Step 2.
+You created your service instance. Click **Manage**, then **Open tool**. Go to Step 2.
 {: download tip}
 
-If you created a project with the {{site.data.keyword.conversationshort}} service, you're all set with these prerequisites. Go to Step 1.
+If you created a {{site.data.keyword.conversationshort}} service instance, you're all set with these prerequisites. Go to [Step 1](#launch-tool).
 
-1.  Go to the {{site.data.keyword.watson}} Developer Console [Services ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/developer/watson/services){: new_window} page.
-1.  Select {{site.data.keyword.conversationshort}}, click **Add Services**, and either sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
-1.  Change the project name to `watson-assistant-tutorial`, and then click **Create Project**.
+1.  Go to the [{{site.data.keyword.conversationshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/conversation) page in the {{site.data.keyword.Bluemix_notm}} Catalog.
+1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
+1.  Click **Create**.
 
-<!-- Remove this text after dedicated instances have the developer console: begin -->
-
-If you use {{site.data.keyword.Bluemix_dedicated_notm}}, create your service instance from the [{{site.data.keyword.conversationshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/conversation/){: new_window} page in the Catalog.
-
-<!-- Remove this text after dedicated instances have the developer console: end -->
 
 ## Step 1: Launch the tool
 {: #launch-tool}
 
-After you create a project that includes the {{site.data.keyword.conversationshort}} service, you'll land on the project details page. Launch the  {{site.data.keyword.conversationshort}} tool from here.
+After you create a {{site.data.keyword.conversationshort}} service instance, you'll land on the **Manage** page of the service dashboard.
 
-Click **Launch Tool** for {{site.data.keyword.conversationshort}} under **Services**.
+On the **Manage** page, click **Open tool**.
 
 <!-- To do: Add screenshot for developer console -->
 
