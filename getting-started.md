@@ -53,14 +53,8 @@ On the **Manage** page, click **Open tool**.
 
 If you're prompted to log into the tool, provide your {{site.data.keyword.Bluemix_notm}} credentials.
 
-If you're not at a project details page for the {{site.data.keyword.conversationshort}} service, go to the {{site.data.keyword.watson}} Developer Console [Projects ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/developer/watson/projects) page and select the project.
+If you're not at a {{site.data.keyword.conversationshort}} service dashboard page, go to the [{{site.data.keyword.cloud_notm}} Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/dashboard) and select the {{site.data.keyword.conversationshort}} service instance.
 {: tip}
-
-<!-- Remove this text after dedicated instances have the developer console: begin -->
-
-{{site.data.keyword.Bluemix_dedicated_notm}}: Select your service instance from the Dashboard to launch the tooling.
-
-<!-- Remove this text after dedicated instances have the Developer Console: end -->
 
 ## Step 2: Create a workspace
 {: #create-workspace}
