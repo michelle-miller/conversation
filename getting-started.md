@@ -41,8 +41,7 @@ If you created a {{site.data.keyword.conversationshort}} service instance, you'r
 1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
 1.  Click **Create**.
 
-
-## Step 1: Launch the tool
+## Step 1: Open the tool
 {: #launch-tool}
 
 After you create a {{site.data.keyword.conversationshort}} service instance, you'll land on the **Manage** page of the service dashboard.
