@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-06"
+lastupdated: "2018-05-01"
 
 ---
 
@@ -196,8 +196,14 @@ Hello $user
 ```
 {: screen}
 
-If you include an email address in the response, you must escape the at symbol (`@`) with a backslash (`\`). For example, `Send us your feedback at feedback\@example.com.` Likewise, if you include a number sign (`#`) in the response, you must escape it. For example, `We are the \#1 seller of lobster rolls in Maine.` Entity names begin with `@` and intent names begin with `#`. Escaping these symbols prevents the service from misreading the response text.
-{: tip}
+If you include one of these special characters in your response, escape it by adding a backslash (`\`) in front of it. Escaping the character prevents the service from misinterpreting it as being one of the following artifact types:
+
+| Artifact | Special Character | Example |
+|----------|-------------------|---------|
+| Context variable | `$` | `The transaction fee is \$2.` |
+| Entity | `@` | `Send us your feedback at feedback\@example.com.` |
+| Intent | `#` | `We are the \#1 seller of lobster rolls in Maine.` |
+{: caption="Special characters to escape in responses" caption-side="top"}
 
 #### Adding variety
 {: #variety}
