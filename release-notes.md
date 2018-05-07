@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-05-07"
 
 ---
 
@@ -37,9 +37,9 @@ IBM releases services, features, and language support for your evaluation that a
 ## Updated models
 {: #updated-models}
 
-The {{site.data.keyword.conversationshort}} algorithms may be periodically refined and updated based on feedback, scientific enhancements, and additional factors, in order to continuously enhance the performance. Updates to the model will be communicated in these release notes.
+The {{site.data.keyword.conversationshort}} algorithms may be periodically refined and updated based on feedback, scientific enhancements, and additional factors, in order to continuously enhance the performance.
 
-Existing models that you have trained will not be immediately impacted, but expired models will be updated to the current model, if you have not already done so, after 60 days of a new model becoming available.
+Existing models that you have trained will not be immediately impacted, but expired models will be updated to the current model and retrained, if you have not already done so, after 60 days of a new model becoming available. Updates to models that will be retrained will be communicated in these release notes.
 
 > **Note:** This updating statement applies to Generally Available (GA) languages and features only.
 
