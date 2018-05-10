@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-10"
 
 ---
 
@@ -41,7 +41,6 @@ The length of time for which messages are retained depends on your {{site.data.k
 
 ## Selecting a data source
 {: #select-source}
-{: #selecting-a-data-source}
 
 By default, the **User conversations** page shows message data for the current application. However, there may be times when it is useful to improve an application with messages that were sent to other applications within your instance. For example, you may have multiple versions of production applications and development applications; you can use the same message data to improve any of these applications.
 
@@ -68,7 +67,7 @@ In this example, the Improve page is populated with messages that had the Deploy
 
 You can filter messages by *Search user statements*, *Intents*, *Entities*, and *Last* n *days*:
 
-*Search user statements* - Type a word in the search bar. This searches the users' inputs, but not your bot's replies.
+*Search user statements* - Type a word in the search bar. This searches the users' inputs, but not your application's replies.
 
 *Intents* - Select the drop-down menu and type an intent in the input field, or choose from the populated list. You can select more than one intent, which filters the results using any of the selected intents, including *Irrelevant*.
 
@@ -78,10 +77,12 @@ You can filter messages by *Search user statements*, *Intents*, *Entities*, and 
 
 ![Entities drop-down menu](images/entities_filter.png)
 
-messages may take some time to update. Allow at least 30 minutes after a user's interaction with your bot before attempting to filter for that content.
+Messages may take some time to update. Allow at least 30 minutes after a user's interaction with your application before attempting to filter for that content.
 
 ## Viewing an individual message
-You can expand each message entry to see what the user said in the whole conversation, and how your bot answered. To do this, select **Open conversation**. You are automatically taken to the message you selected within that conversation.
+You can expand each message entry to see what the user said in the whole conversation, and how your application answered. To do this, select **Open conversation**. You are automatically taken to the message you selected within that conversation.
+
+**NOTE**: The time shown at the top of each conversation is localized to reflect the time zone of your browser. This may differ from the timestamp shown if you review the same conversation log via an API call; API log calls are always shown in UTC.
 
 ![Open conversation panel](images/open_convo.png)
 
