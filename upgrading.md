@@ -36,7 +36,7 @@ To upgrade your plan, complete these steps:
 
 For answers to common questions about subscriptions, see the [Managing billing and usage ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/billing-usage/how_charged.html){: new_window}.
 
-For more information about {{site.data.keyword.Bluemix_notm}} services, see [{{site.data.keyword.Bluemix_notm}} services information](services-information.md).
+For more information about {{site.data.keyword.Bluemix_notm}} services, see [{{site.data.keyword.Bluemix_notm}} services information](services-information.html).
 
 ## Upgrading your workspace
 {: #upgrade-workspace}

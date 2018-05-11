@@ -21,7 +21,7 @@ lastupdated: "2018-03-14"
 
 After you have developed your workspace, you can use the Conversation connector to quickly connect it to a communication channel such as Slack or Facebook Messenger. The Conversation connector is a set of {{site.data.keyword.openwhisk}} components that mediate communication between your {{site.data.keyword.conversationshort}} workspace and a Slack or Facebook app you own, storing session data in a Cloudant database.
 
-By connecting your workspace to a channel app, you can make it available as a chat bot that Slack or Facebook Messenger users can interact with. The responses from your dialog can include multimedia and interactive responses such as images and clickable buttons. (For more information about defining a multimedia response, see [Multimedia responses](dialog-multimedia.html).)
+By connecting your workspace to a channel app, you can make it available as a chat bot that Slack or Facebook Messenger users can interact with. The responses from your dialog can include multimedia and interactive responses such as images and clickable buttons.
 
 ![{{site.data.keyword.openwhisk_short}} deployment overview diagram](images/deploytochannel_diagram.png)
 
@@ -75,6 +75,6 @@ For example, if your workspace uses a context variable called `drink_order` to s
 ```
 {: codeblock}
 
-For more information about modifying context variable values, see [Updating a context variable value](dialog-runtime.html#context-update).
+For more information about modifying context variable values, see [Updating a context variable value](dialog-runtime.html#context-update-json).
 
 You can also clear the context, or make other changes to the behavior of the bot, by editing the deployed {{site.data.keyword.openwhisk_short}} actions. For more information, see documentation provided in the [GitHub repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/conversation-connector){: new_window}.

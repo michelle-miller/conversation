@@ -40,7 +40,7 @@ The length of time for which messages are retained depends on your {{site.data.k
   Lite                                 | Last 7 days
 
 ## Selecting a data source
-{: #select-source}
+{: #selecting-a-data-source}
 
 By default, the **User conversations** page shows message data for the current application. However, there may be times when it is useful to improve an application with messages that were sent to other applications within your instance. For example, you may have multiple versions of production applications and development applications; you can use the same message data to improve any of these applications.
 
