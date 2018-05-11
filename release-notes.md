@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-04"
+lastupdated: "2018-05-11"
 
 ---
 
@@ -47,6 +47,16 @@ Existing models that you have trained will not be immediately impacted, but expi
 {: #change-log}
 
 The following new features and changes to the service are available.
+
+### 11 May 2018
+{: #11May2018}
+
+- **Information security**: The documentation includes some new details about data privacy. Read more in [Information security](information-security.html).
+
+### 7 May 2018
+{: #7May2018}
+
+- **New API authentication process for instances in au-syd region**: The process for authenticating with the {{site.data.keyword.conversationshort}} service, which is required before API calls can be made, has changed for new instances created in the Sydney data center. You must get an API key from IBM Cloud, and then exchange that key for an IBM Cloud Identity and Access Management (IAM) access token that you can pass as a bearer token. See [How to get an IBM Cloud IAM token using an API key ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/apikey_iamtoken.html#iamtoken_from_apikey) for more details.
 
 ### 4 April 2018
 {: #4April2018}
@@ -137,7 +147,7 @@ The following new features and changes to the service are available.
 ### 29 November 2017
 {: #29November2017}
 
-- **Improving understanding of user input across workspaces**: You can now improve a workspace with utterances that were sent to other workspaces within your instance. For example, you might have multiple versions of production workspaces and development workspaces; you can use the same utterance data to improve any of these workspaces. See [Improving across workspaces](logs.html#deploy_id) and [Selecting a data source](logs_convo.html#select-source) for additional information.
+- **Improving understanding of user input across workspaces**: You can now improve a workspace with utterances that were sent to other workspaces within your instance. For example, you might have multiple versions of production workspaces and development workspaces; you can use the same utterance data to improve any of these workspaces. See [Improving across workspaces](logs.html#deploy_id) and [Selecting a data source](logs_convo.html#selecting-a-data-source) for additional information.
 
 ### 20 November 2017
 {: #20November2017}
@@ -332,14 +342,14 @@ The following new features and changes to the service are available.
 ### 25 May 2017
 {: #25May2017}
 
-- You can now manage context variables in the "Try it out" pane. Click the **Manage context** link to open a new pane where you can set and check the values of context variables as you test the dialog. See [Testing your dialog](dialog-test.html) for more information.
+- You can now manage context variables in the "Try it out" pane. Click the **Manage context** link to open a new pane where you can set and check the values of context variables as you test the dialog. See [Testing your dialog](dialog-build.html#test) for more information.
 
 ### 16 May 2017
 {: #16May2017}
 
 - A **Car Dashboard** sample workspace is now available when you open the tool. To use the sample as a starting point for your own workspace, edit the workspace. If you want to use it for multiple workspaces, then duplicate it instead. The sample workspace does not count toward your subscription workspace total unless you use it.
 - It is now easier to navigate the tool. The navigation menu options are available from the side of the main page instead of the top. At the top of the page, Breadcrumb links display that show you where you are. You can now switch between service instances from the Workspaces page. To get there quickly, click **Back to workspaces** from the navigation menu. If you have multiple service instances, the name of the current instance is displayed. You can click the **Change** link beside it to choose another instance.
-- When you create a dialog, two nodes are now added to it for you: 1) a **Welcome** node at the top of the dialog tree that contains the greeting to display to the user and 2) an **Anything else** node at the bottom of the tree that catches any user inquiries that are not recognized by other nodes in the dialog and responds to them. See [Creating a dialog](dialog-create.html) for more details.
+- When you create a dialog, two nodes are now added to it for you: 1) a **Welcome** node at the top of the dialog tree that contains the greeting to display to the user and 2) an **Anything else** node at the bottom of the tree that catches any user inquiries that are not recognized by other nodes in the dialog and responds to them. See [Creating a dialog](dialog-build.html) for more details.
 - When you are testing a dialog in the "Try it out" pane, you can now find and resubmit a recent test utterance by pressing the Up key to cycle through your previous inputs.
 - Experimental Korean language support for 5 system entities (`@sys-date`, `@sys-time`, `@sys-currency`, `@sys-number`, `@sys-percentage`) is now available. There are known issues for some of the numeric entities, and limited support for informal language input.
 - An Overview page is available from the Improve tab. The page provides a summary of interactions with your bot. You can view the amount of traffic for a given time period, as well as the intents and entities that were recognized most often in user conversations. For additional information, see [Using the Overview page](logs_oview.html).

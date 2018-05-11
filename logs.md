@@ -53,7 +53,7 @@ As an example, say you have a {{site.data.keyword.conversationshort}} instance n
 
 ![Data source link](images/data_source_1.png)
 
-Any edits you then make within the Development application will only affect the Development application, even if you’re using Production application utterances. See [Selecting a data source](logs_convo.html#select-source) for additional information.
+Any edits you then make within the Development application will only affect the Development application, even if you’re using Production application utterances. See [Selecting a data source](logs_convo.html#selecting-a-data-source) for additional information.
 
 To specify the deployment ID for an utterance sent using the `/message` API, include the deployment property inside the metadata object in your [context ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/assistant/api/v1/curl.html?curl#message){: new_window}, as in this example:
 

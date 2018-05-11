@@ -61,6 +61,6 @@ For example, if your workspace uses a context variable called `drink_order` to s
 ```
 {: codeblock}
 
-For more information about modifying context variable values, see [Updating a context variable value](dialog-overview.html#updating-a-context-variable-value).
+For more information about modifying context variable values, see [Updating a context variable value](dialog-runtime.html#context-update).
 
 **Note:** When you have finished testing your workspace, you can delete the test deployment by going back to the test deployment tool and clicking **Delete test**. Remember that you must also separately deauthorize the bot application in your Slack team.
