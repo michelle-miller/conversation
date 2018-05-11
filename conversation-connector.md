@@ -38,15 +38,15 @@ The {{site.data.keyword.conversationshort}} tool provides a quick way to deploy 
 
 To deploy a bot using the automated deployment tool:
 
-1. In the {{site.data.keyword.conversationshort}} tool, open the workspace you want to deploy.
-1. Click the menu icon in the upper left corner, and then select **Deploy**.
+1.  In the {{site.data.keyword.conversationshort}} tool, open the workspace you want to deploy.
+1.  Click the menu icon in the upper left corner, and then select **Deploy**.
 
-   ![Quick deploy menu option](images/deploy_menu_testdeploy.png)
+    ![Quick deploy menu option](images/deploy_menu_testdeploy.png)
 
-1. Under **Deploy with {{site.data.keyword.openwhisk_short}}**, click **Deploy to Slack**.
-1. On the Slack page, click **Deploy to Slack app** and follow the instructions.
+1.  Under **Deploy with {{site.data.keyword.openwhisk_short}}**, click **Deploy to Slack**.
+1.  On the Slack page, click **Deploy to Slack app** and follow the instructions.
 
-   ![Deploy to Slack app button](images/deploy_deploytoslack.png)
+    ![Deploy to Slack app button](images/deploy_deploytoslack.png)
 
 ## Deploying manually
 
