@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-11"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -56,7 +56,21 @@ The following new features and changes to the service are available.
 ### 7 May 2018
 {: #7May2018}
 
-- **New API authentication process for instances in au-syd region**: The process for authenticating with the {{site.data.keyword.conversationshort}} service, which is required before API calls can be made, has changed for new instances created in the Sydney data center. You must get an API key from IBM Cloud, and then exchange that key for an IBM Cloud Identity and Access Management (IAM) access token that you can pass as a bearer token. See [How to get an IBM Cloud IAM token using an API key ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/apikey_iamtoken.html#iamtoken_from_apikey) for more details.
+- **New API authentication process for instances in au-syd region**: The process for authenticating with the {{site.data.keyword.conversationshort}} service, which is required before API calls can be made, has changed for new instances created in the Sydney data center.
+
+  1. Get an API key from IBM Cloud, and then exchange that key for an IBM Cloud Identity and Access Management (IAM) access token that you can pass as a bearer token. See [How to get an IBM Cloud IAM token using an API key ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/apikey_iamtoken.html#iamtoken_from_apikey) for more details.
+
+  1. Copy the access token that is returned in the response, and pass it into the service by defining a header with a bearer token. For example, in curl, specify the token using the syntax:
+
+  `--header 'Authorization: Bearer <access_token>'`
+
+  Like this:
+
+  ```
+  curl -X GET \
+  'https://gateway-syd.watsonplatform.net/assistant/api/v1/workspaces?version=2017-05-26'\
+   --header 'Authorization: Bearer eyJhbGciOiJIUz......sgrKIi8hdFs'
+  ```
 
 ### 4 April 2018
 {: #4April2018}

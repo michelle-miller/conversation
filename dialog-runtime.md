@@ -79,9 +79,9 @@ The application can pass information to the dialog, and the dialog can update th
 ## Context variables
 {: #context-variables}
 
-A context variable is a variable that you define in a node, and optionally specify a default value for. Other nodes or application logic can subsequently set or change the value of the context variable.
+A context variable is a variable that you define in a node. You can specify a default value for it. Other nodes, application logic, or user input can subsequently set or change the value of the context variable.
 
-You can condition against context variable values by referencing a context variable from a dialog node condition to determine whether to execute a node. And you can reference a context variable from dialog node response conditions to show different reponses depending on a value provided by an external service or by the user.
+You can condition against context variable values by referencing a context variable from a dialog node condition to determine whether to execute a node. You can also reference a context variable from dialog node response conditions to show different reponses depending on a value provided by an external service or by the user.
 
 ### Passing context from the application
 {: #context-from-app}
@@ -426,7 +426,7 @@ To define a context variable in JSON format, complete the following steps:
 
     To subsequently reference the context variable, use the syntax `$name` where *name* is the name of the context variable that you defined. For example, `$new_variable`.
 
-## Deleting a context variable in JSON
+### Deleting a context variable in JSON
 {: #context-delete-json}
 
 To delete a context variable, set the variable to null.
@@ -454,12 +454,12 @@ If you want to remove all trace of the context variable, you can use the JSONObj
 
 Alternatively you can delete the context variable in your application logic.
 
-## Updating a context variable value in JSON
+### Updating a context variable value in JSON
 {: #context-update-json}
 
 In general, if a node sets the value of a context variable that is already set, then the previous value is overwritten by the new value.
 
-### Updating a complex JSON object
+#### Updating a complex JSON object
 
 Previous values are overwritten for all JSON types except a JSON object. If the context variable is a complex type such as JSON object, a JSON merge procedure is used to update the variable. The merge operation adds any newly defined properties and overwrites any existing properties of the object.
 
@@ -505,7 +505,7 @@ The result is this context:
 
 See [Expression language methods](dialog-methods.html#objects) for more information about methods you can perform on objects.
 
-### Updating arrays
+#### Updating arrays
 
 If your dialog context data contains an array of values, you can update the array by appending values, removing a value, or replacing all the values.
 
@@ -656,6 +656,7 @@ Choose one of these actions to update the array. In each case, we see the array 
 See [Expression language methods](dialog-methods.html#arrays) for more information about methods you can perform on arrays.
 
 ### Setting one context variable equal to another
+{: #var-equals-var}
 
 When you set one context variable equal to another context variable, you define a pointer from one to the other. If the value of one of the variables subsequently changes, then the value of the other variable is changed also.
 
@@ -672,7 +673,7 @@ For example, to create a copy of the values of an array at a certain point of th
 ```json
 {
 "context": {
-   "var1": "<? output.var1?:new JsonArray().append($var2) ?>"
+   "var2": "<? output.var2?:new JsonArray().append($var1) ?>"
  }
  }
  ```
