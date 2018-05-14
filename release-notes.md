@@ -62,15 +62,15 @@ The following new features and changes to the service are available.
 
   1. Copy the access token that is returned in the response, and pass it into the service by defining a header with a bearer token. For example, in curl, specify the token using the syntax:
 
-  `--header 'Authorization: Bearer <access_token>'`
+    `--header 'Authorization: Bearer <access_token>'`
 
-  Like this:
+    Like this:
 
-  ```
-  curl -X GET \
-  'https://gateway-syd.watsonplatform.net/assistant/api/v1/workspaces?version=2017-05-26'\
-   --header 'Authorization: Bearer eyJhbGciOiJIUz......sgrKIi8hdFs'
-  ```
+    ```
+    curl -X GET \
+    'https://gateway-syd.watsonplatform.net/assistant/api/v1/workspaces?version=2017-05-26'\
+     --header 'Authorization: Bearer eyJhbGciOiJIUz......sgrKIi8hdFs'
+    ```
 
 ### 4 April 2018
 {: #4April2018}
