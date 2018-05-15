@@ -135,7 +135,7 @@ The following table shows some examples of how to define name and value pairs fo
 |:---------------|-------------------------------|------------|
 | dessert        | "cake"                        | String     |
 | age            | 18                            | Number     |
-| toppings_array | ["onion","olives"]            | JSON Array |
+| toppings_array | ["onions","olives"]            | JSON Array |
 | full_name      | {"first":"John","last":"Doe"} | JSON Object |
 
 To subsequently refer to these context variables, use the syntax `$name` where *name* is the name of the context variable that you defined.
@@ -146,7 +146,7 @@ For example, you might specify the following expression as the dialog response:
 
 The resulting output is displayed as follows:
 
-`The customer, 18-year-old John, wants a pizza with onion and olives, and then cake.`
+`The customer, 18-year-old John, wants a pizza with onions and olives, and then cake.`
 
 You can use the JSON editor to define context variables also. You might prefer to use the JSON editor if you want to add a complex expression as the variable value. See [Context variables in the JSON editor](dialog-runtime.html#context-var-json) for more details.
 
