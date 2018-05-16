@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-13"
+lastupdated: "2018-05-15"
 
 ---
 
@@ -66,8 +66,8 @@ Use the {{site.data.keyword.conversationshort}} tool to create entities.
 
 1.  For **Fuzzy Matching**, click the button to select either on or off; fuzzy matching is off by default. This feature is available for languages noted in the [Supported languages](lang-support.html) topic.
 
-    **Fuzzy matching**
-     {: #fuzzy-matching}
+    ***Fuzzy matching***
+    {: #fuzzy-matching}
 
     You can turn on fuzzy matching to improve the ability of the service to recognize user input terms with syntax that is similar to the entity, but without requiring an exact match. There are three components to fuzzy matching - stemming, misspelling, and partial matching:
     - *Stemming* - The feature recognizes the stem form of entity values that have several grammatical forms. For example, the stem of 'bananas' would be 'banana', while the stem of 'running' would be 'run'.
@@ -141,7 +141,7 @@ Use the {{site.data.keyword.conversationshort}} tool to create entities.
         ```
        {: screen}
 
-      For additional information about using capture groups in dialog runtime, see [Storing pattern entity values in context variables](dialog-overview-context-groups.html).
+      For additional information about using capture groups in dialog runtime, see [Storing pattern entity values](dialog-runtime.html#context-pattern-entities).
 
       The pattern matching engine employed by the {{site.data.keyword.conversationshort}} service has some syntax limitations, which are necessary in order to avoid performance concerns which can occur when using other regular expression engines.
         - Entity patterns may not contain:
