@@ -71,6 +71,7 @@ The following new features and changes to the service are available.
     'https://gateway-syd.watsonplatform.net/assistant/api/v1/workspaces?version=2017-05-26'\
      --header 'Authorization: Bearer eyJhbGciOiJIUz......sgrKIi8hdFs'
     ```
+  For all existing instances and all new instances created in any other regions, you must continue to authenticate with the username and password that are provided in the service credentials for the service instance.
 
 ### 4 April 2018
 {: #4April2018}
