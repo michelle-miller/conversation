@@ -37,7 +37,7 @@ You created your service instance. Click **Manage**, then **Open tool**. Go to S
 
 If you created a {{site.data.keyword.conversationshort}} service instance, you're all set with these prerequisites. Go to [Step 1](#launch-tool).
 
-1.  Go to the [{{site.data.keyword.conversationshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/conversation) page in the {{site.data.keyword.Bluemix_notm}} Catalog.
+1.  Go to the [{{site.data.keyword.conversationshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")]( https://console.bluemix.net/catalog/services/conversation) page in the {{site.data.keyword.Bluemix_notm}} Catalog.
 1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
 1.  Click **Create**.
 
@@ -52,7 +52,7 @@ On the **Manage** page, click **Open tool**.
 
 If you're prompted to log into the tool, provide your {{site.data.keyword.Bluemix_notm}} credentials.
 
-If you're not at a {{site.data.keyword.conversationshort}} service dashboard page, go to the [{{site.data.keyword.cloud_notm}} Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/dashboard) and select the {{site.data.keyword.conversationshort}} service instance.
+If you're not at a {{site.data.keyword.conversationshort}} service dashboard page, go to the [{{site.data.keyword.cloud_notm}} Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard) and select the {{site.data.keyword.conversationshort}} service instance.
 {: tip}
 
 ## Step 2: Create a workspace
