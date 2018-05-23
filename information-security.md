@@ -76,7 +76,7 @@ As an example, to delete any message data associated with a user that has the cu
 ```
 curl -X DELETE
  --user {username}:{password}
- --data 'https://gateway.watson.net/conversation/api/v1/user_data?customer_id=abc&version=2017-05-26'
+ 'https://gateway.watson.net/conversation/api/v1/user_data?customer_id=abc&version=2017-05-26'
 ```
 {: #codeblock}
 
