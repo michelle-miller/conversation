@@ -135,7 +135,7 @@ Use the {{site.data.keyword.conversationshort}} tool to create entities.
         ```json
         {
             "context" : {
-                "area_code": "<? @fullUSphone.groups[1] ?>"
+                "area_code": "<? @contactInfo.groups[1] ?>"
             }
         }
         ```
