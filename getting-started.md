@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-27"
+lastupdated: "2018-05-29"
 
 ---
 
@@ -192,7 +192,7 @@ Open the sample workspace to see intents similar to the ones you just created pl
 
 1.  Go back to the Workspaces page.
    You can click the ![Back to workspaces button](images/workspaces-button.png) button from the navigation menu.
-1.  On the **Car Dashboard - Sample** workspace tile, click the **Edit sample** button.
+1.  On the **Customer Service - Sample** workspace tile, click the **Edit sample** button.
 
 ## Next steps
 {: #next-steps}

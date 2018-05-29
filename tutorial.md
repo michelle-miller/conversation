@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-23"
+lastupdated: "2018-05-29"
 
 ---
 
@@ -268,7 +268,7 @@ Optionally, you can review the **Car Dashboard - Sample** workspace to see this 
 
 1.  Click the **Back to workspaces** button ![Shows Back to workspaces button in menu](images/workspaces-button.png) from the navigation menu.
 
-1.  On the **Car Dashboard - Sample** tile, click **Edit sample**.
+1.  On the **Customer Service - Sample** tile, click **Edit sample**.
 
 ## Next steps
 {: #deploy}
