@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-20"
+lastupdated: "2018-05-30"
 
 ---
 
@@ -57,14 +57,14 @@ Any edits you then make within the Development application will only affect the 
 
 To specify the deployment ID for an utterance sent using the `/message` API, include the deployment property inside the metadata object in your [context ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/assistant/api/v1/curl.html?curl#message){: new_window}, as in this example:
 
-```
+```json
 "context" : {
   "metadata" : {
        "deployment": "HelpDesk-Production"
   }
 }
 ```
-{: #codeblock}
+{: codeblock}
 
 ## Enabling user metrics
 {: #user_id}
@@ -73,14 +73,14 @@ User metrics allow you to see, for example, the number of unique users who have 
 
 To specify the `User ID` for an utterance sent using the `/message` API, include the `user_id` property inside the metadata object in your [context ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/assistant/api/v1/curl.html?curl#message){: new_window}, as in this example:
 
-```
+```json
 "context" : {
   "metadata" : {
        "user_id": "{UserID}"
   }
 }
 ```
-{: #codeblock}
+{: codeblock}
 
 <!-- ### Querying data
 Use the `/logs` API `filter` parameter to search an application log for specific user data. For example, to search for data specific to a `User ID` that matches `my_best_customer`, the query might be:
@@ -90,7 +90,7 @@ curl -X GET
  --user {username}:{password}
  --data 'https://gateway.watson.net/conversation/api/v1/workspaces/{workspaceID}/logs?version=2018-02-16&filter=(language::en,request.header.metadata.user_id::my_best_customer)'
 ```
-{: #codeblock}
+{: codeblock}
 
 See the [Filter query reference](filter-reference.html) for additional details. -->
 
@@ -111,7 +111,7 @@ curl -X POST
    'X-Watson-Metadata: customer_id={first-customer-ID};customer_id={second-customer-ID}'
  --data '{"input":{"text":"hello"}}' 'https://gateway.watson.net/conversation/api/v1/workspaces/{workspaceID}/message?version=2017-05-26'
 ```
-{: #codeblock}
+{: codeblock}
 
 **Note**: The `customer_id` string cannot include the semicolon (`;`) or equal sign (`=`) characters.
 
@@ -129,7 +129,6 @@ curl -X DELETE
  --user {username}:{password}
  --data 'https://gateway.watson.net/conversation/api/v1/user_data/customer_id=abc;customer_id=xyz?version=2017-05-26'
 ```
-{: #codeblock}
-
+{: codeblock}
 
 Each example returns an empty JSON object `{}`. -->

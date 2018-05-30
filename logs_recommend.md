@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-13"
+lastupdated: "2018-05-30"
 
 ---
 
@@ -31,7 +31,7 @@ This feature is available only to Premium users.
 
 By analyzing the conversations that users have had with your workspace, and taking into account your system's current training data and response certainty, you will be presented with actions you can take to easily and efficiently improve your workspace.
 
-<iframe class="embed-responsive-item" id="youtubeplayer" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/scMu66AvZtY" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
+<iframe class="embed-responsive-item" id="youtubeplayer" title="Recommendations overview" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/scMu66AvZtY" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
 
 Recommendations are generated nightly, and require a large volume of user messages, for example, more than 50.
 {: tip}
