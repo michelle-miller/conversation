@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-15"
+lastupdated: "2018-05-29"
 
 ---
 
@@ -157,6 +157,7 @@ Use the {{site.data.keyword.conversationshort}} tool to create entities.
 1.  When you are finished adding entity values, select ![Close arrow](images/close_arrow.png) to finish creating the entity.
 
 ### Results
+{: #creating-results}
 
 The entity you created is added to the **Entities** tab, and the system begins to train itself on the new data.
 
@@ -185,6 +186,7 @@ Use the Search feature to find entity values and synonyms.
     **Note**: The first time you search, an index is created; you may see a message to wait while your contents are being indexed.
 
 ### Results
+{: #searching-results}
 
 Entities containing your search term, with corresponding examples, are shown. Select any result to open it for editing.
 
@@ -236,6 +238,7 @@ If you have a large number of entities, you might find it easier to import them 
 1.  Click ![Import](images/importGA.png) and then drag a file, or browse to select a file from your computer. The file is validated and imported, and the system begins to train itself on the new data.
 
 ### Results
+{: #importing-results}
 
 You can view the imported entities on the Entities tab. You might need to refresh the page to see the new entities.
 
@@ -282,5 +285,6 @@ System entities are centrally maintained, so any updates are available automatic
 1.  Click the toggle switch next to a system entity to enable or disable it.
 
 ### Results
+{: #enabling-sys-results}
 
 After you enable system entities, the {{site.data.keyword.conversationshort}} service begins retraining. After training is complete, you can use the entities.

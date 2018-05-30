@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-02"
+lastupdated: "2018-05-29"
 
 ---
 
@@ -105,6 +105,7 @@ Use the {{site.data.keyword.conversationshort}} tool to create intents.
 1.  When you have finished adding examples, select ![Close arrow](images/close_arrow.png) to finish creating the intent.
 
 ### Results
+{: #creating-results}
 
 The intent you created is added to the Intents tab, and the system begins to train itself on the new data.
 
@@ -140,6 +141,7 @@ Use the Search feature to find user examples, intent names, and descriptions.
     **Note**: The first time you search, an index is created; you may see a message to wait while your contents are being indexed.
 
 ### Results
+{: #searching-results}
 
 Intents containing your search term, with corresponding examples, are shown. Select any result to open it for editing.
 
@@ -178,6 +180,7 @@ If you have a large number of intents and examples, you might find it easier to 
     > **Important:** The maximum CSV file size is 10MB. If your CSV file is larger, consider splitting it into multiple files and importing them separately.
 
 ### Results
+{: #importing-results}
 
 You can view the imported intents and the corresponding examples on the **Intents** tab. You might need to refresh the page in order to see the new intents and examples.
 
