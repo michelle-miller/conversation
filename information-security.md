@@ -58,7 +58,7 @@ curl -X POST
    'X-Watson-Metadata: customer_id=abc'
  --data '{"input":{"text":"hello"}}' 'https://gateway.watson.net/conversation/api/v1/workspaces/{workspaceID}/message?version=2017-05-26'
 ```
-{: #codeblock}
+{: codeblock}
 
 **Note**: The `customer_id` string cannot include the semicolon (`;`) or equal sign (`=`) characters. You are responsible for ensuring that each `customer ID` property is unique across your customers.
 
@@ -78,7 +78,7 @@ curl -X DELETE
  --user {username}:{password}
  'https://gateway.watson.net/conversation/api/v1/user_data?customer_id=abc&version=2017-05-26'
 ```
-{: #codeblock}
+{: codeblock}
 
 An empty JSON object `{}` is returned.
 
