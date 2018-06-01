@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-29"
+lastupdated: "2018-05-30"
 
 ---
 
@@ -53,7 +53,13 @@ The following new features and changes to the service are available.
 
 - **New sample workspace**: The sample workspace that is provided for you to explore or to use as a starting point for your own workspace has changed. The **Car Dashboard** sample was replaced by a **Customer Service** sample. The new sample showcases how to use content catalog intents and other newer features to build a bot. It can answer common questions, such as inquiries about store hours and locations, and illustrates how to use a node with slots to schedule in-store appointments.
 
-- **HTML rendering was added to Try it out**: The "Try it out" pane now renders HTML formatting that is included in response text. Previously, if you included a hypertext link as an HTML anchor tag (`Contact us at <a href="www.ibm.com>ibm.com</a>.`) in a text response, you would see the HTML source `<a href="www.ibm.com>ibm.com</a>` in the "Try it out" pane during testing. Now, the hypertext link is rendered as it would be on a web page. It would be displayed like this: `Contact us at` [ibm.com](http://www.ibm.com){: new_window}.
+- **HTML rendering was added to Try it out**: The "Try it out" pane now renders HTML formatting that is included in response text. Previously, if you included a hypertext link as an HTML anchor tag in a text response, you would see the HTML source in the "Try it out" pane during testing. It used to look like this:
+
+  `Contact us at <a href="https://www.ibm.com>ibm.com</a>.`
+
+  Now, the hypertext link is rendered as if on a web page. It is displayed like this:
+
+  `Contact us at` [ibm.com](https://www.ibm.com){: new_window}.
 
     **Note**: As before, you must use the appropriate type of syntax in your responses for the client application to which you will deploy the conversation. Only use HTML syntax if your client application can interpret it properly. Other integration channels might expect other formats.
 
