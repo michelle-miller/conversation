@@ -63,6 +63,8 @@ The following new features and changes to the service are available.
 
     **Note**: As before, you must use the appropriate type of syntax in your responses for the client application to which you will deploy the conversation. Only use HTML syntax if your client application can interpret it properly. Other integration channels might expect other formats.
 
+- **Deployment changes**: The **Test in Slack** option was removed.
+
 ### 11 May 2018
 {: #11May2018}
 
