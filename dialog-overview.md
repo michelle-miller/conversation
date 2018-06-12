@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-30"
+lastupdated: "2018-06-12"
 
 ---
 
@@ -65,7 +65,7 @@ When you start to build the dialog, you must determine the branches to include, 
 
 When the service reaches the end of a branch, or cannot find a condition that evaluates to true from the current set of child nodes it is evaluating, it jumps back out to the base of the tree. And once again, the service processes the root nodes from first to the last. If none of the conditions evaluates to true, then the response from the last node in the tree, which typically has a special `anything_else` condition that always evaluates to true, is returned.
 
-You can disrupt the standard first-to-last flow by customizing what happens after a node is processed. For example, you can configure a node to jump directly to another node after it is processed, even if the other node is positioned earlier in the tree. See [Defining what to do next](dialog-overview.html#jump-to) for more details.
+You can disrupt the standard first-to-last flow by customizing what happens after a node is processed. For example, you can configure a node to jump directly to another node after it is processed, even if the other node is positioned earlier in the tree. See [Defining what to do next](dialog-overview.html#jump-to) for more details. You can also configure conditional responses that jump to other nodes. See [Conditional responses](dialog-overview.html#multiple) for more details about how to do so.
 
 How you configure digression settings for each node can also impact how users move through the nodes at run time. If you enable digressions away from most nodes, users can jump from one node to another and back again more easily. See [Digressions](dialog-runtime.html#digressions) for more information.
 
@@ -240,10 +240,16 @@ To add conditional responses to a node, complete the following steps:
     The node response section changes to show a pair of condition and response fields. You can add a condition and a response into them.
 1.  To customize a response further, click the **Edit response** ![Edit response](images/edit-slot.png) icon next to the response.
 
-    You must open the response for editing to change the value of a context variable when the response is triggered, for example. You update or add context values for each individual conditional response; there is no common JSON editor that shows you the context information for all of the responses at once.
+    You must open the response for editing to complete the following tasks:
+
+    - **Update context**. To change the value of a context variable when the response is triggered, specify the context value in the context editor. You update context for each individual conditional response; there is no common context editor or JSON editor for all conditional responses.
+    - **Configure a jump**. To instruct the service to jump to a different node after this conditional response is processed, select **Jump to** from the *And finally* section of the response edit view. Identify the node that you want the service to process next. See [Configuring the Jump to action](dialog-overview.html#jump-to-config) for more information.
+
+      A **Jump to** action that is configured for the node is not processed until all of the conditional responses are processed. Therefore, if a conditional response is configured to jump to another node, and the conditional response is triggered, then the jump configured for the node is never processed, and so does not occur.
+
 1.  Click **Add response** to add another conditional response.
 
-The conditions within a node are evaluated in order, just as nodes are.  Be sure that your conditional responses are listed in the correct order.  If you need to change the order, select a condition and response pair and move it up or down in the list using the arrows that are displayed. A **Jump to** action that is configured for the node is not processed until after all of the conditional responses are processed.
+The conditions within a node are evaluated in order, just as nodes are.  Be sure that your conditional responses are listed in the correct order.  If you need to change the order, select a condition and response pair and move it up or down in the list using the arrows that are displayed.
 
 ### A complex response
 {: #complex}
