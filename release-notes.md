@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-30"
+lastupdated: "2018-06-12"
 
 ---
 
@@ -47,6 +47,11 @@ Existing models that you have trained will not be immediately impacted, but expi
 {: #change-log}
 
 The following new features and changes to the service are available.
+
+### 12 June 2018
+{: #12June2018}
+
+- **Jump-tos from conditional responses**: You can now configure a conditional response to jump directly to another node. See [Conditional responses](dialog-overview.html#multiple) for more details.
 
 ### 25 May 2018
 {: #25May2018}
