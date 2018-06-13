@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-07"
+lastupdated: "2018-06-13"
 
 ---
 
@@ -48,10 +48,12 @@ Existing models that you have trained will not be immediately impacted, but expi
 
 The following new features and changes to the service are available.
 
-### 7 June 2018
-{: #7June2018}
+### 12 June 2018
+{: #12June2018}
 
 - **Pattern limit expanded**: When using the **Patterns** field to [define specific patterns for an entity value](entities.html#patterns), the pattern (regular expression) is now limited to 512 characters.
+
+- **Jump-tos from conditional responses**: You can now configure a conditional response to jump directly to another node. See [Conditional responses](dialog-overview.html#multiple) for more details.
 
 ### 25 May 2018
 {: #25May2018}
@@ -67,6 +69,8 @@ The following new features and changes to the service are available.
   `Contact us at` [ibm.com](https://www.ibm.com){: new_window}.
 
     **Note**: As before, you must use the appropriate type of syntax in your responses for the client application to which you will deploy the conversation. Only use HTML syntax if your client application can interpret it properly. Other integration channels might expect other formats.
+
+- **Deployment changes**: The **Test in Slack** option was removed.
 
 ### 11 May 2018
 {: #11May2018}
