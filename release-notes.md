@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-13"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -48,6 +48,47 @@ Existing models that you have trained will not be immediately impacted, but expi
 
 The following new features and changes to the service are available.
 
+### 14 June 2018
+{: #14June2018}
+
+- **Access management improvements**: {{site.data.keyword.conversationshort}} is transitioning from managing user access to the service with Cloud Foundry to using IBM Cloud Identity and Access Management (IAM). The benefit of using IAM is that users can securely authenticate with an individual IBM Cloud service and more easily control access to resources consistently across the IBM Cloud platform. See [IBM Cloud Identity and Access Management ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/index.html){: new_window} for more details.
+
+  The following regions have transitioned to using IAM for new service instances:
+
+  <table>
+  <caption>IAM rollout dates for new instances</caption>
+  <tr>
+  <th>Region</th>
+  <th>Date</th>
+  </tr>
+  <tr>
+  <td>us-east</td>
+  <td>14 June 2018</td>
+  </tr>
+  <tr>
+  <td>au-syd</td>
+  <td>7 May 2018</td>
+  </tr>
+  </table>
+
+  As a result of the transition, the process for authenticating with the {{site.data.keyword.conversationshort}} service, which is required before API calls can be made, has changed for new instances that use IAM.
+
+  1. Get an API key from IBM Cloud, and then exchange that key for an IBM Cloud Identity and Access Management (IAM) access token that you can pass as a bearer token. See [How to get an IBM Cloud IAM token using an API key ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/apikey_iamtoken.html#iamtoken_from_apikey){: new_window} for more details.
+
+  1. Copy the access token that is returned in the response, and pass it into the service by defining a header with a bearer token. For example, in curl, specify the token using the syntax:
+
+     `--header 'Authorization: Bearer <access_token>'`
+
+     Like this:
+
+     ```curl
+      curl -X GET \
+      'https://gateway-syd.watsonplatform.net/assistant/api/v1/workspaces?version=2017-05-26'\
+       --header 'Authorization: Bearer eyJhbGciOiJIUz......sgrKIi8hdFs'
+     ```
+
+  For all existing instances and all new instances created in any other regions, you must continue to authenticate with the username and password that are provided in the service credentials for the service instance.
+
 ### 12 June 2018
 {: #12June2018}
 
@@ -80,23 +121,7 @@ The following new features and changes to the service are available.
 ### 7 May 2018
 {: #7May2018}
 
-- **New API authentication process for instances in au-syd region**: The process for authenticating with the {{site.data.keyword.conversationshort}} service, which is required before API calls can be made, has changed for new instances created in the Sydney data center.
-
-  1. Get an API key from IBM Cloud, and then exchange that key for an IBM Cloud Identity and Access Management (IAM) access token that you can pass as a bearer token. See [How to get an IBM Cloud IAM token using an API key ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/apikey_iamtoken.html#iamtoken_from_apikey) for more details.
-
-  1. Copy the access token that is returned in the response, and pass it into the service by defining a header with a bearer token. For example, in curl, specify the token using the syntax:
-
-    `--header 'Authorization: Bearer <access_token>'`
-
-    Like this:
-
-    ```
-    curl -X GET \
-    'https://gateway-syd.watsonplatform.net/assistant/api/v1/workspaces?version=2017-05-26'\
-     --header 'Authorization: Bearer eyJhbGciOiJIUz......sgrKIi8hdFs'
-    ```
-
-  For all existing instances and all new instances created in any other regions, you must continue to authenticate with the username and password that are provided in the service credentials for the service instance.
+**New API authentication process for instances in au-syd region**: The process for authenticating with the Watson Assistant service, which is required before API calls can be made, has changed for new instances created in the Sydney data center.
 
 ### 4 April 2018
 {: #4April2018}

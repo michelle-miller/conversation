@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-14"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -99,19 +99,26 @@ After you create the service instance, you can give other people access to it. T
 
 **Important**: Only one person can edit an intent, entity, or a dialog node at a time. If multiple people work on the same item at the same time, then the changes made by the person who saves their changes last are the only changes applied. Changes that are made during the same time frame by someone else and are saved first are not retained. Coordinate the updates that you plan to make with your team members to prevent anyone from losing their work.
 
-To share a workspace with other people, you must give them developer access to the service instance that hosts the workspace. If the instance you share hosts other workspaces that you do not want others to edit, then be sure to make that clear to anyone you invite.
+To share a workspace with other people, you must give them access to the service instance that hosts the workspace.
 
-1.  Go to the {{site.data.keyword.watson}} Developer Console [Projects ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/developer/watson/projects) page, and log in. Click **Manage > Account > Users** from the menu.
+**Note**: New service instances created on IBM Cloud are using IBM Cloud Identity and Access Management (IAM) instead of being managed by Cloud Foundry. This transition is being rolled out at different times in different regions. During the transition, keep the following things in mind:
+
+  - If you are using a service instance that is managed by Cloud Foundry, then your steps will be slightly different from those described in the procedure below. For Cloud Foundry-managed instances, you must choose your organization from the *Cloud Foundry access* section, and then assign the person to the **Developer** space role.
+
+  If you are not sure which type of access management your instance uses, check the [release notes](release-notes.html) to find out whether IAM is being used in your region.
+
+1.  Go to the {{site.data.keyword.watson}} Developer Console [Projects ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/developer/watson/projects) page, and log in. Click **Manage > Account > Users** from the header menu.
 1.  Click **Invite users**, and then enter the email addresses of the people on your team to whom you want to give access.
-1.  In the *Cloud Foundry access* section, choose your organization from the *Organization* list.
 
-    The *Organization roles* field is automatically filled with *Auditor*. You can keep the default value in the field.
-1.  Optionally, limit the access you are granting to the workspaces in a single region and space.
-1.  In the *Space roles* field, choose **Developer**.
+    If you gave someone access to a service instance in Cloud Foundry, then the person might be listed as an invited user already. Click the person's name to open the access management settings for the user. Click **Assign access**, and then choose **Assign access to resources**.
+1.  In the *Services* section, make the following selections at a minimum:
 
-    See [Cloud Foundry roles ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/cfaccess.html#cfroles) for more information about the roles.
+    - **Services**: {{site.data.keyword.conversationshort}}
+    - **Assign platform access roles**: Operator
+
+    For more information about platform management roles, see [IAM access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/users_roles.html). (Service access roles are not leveraged by {{site.data.keyword.conversationshort}}.)
 1.  Click **Invite users**.
 
-When the people you invite next log in to {{site.data.keyword.cloud_notm}}, your organization will be included in their list of accounts.
+When the people you invite next log in to {{site.data.keyword.cloud_notm}}, your account will be included in their list of accounts. If they select your account, they can see your service instance, and open and edit your workspace.
 
-With more people contributing to workspace development, unintended changes can occur, including workspace deletions. Consider creating backup copies of your workspace on a regular basis, so you can roll back to an earlier version if necessary. To create a backup, simply export the workspace as a JSON file.
+With more people contributing to workspace development, unintended changes can occur, including workspace deletions. Consider creating backup copies of your workspace on a regular basis, so you can roll back to an earlier version if necessary. To create a backup, simply [export the workspace as a JSON file](#exporting-and-copying-workspaces).
