@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-13"
 
 ---
 
@@ -50,6 +50,8 @@ The following new features and changes to the service are available.
 
 ### 12 June 2018
 {: #12June2018}
+
+- **Pattern limit expanded**: When using the **Patterns** field to [define specific patterns for an entity value](entities.html#patterns), the pattern (regular expression) is now limited to 512 characters.
 
 - **Jump-tos from conditional responses**: You can now configure a conditional response to jump directly to another node. See [Conditional responses](dialog-overview.html#multiple) for more details.
 
