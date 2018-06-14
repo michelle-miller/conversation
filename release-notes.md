@@ -51,43 +51,22 @@ The following new features and changes to the service are available.
 ### 14 June 2018
 {: #14June2018}
 
-- **Access management improvements**: {{site.data.keyword.conversationshort}} is transitioning from managing user access to the service with Cloud Foundry to using IBM Cloud Identity and Access Management (IAM). The benefit of using IAM is that users can securely authenticate with an individual IBM Cloud service and more easily control access to resources consistently across the IBM Cloud platform. See [IBM Cloud Identity and Access Management ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/index.html){: new_window} for more details.
+- **Washington, DC data center opens**: You can now create {{site.data.keyword.conversationshort}} service instances that are hosted in the Washington, DC data center. See [IBM Cloud global data centers ![External link icon](../../icons/launch-glyph.svg "External link icon"](https://www.ibm.com/cloud/data-centers/){: new_window} for more details.
 
-  The following regions have transitioned to using IAM for new service instances:
+- **New API authentication process**: The {{site.data.keyword.conversationshort}} service has a new API authentication process for service instances that are hosted in the following regions:
 
-  <table>
-  <caption>IAM rollout dates for new instances</caption>
-  <tr>
-  <th>Region</th>
-  <th>Date</th>
-  </tr>
-  <tr>
-  <td>us-east</td>
-  <td>14 June 2018</td>
-  </tr>
-  <tr>
-  <td>au-syd</td>
-  <td>7 May 2018</td>
-  </tr>
-  </table>
+  - Washington, DC (us-east) as of 14 June 2018
+  - Sydney, Australia (au-syd) as of 7 May 2018
 
-  As a result of the transition, the process for authenticating with the {{site.data.keyword.conversationshort}} service, which is required before API calls can be made, has changed for new instances that use IAM.
+  {{site.data.keyword.cloud_notm}} is migrating to token-based Identity and Access Management (IAM) authentication.
 
-  1. Get an API key from IBM Cloud, and then exchange that key for an IBM Cloud Identity and Access Management (IAM) access token that you can pass as a bearer token. See [How to get an IBM Cloud IAM token using an API key ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/apikey_iamtoken.html#iamtoken_from_apikey){: new_window} for more details.
+  - For new service instances in the regions and dates indicated previously, you use IAM for authentication. You can pass either a bearer token or an API key. Tokens support authenticated requests without embedding service credentials in every call. API keys use basic authentication.
 
-  1. Copy the access token that is returned in the response, and pass it into the service by defining a header with a bearer token. For example, in curl, specify the token using the syntax:
+    When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication ![External link icon](../k../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/assistant/api/v1/curl.html?curl#authentication){: new_window} in the API reference.
 
-     `--header 'Authorization: Bearer <access_token>'`
+  - All new and existing service instances in other regions, you continue to use service credentials (`{username}:{password}`) for authentication.
 
-     Like this:
-
-     ```curl
-      curl -X GET \
-      'https://gateway-syd.watsonplatform.net/assistant/api/v1/workspaces?version=2017-05-26'\
-       --header 'Authorization: Bearer eyJhbGciOiJIUz......sgrKIi8hdFs'
-     ```
-
-  For all existing instances and all new instances created in any other regions, you must continue to authenticate with the username and password that are provided in the service credentials for the service instance.
+  If you are not sure which type of authentication to use, view the service credentials by clicking the service instance on the [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps?watson){: new_window}.
 
 ### 12 June 2018
 {: #12June2018}
@@ -121,7 +100,7 @@ The following new features and changes to the service are available.
 ### 7 May 2018
 {: #7May2018}
 
-**New API authentication process for instances in au-syd region**: The process for authenticating with the Watson Assistant service, which is required before API calls can be made, has changed for new instances created in the Sydney data center.
+- **Sydney, Australia data center opens**: You can now create {{site.data.keyword.conversationshort}} service instances that are hosted in the Sydney, Australia data center. See [IBM Cloud global data centers ![External link icon](../../icons/launch-glyph.svg "External link icon"](https://www.ibm.com/cloud/data-centers/) for more details.
 
 ### 4 April 2018
 {: #4April2018}
