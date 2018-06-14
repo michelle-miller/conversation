@@ -60,11 +60,11 @@ The following new features and changes to the service are available.
 
   {{site.data.keyword.cloud_notm}} is migrating to token-based Identity and Access Management (IAM) authentication.
 
-  - For new service instances in the regions and dates indicated previously, you use IAM for authentication. You can pass either a bearer token or an API key. Tokens support authenticated requests without embedding service credentials in every call. API keys use basic authentication.
+  For new service instances in the regions listed above, you use IAM for authentication. You can pass either a bearer token or an API key. Tokens support authenticated requests without embedding service credentials in every call. API keys use basic authentication.
 
-    When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication ![External link icon](../k../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/assistant/api/v1/curl.html?curl#authentication){: new_window} in the API reference.
+  When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication ![External link icon](../k../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/assistant/api/v1/curl.html?curl#authentication){: new_window} in the API reference.
 
-  - All new and existing service instances in other regions, you continue to use service credentials (`{username}:{password}`) for authentication.
+  For all new and existing service instances in other regions, you continue to use service credentials (`{username}:{password}`) for authentication.
 
   If you are not sure which type of authentication to use, view the service credentials by clicking the service instance on the [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps?watson){: new_window}.
 
