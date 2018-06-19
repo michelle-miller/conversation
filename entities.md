@@ -32,6 +32,7 @@ The number of entities, entity values, and synonyms that you can create depends 
 |-------------------|-----------------------:|----------------------------:|--------------------------------:|
 | Standard/ Premium |                          1000 |                            100,000 |                              100,000 |
 | Lite              |                            25 |                            100,000 |                              100,000 |
+{: caption="Service plan details" caption-side="top"}
 
 System entities that you enable for use count toward your plan usage totals.
 

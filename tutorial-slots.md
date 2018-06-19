@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-24"
+lastupdated: "2018-06-15"
 
 ---
 
@@ -140,7 +140,7 @@ The node you add will collect the information required to make a reservation at 
 
 ## Step 4: Test the dialog
 
-1.  Select the ![Ask Watson](images/ask_watson.png) icon to open the chat pane.
+1.  Select the ![Try it](images/ask_watson.png) icon to open the chat pane.
 1.  Type `i want to make a reservation`.
 
     The bot recognizes the #reservation intent, and it responds with the prompt for the first slot, `What day would you like to come in?`.
