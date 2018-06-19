@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-30"
+lastupdated: "2018-06-15"
 
 ---
 
@@ -33,6 +33,7 @@ The number of intents and examples you can create depends on your {{site.data.ke
 |------------------|----------------------:|-----------------------:|
 | Standard/Premium |                 2,000 |                 25,000 |
 | Lite             |                   100 |                 25,000 |
+{: caption="Service plan details" caption-side="top"}
 
 ## Creating intents
 {: #creating-intents}
@@ -58,7 +59,7 @@ Use the {{site.data.keyword.conversationshort}} tool to create intents.
 
 1.  Select **Create intent** to save your intent name.
 
-    ![Screen capture showing new intent definition](images/create_intent.png)
+    ![Screen capture shows an intent named #pay_bill](images/create_intent.png)
 
 1.  Next, in the **Add user examples** field, type the text of a user example for the intent. An example can be any string up to 1024 characters in length. The following might be examples for the `#pay_bill` intent:
     - `I need to pay my bill.`
@@ -69,7 +70,7 @@ Use the {{site.data.keyword.conversationshort}} tool to create intents.
 
     If you have defined, or plan to define, entities that correspond to this intent, refer to the entities, or their associated synonyms, in some of the examples. Doing so helps to establish a relationship between the intent and entities.
 
-    ![Screen capture showing intent definition](images/define_intent.png)
+    ![Screen capture shows that the definition Pay my account balance is added as a user example.](images/define_intent.png)
     {: #entity-as-example}
 
     *Important*:
@@ -86,7 +87,7 @@ Use the {{site.data.keyword.conversationshort}} tool to create intents.
     - Is the `@PhoneModelName` in stock?
     - Add a `@PhoneModelName` to my order.
 
-    ![Screen capture showing intent definition](images/define_intent_entity.png)
+    ![Screen capture shows the @PhoneModelName entity being referenced in a user example for the #order_phone intent](images/define_intent_entity.png)
 
     **Note**: Currently, you can only directly reference closed entities that you define (pattern values will be ignored). You cannot use [system entities](system-entities.html).
 
@@ -122,7 +123,7 @@ You can tab from the intent name to each example, editing the examples if you ch
 
 To move or delete an example, select the example by selecting the check box and then select **Move** or **Delete**.
 
-  ![Screen capture showing how to move or delete an example](images/move_example.png)
+  ![Screen capture shows that the checkbox for a user example is selected and the Move and Delete icons are available.](images/move_example.png)
 
 ## Searching intents
 
@@ -130,13 +131,13 @@ Use the Search feature to find user examples, intent names, and descriptions.
 
 1.  Select the **Intents** tab in the navigation bar.
 
-    ![Intent tab overview](images/intent_oview.png)
+    ![Screen shot shows the search field on the intents page](images/intent_oview.png)
 
 1.  Select the Search icon: ![Search icon](images/search_icon.png)
 
 1.  Enter a search term or phrase.
 
-    ![Intent search term](images/searchint_1.png)
+    ![Screen shot shows that the term, hello, was added to the search field](images/searchint_1.png)
 
     **Note**: The first time you search, an index is created; you may see a message to wait while your contents are being indexed.
 
@@ -145,7 +146,7 @@ Use the Search feature to find user examples, intent names, and descriptions.
 
 Intents containing your search term, with corresponding examples, are shown. Select any result to open it for editing.
 
-  ![Intent search return](images/searchint_2.png)
+  ![Screen shot shows the search results, including a few intents that contain references to the term hello](images/searchint_2.png)
 
 ## Importing intents and examples
 
@@ -175,7 +176,7 @@ If you have a large number of intents and examples, you might find it easier to 
 
 1.  Select the *Import* icon ![Import icon](images/importGA.png). Then, drag a file or browse to select a file from your computer. The file is validated and imported, and the system begins to train itself on the new data.
 
-    ![Import option](images/ImportIntent.png)
+    ![Screen shot shows where the Import icon is located on the Intents page](images/ImportIntent.png)
 
     > **Important:** The maximum CSV file size is 10MB. If your CSV file is larger, consider splitting it into multiple files and importing them separately.
 
@@ -191,7 +192,7 @@ You can export a number of intents to a CSV file, so you can then import and reu
 
 1.  On the Intents tab, select the intents you want from the list and choose *Export*.
 
-    ![Export option](images/ExportIntent.png)
+    ![Screen shot shows where the Export icon is located on the Intents page](images/ExportIntent.png)
 
 ## Deleting intents
 {: #delete_intents}
@@ -202,25 +203,25 @@ You can select a number of intents for deletion.
 
 1.  On the Intents tab, select the intents you want from the list and choose *Delete*.
 
-    ![Delete option](images/DeleteIntent.png)
+    ![Screen shot shows that an intent selected and it highlights the Delete icon](images/DeleteIntent.png)
 
 ## Testing your intents
 {: #testing-your-intents}
 
 After you have finished creating new intents, you can test the system to see if it recognizes your intents as you expect.
 
-1.  In the {{site.data.keyword.conversationshort}} tool, select the ![Ask Watson](images/ask_watson.png) icon.
+1.  In the {{site.data.keyword.conversationshort}} tool, select the ![Try it](images/ask_watson.png) icon.
 
 1.  In the *Try it out* pane, enter a question or other text string and press Enter to see which intent is recognized. If the wrong intent is recognized, you can improve your model by adding this text as an example to the correct intent.
 
     If you have recently made changes in your workspace, you might see a message indicating that the system is still retraining. If you see this message, wait until training completes before testing:
     {: tip}
 
-    ![Screen capture showing retraining message](images/training.png)
+    ![Screen capture shows the Watson is training message in the Try it out pane](images/training.png)
 
     The response indicates which intent was recognized from your input.
 
-    ![Screen capture of testing intents](images/test_intents.png)
+    ![Screen capture of the system identifying intents from user input in the Try it out pane](images/test_intents.png)
 
 1.  If the system did not recognize the correct intent, you can correct it. To correct the recognized intent, select the displayed intent and then select the correct intent from the list. After your correction is submitted, the system automatically retrains itself to incorporate the new data.
 
