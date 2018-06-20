@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-10"
+lastupdated: "2018-06-20"
 
 ---
 
@@ -56,7 +56,9 @@ curl -X POST
    'Content-Type: application/json'
    'Accept: application/json'
    'X-Watson-Metadata: customer_id=abc'
- --data '{"input":{"text":"hello"}}' 'https://gateway.watson.net/conversation/api/v1/workspaces/{workspaceID}/message?version=2017-05-26'
+ --data
+   '{"input":{"text":"hello"}}'
+   'https://gateway.watson.net/assistant/api/v1/workspaces/{workspaceID}/message?version=2017-05-26'
 ```
 {: codeblock}
 
@@ -76,7 +78,7 @@ As an example, to delete any message data associated with a user that has the cu
 ```
 curl -X DELETE
  --user {username}:{password}
- 'https://gateway.watson.net/conversation/api/v1/user_data?customer_id=abc&version=2017-05-26'
+ 'https://gateway.watson.net/assistant/api/v1/user_data?customer_id=abc&version=2017-05-26'
 ```
 {: codeblock}
 
