@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-19"
+lastupdated: "2018-06-20"
 
 ---
 
@@ -51,7 +51,7 @@ If you want to upgrade from one plan to another, see [Upgrading](upgrading.html)
 ## Data centers
 {: #regions}
 
-IBM Cloud has a network of global data centers that provide redundancy and performance benefits to its cloud services. See [IBM Cloud global data centers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/data-centers/){: new_window} for more details.
+IBM Cloud has a network of global data centers that provide performance benefits to its cloud services. See [IBM Cloud global data centers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/data-centers/){: new_window} for more details.
 
 {{site.data.keyword.cloud_notm}} is migrating from managing user access with Cloud Foundry to using token-based Identity and Access Management (IAM) authentication. IAM is being rolled out in different regions at different times. For more information about IAM, see [Authenticating with IAM tokens ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/watson/getting-started-iam.html#){: new_window}.
 
