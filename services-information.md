@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-30"
+lastupdated: "2018-06-20"
 
 ---
 
@@ -47,6 +47,24 @@ The number of API calls allowed per instance depends on your service plan. See y
 If you have a Lite plan and reach your API call limit, but the logs show that you have made fewer calls than expected, remember that the Lite plan stores log information for only 7 days.
 
 If you want to upgrade from one plan to another, see [Upgrading](upgrading.html).
+
+## Data centers
+{: #regions}
+
+IBM Cloud has a network of global data centers that provide performance benefits to its cloud services. See [IBM Cloud global data centers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/data-centers/){: new_window} for more details.
+
+{{site.data.keyword.cloud_notm}} is migrating from managing user access with Cloud Foundry to using token-based Identity and Access Management (IAM) authentication. IAM is being rolled out in different regions at different times. For more information about IAM, see [Authenticating with IAM tokens ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/watson/getting-started-iam.html#){: new_window}.
+
+You can create {{site.data.keyword.conversationshort}} service instances that are hosted in the following data center regions:
+
+| Region | Authentication type | IAM adoption date | Notes |
+|--------|---------------------|-------------------|-------|
+| Sydney | IAM                 | 7 May 2018 | Instances created before May 7 were syndicated to the US South data center |
+| Germany | Cloud Foundry      | N/A              | N/A |
+| United Kingdom | N/A | N/A            | All Instances are syndicated to the US South data center |
+| US East | IAM                | 14 June 2018 | N/A |
+| US South | Cloud Foundry     | N/A              | N/A |
+{: caption="Data center regions" caption-side="top"}
 
 ## Terms and security
 {: #terms}
