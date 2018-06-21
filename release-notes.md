@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -37,16 +37,21 @@ IBM releases services, features, and language support for your evaluation that a
 ## Updated models
 {: #updated-models}
 
-The {{site.data.keyword.conversationshort}} algorithms may be periodically refined and updated based on feedback, scientific enhancements, and additional factors, in order to continuously enhance the performance.
+The {{site.data.keyword.conversationshort}} algorithms may be periodically refined and updated based on feedback, scientific enhancements, and additional factors, in order to continuously enhance the performance. Updates to the model will be communicated in these release notes.
 
-Existing models that you have trained will not be immediately impacted, but expired models will be updated to the current model and retrained, if you have not already done so, after 60 days of a new model becoming available. Updates to models that will be retrained will be communicated in these release notes.
+Existing models that you have trained will not be immediately impacted, but expired models will be updated to the current model, if you have not already done so, after 60 days of a new model becoming available.
 
-> **Note:** This updating statement applies to Generally Available (GA) languages and features only.
+**Note:** This updating statement applies to Generally Available (GA) languages and features only.
 
 ## Changes
 {: #change-log}
 
 The following new features and changes to the service are available.
+
+### 21 June 2018
+{: #21June2018}
+
+- **Language updates for system entities**: Dutch and Simplified Chinese language support has been enhanced to include the general availability of [System entities](system-entities.html). Traditional Chinese language support includes the availability of system entities in beta release. See [Supported languages](lang-support.html) for details.
 
 ### 14 June 2018
 {: #14June2018}
@@ -69,11 +74,9 @@ The following new features and changes to the service are available.
   If you are not sure which type of authentication to use, view the service credentials by clicking the service instance on the [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps?watson){: new_window}.
 
 ### 12 June 2018
-{: #12June2018}
+{: #11June2018}
 
 - **Pattern limit expanded**: When using the **Patterns** field to [define specific patterns for an entity value](entities.html#patterns), the pattern (regular expression) is now limited to 512 characters.
-
-- **Jump-tos from conditional responses**: You can now configure a conditional response to jump directly to another node. See [Conditional responses](dialog-overview.html#multiple) for more details.
 
 ### 25 May 2018
 {: #25May2018}
