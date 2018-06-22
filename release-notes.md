@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-20"
+lastupdated: "2018-06-21"
 ---
 
 {:shortdesc: .shortdesc}
@@ -50,6 +50,8 @@ The following new features and changes to the service are available.
 
 - **Language updates for system entities**: Dutch and Simplified Chinese language support has been enhanced to include the general availability of [System entities](system-entities.html). Traditional Chinese language support includes the availability of system entities in beta release. See [Supported languages](lang-support.html) for details.
 
+- **Jump-tos from conditional responses**: You can now configure a conditional response to jump directly to another node. See [Conditional responses](dialog-overview.html#multiple) for more details.
+
 ### 14 June 2018
 {: #14June2018}
 
@@ -71,7 +73,7 @@ The following new features and changes to the service are available.
   If you are not sure which type of authentication to use, view the service credentials by clicking the service instance on the [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps?watson){: new_window}.
 
 ### 12 June 2018
-{: #11June2018}
+{: #12June2018}
 
 - **Pattern limit expanded**: When using the **Patterns** field to [define specific patterns for an entity value](entities.html#patterns), the pattern (regular expression) is now limited to 512 characters.
 
