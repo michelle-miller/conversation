@@ -46,7 +46,7 @@ If you created a {{site.data.keyword.conversationshort}} service instance, you'r
 
 After you create a {{site.data.keyword.conversationshort}} service instance, you'll land on the **Manage** page of the service dashboard.
 
-On the **Manage** page, click **Open tool**.
+On the **Manage** page, click **Launch tool**.
 
 <!-- To do: Add screenshot for developer console -->
 
