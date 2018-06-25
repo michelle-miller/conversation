@@ -35,10 +35,10 @@ The first table shows the level of support for all features, except those relate
 |:---|:---:|:---:|:---:|:---:|
 | **English (en)**                   | GA | GA | GA | GA |
 | **Arabic (ar)**                    | GA | Beta | NA | NA |
-| **Chinese (Simplified) (zh-cn)**   | Beta | Beta | Beta | NA |
+| **Chinese (Simplified) (zh-cn)**   | GA | GA | Beta | NA |
 | **Chinese (Traditional) (zh-tw)**  | Beta | Beta | Beta | NA |
 | **Czech (cs)**                     | Beta | Beta | Beta | NA |
-| **Dutch (nl)**                     | GA | GA | GA | NA |
+| **Dutch (nl)**                     | GA | GA | Beta | NA |
 | **French (fr)**                    | GA | GA | Beta | GA |
 | **German (de)**                    | GA | GA | Beta | GA |
 | **Italian (it)**                   | GA | GA | Beta | GA |
@@ -55,7 +55,7 @@ The first table shows the level of support for all features, except those relate
 |:---|:---:|:---:|:---:|
 | **English (en)**                   | GA | GA, Beta ([location](system-entities.html#sys-location), [person](system-entities.html#sys-person)) | Beta (Stemming, misspelling, and partial match) |
 | **Arabic (ar)**  | GA | Beta | Beta (Misspelling only) |
-| **Chinese (Simplified) (zh-cn)**   | GA | GA | Beta |
+| **Chinese (Simplified) (zh-cn)**   | GA | GA | Beta (Misspelling only) |
 | **Chinese (Traditional) (zh-tw)**  | Beta | Beta | Beta |
 | **Czech (cs)**                     | Beta | Beta | Beta (Misspelling only) |
 | **Dutch (nl)**                     | GA | GA | Beta (Misspelling only) |
