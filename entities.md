@@ -112,10 +112,9 @@ Use the {{site.data.keyword.conversationshort}} tool to create entities.
       Often when using pattern entities, it will be necessary to store the text that matches the pattern in a context variable (or action variable), from within your dialog tree. For additional information, see [Defining a context variable](dialog-runtime.html#context-var-define).
 
       Imagine a case where you are asking a user for their email address. The dialog node condition will contain a condition similar to `@contactInfo:email`. In order to assign the user-entered email as a context variable, the following syntax can be used to capture the pattern match within the dialog node's response section:
-
-      | Variable | Value            |
-      |----------|------------------|
-      |  email   | `<? @contactInfo.literal ?>` |
+      
+      - Variable: email
+      - Value: `<? @contactInfo.literal ?>`
       {: #capture-group}
 
       *Capture groups* - For regular expressions, any part of a pattern inside a pair of normal parentheses will be captured as a group. For example, the entity value `fullUSphone` contains three captured groups:
@@ -127,10 +126,9 @@ Use the {{site.data.keyword.conversationshort}} tool to create entities.
       Grouping can be helpful if, for example, you wanted the {{site.data.keyword.conversationshort}} service to ask users for their phone number, and then use only the area code of their provided number in a response.
 
       In order to assign the user-entered area code as a context variable, the following syntax can be used to capture the group match within the dialog node's response section:
-
-      | Variable     | Value            |
-      |--------------|------------------|
-      |  area_code   | `<? @fullUSphone.groups[1] ?>` |
+      
+      - Variable: area_code
+      - Value: `<? @fullUSphone.groups[1] ?>` 
 
       For additional information about using capture groups in dialog runtime, see [Storing pattern entity values](dialog-runtime.html#context-pattern-entities).
 
