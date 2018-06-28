@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-06-28"
 ---
 
 {:shortdesc: .shortdesc}
@@ -49,8 +49,6 @@ The following new features and changes to the service are available.
 {: #21June2018}
 
 - **Language updates for system entities**: Dutch and Simplified Chinese language support are now generally available. Dutch language support includes fuzzy matching for misspellings. Traditional Chinese language support includes the availability of [system entities](system-entities.html) in beta release. See [Supported languages](lang-support.html) for details.
-
-- **Jump-tos from conditional responses**: You can now configure a conditional response to jump directly to another node. See [Conditional responses](dialog-overview.html#multiple) for more details.
 
 ### 14 June 2018
 {: #14June2018}
