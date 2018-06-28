@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-20"
+lastupdated: "2018-06-28"
 
 ---
 
@@ -65,6 +65,8 @@ You can create {{site.data.keyword.conversationshort}} service instances that ar
 | US East | IAM                | 14 June 2018 | N/A |
 | US South | Cloud Foundry     | N/A              | N/A |
 {: caption="Data center regions" caption-side="top"}
+
+See [Services by region ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/resources/services_region.html#services_region){: new_window} for information about the data centers in which other IBM Cloud services are hosted.
 
 ## Terms and security
 {: #terms}
