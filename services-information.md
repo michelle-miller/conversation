@@ -83,7 +83,7 @@ curl -X GET \
 ### IAM API calls
 {: #iam-api}
 
-- The base url must include the region. Use the syntax `gateway-<region>.watsonplatform.net` to specify the region in which you created the service instance. Use the region codes listed in the *Data center regions* table above.
+- The base url must include the region. Use the syntax `gateway-<region>.watsonplatform.net` to specify the region in which you created the service instance. The region codes are listed in the *Data center regions* table above.
 - Provide the appropriate type of token in the header. In this example, a bearer token is being used. See [Authenticating with IAM tokens ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/watson/getting-started-iam.html){: new_window}.
 
 ```curl
