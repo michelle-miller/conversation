@@ -207,8 +207,6 @@ When you use the `sys-number` system entity in a slot condition, it does not dea
     ```
     {: codeblock}
 
-    **Note**: 
-
 1.  Click **Save**.
 
 1.  Test the node again. Open the "Try it out" pane, and click **Clear** to delete the slot context variable values that you specified when you tested the node with slots earlier. To see the impact of the changes you made, use the following script:
