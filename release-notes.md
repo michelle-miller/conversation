@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-28"
+lastupdated: "2018-07-06"
 ---
 
 {:shortdesc: .shortdesc}
@@ -40,6 +40,13 @@ Existing models that you have trained will not be immediately impacted, but expi
 
 **Note:** This updating statement applies to Generally Available (GA) languages and features only.
 
+## Upcoming API authentication changes
+{: #iam-is-coming}
+
+{{site.data.keyword.cloud_notm}} is transitioning from using Cloud Foundry to using token-based Identity and Access Management (IAM) authentication. (See [Authenticating with IAM tokens ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/watson/getting-started-iam.html) for more information.)
+
+The method used to authenticate with IAM service instances is different from the method used to authenticate with Cloud Foundry instances. Existing applications that use Cloud Foundry will continue to work. However, if you migrate a service instance or create a new service instance in a region that uses IAM, you must update the code that handles authentication. All regions are transitioning to IAM, but on a rolling schedule. For more details, see [Data centers](services-information.html#regions).
+
 ## Changes
 {: #change-log}
 
@@ -53,7 +60,7 @@ The following new features and changes to the service are available.
 ### 14 June 2018
 {: #14June2018}
 
-- **Washington, DC data center opens**: You can now create {{site.data.keyword.conversationshort}} service instances that are hosted in the Washington, DC data center. See [IBM Cloud global data centers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/data-centers/){: new_window} for more details.
+- **Washington, DC data center opens**: You can now create {{site.data.keyword.conversationshort}} service instances that are hosted in the Washington, DC data center. See [Data centers](services-information.html#regions) for more details.
 
 - **New API authentication process**: The {{site.data.keyword.conversationshort}} service has a new API authentication process for service instances that are hosted in the following regions:
 
@@ -64,9 +71,9 @@ The following new features and changes to the service are available.
 
   For new service instances in the regions listed above, you use IAM for authentication. You can pass either a bearer token or an API key. Tokens support authenticated requests without embedding service credentials in every call. API keys use basic authentication.
 
-  When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/assistant/api/v1/curl.html?curl#authentication){: new_window} in the API reference.
-
   For all new and existing service instances in other regions, you continue to use service credentials (`{username}:{password}`) for authentication.
+
+  When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/assistant/api/v1/curl.html?curl#authentication){: new_window} in the API reference.
 
   If you are not sure which type of authentication to use, view the service credentials by clicking the service instance on the [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps?watson){: new_window}.
 
