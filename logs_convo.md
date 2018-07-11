@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-10"
+lastupdated: "2018-07-11"
 
 ---
 
@@ -65,7 +65,7 @@ In this example, the Improve page is populated with messages that had the Deploy
 
 ## Filtering messages
 
-You can filter messages by *Search user statements*, *Intents*, *Entities*, and *Last* n *days*:
+You can filter messages by *Search user statements*, *Intents*, *Entities*, and date range:
 
 *Search user statements* - Type a word in the search bar. This searches the users' inputs, but not your application's replies.
 

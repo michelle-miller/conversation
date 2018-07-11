@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-24"
+lastupdated: "2018-07-11"
 
 ---
 
@@ -43,15 +43,34 @@ The top part of the page includes the following controls:
   **Important** - The intent and entities filters are populated by the intents and entities in the ***workspace***, and not what is in the data source. If you have [selected a data source](logs.html#deploy_id) other than the workspace, you might not see an intent or entity from your data source logs as an option in the filters, unless those intents and entities are also in the workspace.
 
 * *Refresh data* - Allows you to refresh the Overview page statistics immediately. The Overview page shows when the data that it displays was last updated. You can select **Refresh data** if you think that newer data might be available.
-* Time period control - Use this control to choose the period for which data is displayed. This control affects all data shown on the page: not just the number of conversations displayed in the graph, but also the statistics displayed along with the graph, and the lists of top intents and entities.
 
-  ![Time period control](images/oview-time.png)
+* Date filters - Use these filters to choose the period for which data is displayed. These filters affect all data shown on the page: not just the number of conversations displayed in the graph, but also the statistics displayed along with the graph, and the lists of top intents and entities.
 
-  You can choose whether to view data for a single day, a week, a month, or a quarter. In each case, the data points on the graph adjust to an appropriate measurement period. For example, when viewing a graph for a day, the data is presented in hourly values, but when viewing a graph for a week, the data is shown by day. A week always runs from Sunday through Saturday. You cannot create custom time periods, such as a week that runs from Thursday to the following Wednesday, or a month that begins on any date other than the first.
+  **NOTE**: Premium plan users can review 90 days of data; all other plan users can review 30 days of data.
+
+  ![Date picker overview](images/oview-time.png)
+
+  You can choose whether to view data for a single day; for one, two, or three weeks; or for 30 days. There is also a `Custom Range` option that lets you choose something else over the past thirty days, such as 10 days.
+  
+  ![Past X days filter](images/oview-time-days.png)
+
+  You can use the date range selector to narrow a specific range, or to pick a specific day.
+
+  ![Date range filter](images/oview-time-range.png)
+
+  Finally, you can narrow your selection by hour, day, or week, depending on what range you've chosen.
+
+  ![Date interval filter](images/oview-time-interval.png)
+
+  In each case, the data points on the graph adjust to an appropriate measurement period. For example, when viewing a graph for a day, the data is presented in hourly values, but when viewing a graph for a week, the data is shown by day.
 
   **NOTE**: If you choose a single day view, for example, the time shown for each conversation is localized to reflect the time zone of your browser. This may differ from the timestamp shown if you review the same conversation log via an API call; API log calls are always shown in UTC.
 
     ![Time period control](images/oview-time2.png)
+
+   A week always runs from Monday through Sunday. Use a custom range if you want to filter by different start and end dates for a week or month, such as a week that runs from Thursday to the following Wednesday, or a month that begins on any date other than the first. If the last interval of the selected date range is incomplete, the graph will show as a dotted line.
+
+    ![Incomplete interval](images/oview-dotted.png)
 
 ## Graphs and statistics
 Several statistical scorecards provide log data for your application:
