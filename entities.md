@@ -177,6 +177,7 @@ Use the {{site.data.keyword.conversationshort}} tool to create entities.
 The entity you created is added to the **Entities** tab, and the system begins to train itself on the new data.
 
 ## Defining contextual entities ![BETA](images/beta.png)
+{: #defining-contextual-entities}
 
 When you define specific values for an entity, the service finds entity mentions only when a term in the user input exactly matches (or closely matches if fuzzy matching is enabled) a value or synonym defined. When you define a contextual entity, a model is trained on both the entity *value* and the *context* in which the entity is used in sentences that you annotate. This new contextual entity model enables the service to calculate a confidence score that identifies how likely a word or phrase is to be an instance of an entity, based on how it is used in the user input.
 
