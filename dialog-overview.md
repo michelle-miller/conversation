@@ -340,10 +340,6 @@ You can return responses with multimedia or interactive elements such as images 
 
 In addition to the default response type of **Text**, for which you specify the text to return to the user as a response, the following response types are supported:
 
-- **Connect to human agent**: The dialog calls a service that you designate, typically a service that manages human agent support ticket queues, to pass off the conversation to a person. You can optionally include a message that summarizes the user's issue to be provided to the human agent. It is the responsibility of the external service to display a message that is shown to the user that explains that the conversation is being transferred. The dialog does not manage that communication itself. The dialog transfer does not occur when you are testing nodes with this response type in the "Try it out" pane. You must access a node that uses this response type from a test deployment to see how your users will experience it.
-
-  **Note**: This response type is supported with custom application integrations only.
-
 - **Image**: Embeds an image into the response. The source image file must be hosted somewhere and have a URL that you can use to reference it.
 - **Option**: Adds a list of one or more options. When a user clicks one of the options, an associated user input value is sent to the service. How options are rendered can differ depending on where you deploy the dialog. For example, in one integration channel the options might be displayed as clickable buttons, but in another they might be displayed as a dropdown list.
 - **Pause**: Forces the application to wait for a specified number of milliseconds before continuing with processing. You can choose to show an indicator that the dialog is working on typing a response. Use this response type if you need to perform an action that might take some time. For example, a parent node makes a Cloud Function call and displays the result in a child node. You could use this response type as the response for the parent node to give the programmatic call time to complete, and then jump to the child node to show the result. This response type does not render in the "Try it out" pane. You must access a node that uses this response type from a test deployment to see how your users will experience it.
@@ -355,9 +351,6 @@ To add a rich response, complete the following steps:
 
 1.  Click the drop-down menu in the response field to choose a response type, and then provide any required information:
 
-    - **Connect to human agent**. You can optionally add a message to share with the human agent to whom the conversation is transferred.
-
-        **Note**: This response type is only supported with custom application integrations. You must program the client application to recognize when this respones type is triggered.
     - **Image**. Add the full URL to the hosted image file into the **Image source** field. The image must be in .jpg, .gif, or .png format.
 
         For example: `https://www.example.com/assets/common/logo.png`.
@@ -426,6 +419,8 @@ To add a rich response, complete the following steps:
     **Note**: You cannot add more than 5 response types to a single response. Meaning, if you define three conditional responses for a dialog node, each conditional response can have no more than 5 response types added to it.
 
 1.  If you added more than one response type, you can click the **Move** up or down arrows to arrange the response types in the order you want the service to process them.
+
+For information about the JSON format of these rich response types, see [Defining responses using the JSON editor](dialog-responses-json.html).
 
 ### Conditional responses
 {: #multiple}
