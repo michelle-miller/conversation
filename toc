@@ -30,6 +30,8 @@ Watson Assistant
         dialog-slots.md
         dialog-actions.md
         dialog-api.md
+        dialog-responses-json.md
+        implement-responses.md
 
     {: .topicgroup}
     Deploying

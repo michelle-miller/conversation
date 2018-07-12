@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-30"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -154,12 +154,17 @@ Response:
 
 ```json
 "output": {
-    "text": {
+  "generic" : [
+    {
       "values": [
-        "The first item in the array is <?$nested.array.get(0)?>"
+        {
+        "text" : "The first item in the array is <?$nested.array.get(0)?>"
+        }
       ],
+      "response_type": "text",
       "selection_policy": "sequential"
     }
+  ]
   }
 ```
 {: codeblock}
@@ -184,7 +189,17 @@ Dialog node output:
 ```json
 {
   "output": {
+  "generic" : [
+    {
+      "values": [
+        {
     "text": "<? $toppings_array.getRandomItem() ?> is a great choice!"
+        }
+      ],
+      "response_type": "text",
+      "selection_policy": "sequential"
+    }
+  ]
   }
 }
 ```
@@ -214,7 +229,17 @@ Dialog node output:
 ```json
 {
   "output": {
+  "generic" : [
+    {
+      "values": [
+        {
     "text": "This is the array: <? $toppings_array.join(';') ?>"
+        }
+      ],
+      "response_type": "text",
+      "selection_policy": "sequential"
+    }
+  ]
   }
 }
 ```
@@ -506,8 +531,18 @@ Example of a dialog node with `now()` used in the output field:
 {
   "conditions": "#what_time_is_it",
   "output": {
-    "text": "<? now() ?>"
-   }
+    "generic": [
+      {
+        "values": [
+          {
+          "text": "<? now() ?>"
+          }
+        ],
+        "response_type": "text",
+        "selection_policy": "sequential"
+      }
+    ]
+  }
 }
 ```
 {: codeblock}
@@ -518,8 +553,18 @@ Example of `now()` in node's conditions (to decide if it is still morning):
 {
   "conditions": "now().before('12:00:00')",
   "output": {
-    "text": "Good morning!"
-   }
+      "generic": [
+        {
+        "values": [
+          {
+          "text": "Good morning!"
+          }
+        ],
+        "response_type": "text",
+        "selection_policy": "sequential"
+        }
+      ]
+  }
 }
 ```
 {: codeblock}
@@ -580,8 +625,18 @@ Example of a dialog node with `today()` used in the output field:
 {
   "conditions": "#what_day_is_it",
   "output": {
-    "text": "Today's date is <? today() ?>."
-   }
+    "generic": [
+      {
+        "values": [
+          {
+          "text": "Today's date is <? today() ?>."
+          }
+        ],
+        "response_type": "text",
+        "selection_policy": "sequential"
+      }
+    ]
+  }
 }
 ```
 {: codeblock}
@@ -608,8 +663,18 @@ To get tomorrow's date, specify the following expression:
 ```json
 {
   "output": {
-    "text": "Tomorrow's date is <? today().plusDays(1) ?>."
-   }
+    "generic": [
+      {
+        "values": [
+          {
+          "text": "Tomorrow's date is <? today().plusDays(1) ?>."
+          }
+        ],
+        "response_type": "text",
+        "selection_policy": "sequential"
+      }
+    ]
+  }
 }
 ```
 {: codeblock}
@@ -621,8 +686,18 @@ To get the date for the day a week from today, specify the following expression:
 ```json
 {
   "output": {
-    "text": "Next week's date is <? @sys-date.plusDays(7) ?>."
-   }
+    "generic": [
+      {
+        "values": [
+          {
+          "text": "Next week's date is <? @sys-date.plusDays(7) ?>."
+          }
+        ],
+        "response_type": "text",
+        "selection_policy": "sequential"
+      }
+    ]
+  }
 }
 ```
 {: codeblock}
@@ -634,8 +709,18 @@ To get last month's date, specify the following expression:
 ```json
 {
   "output": {
-    "text": "Last month the date was <? today().minusMonths(1) ?>."
-   }
+    "generic": [
+      {
+        "values": [
+          {
+          "text": "Last month the date was <? today().minusMonths(1) ?>."
+          }
+        ],
+        "response_type": "text",
+        "selection_policy": "sequential"
+      }
+    ]
+  }
 }
 ```
 {: codeblock}
@@ -660,8 +745,18 @@ To get the time an hour from now, specify the following expression:
 ```json
 {
   "output": {
-    "text": "One hour from now is <? now().plusHours(1) ?>."
-   }
+    "generic": [
+      {
+        "values": [
+          {
+          "text": "One hour from now is <? now().plusHours(1) ?>."
+          }
+        ],
+        "response_type": "text",
+        "selection_policy": "sequential"
+      }
+    ]
+  }
 }
 ```
 {: codeblock}
@@ -673,8 +768,18 @@ To get the time 30 minutes ago, specify the following expression:
 ```json
 {
   "output": {
-    "text": "A half hour before @sys-time is <? @sys-time.minusMinutes(30) ?>."
-   }
+    "generic": [
+      {
+        "values": [
+          {
+          "text": "A half hour before @sys-time is <? @sys-time.minusMinutes(30) ?>."
+          }
+        ],
+        "response_type": "text",
+        "selection_policy": "sequential"
+      }
+    ]
+  }
 }
 ```
 {: codeblock}
@@ -686,8 +791,18 @@ To reformat the time that is returned, you can use the following expression:
 ```json
 {
   "output": {
-    "text": "6 hours ago was <? now().minusHours(6).reformatDateTime('h:mm a') ?>."
-   }
+    "generic": [
+      {
+        "values": [
+          {
+          "text": "6 hours ago was <? now().minusHours(6).reformatDateTime('h:mm a') ?>."
+          }
+        ],
+        "response_type": "text",
+        "selection_policy": "sequential"
+      }
+    ]
+  }
 }
 ```
 {: codeblock}
@@ -801,12 +916,17 @@ You can use the the Class methods, including these:
     "bigger_number": "<? T(Math).max($number1,$number2) ?>"
   },
   "output": {
-    "text": {
-      "values": [
-        "The bigger number is $bigger_number."
-      ],
-      "selection_policy": "sequential"
-    }
+    "generic": [
+      {
+        "values": [
+          {
+          "text": "The bigger number is $bigger_number."
+          }
+        ],
+        "response_type": "text",
+        "selection_policy": "sequential"
+      }
+    ]
   }
 }
 ```
@@ -820,12 +940,17 @@ You can use the the Class methods, including these:
     "smaller_number": "<? T(Math).min($number1,$number2) ?>"
   },
   "output": {
-    "text": {
-      "values": [
-        "The smaller number is $smaller_number."
-      ],
-      "selection_policy": "sequential"
-    }
+    "generic": [
+      {
+        "values": [
+          {
+          "text": "The smaller number is $smaller_number."
+          }
+        ],
+        "response_type": "text",
+        "selection_policy": "sequential"
+      }
+    ]
   }
 }
 ```
@@ -839,12 +964,17 @@ You can use the the Class methods, including these:
     "power_of_two": "<? T(Math).pow($base.toDouble(),2.toDouble()) ?>"
   },
   "output": {
-    "text": {
-      "values": [
-        "Your number $base to the second power is $power_of_two."
-      ],
-      "selection_policy": "sequential"
-    }
+    "generic": [
+      {
+        "values": [
+          {
+          "text": "Your number $base to the second power is $power_of_two."
+          }
+        ],
+        "response_type": "text",
+        "selection_policy": "sequential"
+      }
+    ]
   }
 }
 ```
@@ -871,12 +1001,17 @@ Condition = @sys-number
     "answer": "<? new Random().nextInt(@sys-number.numeric_value + 1) ?>"
   },
   "output": {
-    "text": {
-      "values": [
-        "Here's a random number between 0 and @sys-number.literal: $answer."
-      ],
-      "selection_policy": "sequential"
-    }
+    "generic": [
+      {
+        "values": [
+          {
+          "text": "Here's a random number between 0 and @sys-number.literal: $answer."
+          }
+        ],
+        "response_type": "text",
+        "selection_policy": "sequential"
+      }
+    ]
   }
 }
 ```
@@ -947,16 +1082,22 @@ To use the method, you can specify it in an expression in a variable that you de
 
 ```json
 {
- "output": {
-  "text": {
-    "values": [
-      "Response for this node."
+  "output": {
+    "generic": [
+      {
+        "values": [
+          {
+          "text": "Response for this node."
+          }
+        ],
+        "response_type": "text",
+        "selection_policy": "sequential"
+      }
     ],
-    "selection_policy": "sequential"
-  },
-  "context_eraser": "<? context.clear() ?>"
- }
+    "context_eraser": "<? context.clear() ?>"
+  }
 }
+
 ```
 
 #### Clearing output
@@ -971,15 +1112,20 @@ To use the method, you can specify it in an expression in a variable that you de
 
 ```json
 {
- "output": {
-   "text": {
-     "values": [
-       "Have a great day."
-     ],
-     "selection_policy": "sequential"
-   },
-   "output_eraser": "<? output.clear() ?>"
- }
+  "output": {
+    "generic": [
+      {
+        "values": [
+          {
+          "text": "Have a great day!"
+          }
+        ],
+        "response_type": "text",
+        "selection_policy": "sequential"
+      }
+    ],
+    "output_eraser": "<? output.clear() ?>"
+  }
 }
 ```
 

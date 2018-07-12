@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-09"
+lastupdated: "2018-07-12"
 ---
 
 {:shortdesc: .shortdesc}
@@ -25,7 +25,9 @@ API requests require a version parameter that takes a date in the format `versio
 
 Send the version parameter with every API request. The service uses the API version for the date you specify, or the most recent version before that date. Don't default to the current date. Instead, specify a date that matches a version that is compatible with your app, and don't change it until your app is ready for a later version.
 
-The current version is `2018-02-16`.
+The current version is `2018-07-10`.
+
+The "Try it out" pane in the {{site.data.keyword.conversationshort}} tooling is using version 2018-07-10.
 
 ## Beta features
 
@@ -51,6 +53,31 @@ The method used to authenticate with IAM service instances is different from the
 {: #change-log}
 
 The following new features and changes to the service are available.
+
+### 12 July 2018
+{: #12July2018}
+
+- **Rich response types**: You can now add rich responses that include elements such as images or buttons in addition to text, to your dialog. See [Rich responses](dialog-overview.html#multimedia) for more information.
+
+- **Contextual entities (Beta)**: Contextual entities are entities that you define by labeling mentions of the entity type that occur in intent user examples. These entity types teach the service not only terms of interest, but also the context in which terms of interest typically appear in user utterances, enabling the service to recognize never-seen-before entity mentions based solely on how they are referenced in user input. For example, if you annotate the intent user example, "I want a flight to Boston" by labeling "Boston" as a @destination entity, then the service can recognize "Chicago" as a @destination in a user input that says, "I want a flight to Chicago." This feature is currently available for English only. See [Defining contextual entities](entities.html#defining-contextual-entities) for more information.
+
+  **Note**: When you access the tool with an Internet Explorer web browser, you cannot label entity mentions in intent user examples nor edit user example text.
+
+- **Entity recommendations**: The service can now recommend synonyms for your entity values. The recommender finds related synonyms based on contextual similarity extracted from a vast body of existing information, including large sources of written text, and uses natural language processing techniques to identify words similar to the existing synonyms in your entity value. For more information see [Synonyms](entities.html#synonyms).
+
+- **New API version**: The current API version is now `2018-07-10`. This version introduces the following changes:
+
+  - The content of the /message `output` object changed from being a `text` JSON object to being a `generic` array that supports multiple rich response types, including `image`, `option`, `pause`, and `text`.
+  - Support for contextual entities was added.
+
+- **Overview page date filter**: Use the new date filters to choose the period for which data is displayed. These filters affect all data shown on the page: not just the number of conversations displayed in the graph, but also the statistics displayed along with the graph, and the lists of top intents and entities. See [Controls](logs_oview.html#controls) for more information.
+
+- **Pattern limit expanded**: When using the **Patterns** field to [define specific patterns for an entity value](entities.html#patterns), the pattern (regular expression) is now limited to 512 characters.
+
+### 9 July 2018
+{: #9July2018}
+
+- **Jump-tos from conditional responses**: You can now configure a conditional response to jump directly to another node. See [Conditional responses](dialog-overview.html#multiple) for more details.
 
 ### 21 June 2018
 {: #21June2018}
@@ -84,7 +111,7 @@ The following new features and changes to the service are available.
 
 - **HTML rendering was added to Try it out**: The "Try it out" pane now renders HTML formatting that is included in response text. Previously, if you included a hypertext link as an HTML anchor tag in a text response, you would see the HTML source in the "Try it out" pane during testing. It used to look like this:
 
-  `Contact us at <a href="https://www.ibm.com>ibm.com</a>.`
+  `Contact us at <a href="https://www.ibm.com">ibm.com</a>.`
 
   Now, the hypertext link is rendered as if on a web page. It is displayed like this:
 
