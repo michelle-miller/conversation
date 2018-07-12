@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-29"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -37,7 +37,7 @@ Each dialog node contains, at a minimum, a condition and a response.
 ![Shows user input going to a box that contains the statement If: CONDITION, Then: RESPONSE](images/node1-empty.png)
 
 - Condition: Specifies the information that must be present in the user input for this node in the dialog to be triggered. The information might be a specific intent, an entity value, or a context variable value. See [Conditions](#conditions) for more information.
-- Response: The utterance that the service uses to respond to the user. The response can also be configured to trigger programmatic actions. See [Responses](#responses) for more information.
+- Response: The utterance that the service uses to respond to the user. The response can also be configured to show an image or a list of options, or to trigger programmatic actions. See [Responses](#responses) for more information.
 
 You can think of the node as having an if/then construction: if this condition is true, then return this response.
 
@@ -68,6 +68,7 @@ When the service reaches the end of a branch, or cannot find a condition that ev
 You can disrupt the standard first-to-last flow in the following ways:
 
 - By customizing what happens after a node is processed. For example, you can configure a node to jump directly to another node after it is processed, even if the other node is positioned earlier in the tree. See [Defining what to do next](dialog-overview.html#jump-to) for more information.
+- By configuring conditional responses to jump to other nodes. See [Conditional responses](dialog-overview.html#multiple) for more information.
 - By configuring digression settings for dialog nodes. Digressions can also impact how users move through the nodes at run time. If you enable digressions away from most nodes and configure returns, users can jump from one node to another and back again more easily. See [Digressions](dialog-runtime.html#digressions) for more information.
 
 ## Conditions
@@ -133,7 +134,7 @@ Use one of these syntax options to create valid expressions in conditions:
 
 - Shorthand notations to refer to intents, entities, and context variables. See [Accessing and evaluating objects](expression-language.html).
 
-- Spring Expression (SpEL) language, which is an expression language that supports querying and manipulating an object graph at runtime. See [Spring Expression Language (SpEL) language ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/expressions.html){: new_window} for more information.
+- Spring Expression (SpEL) language, which is an expression language that supports querying and manipulating an object graph at run time. See [Spring Expression Language (SpEL) language ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/expressions.html){: new_window} for more information.
 
 You can use regular expressions to check for values to condition against.  To find a matching string, for example, you can use the `String.find` method. See  [Methods](dialog-methods.html) for more details.
 
@@ -177,11 +178,11 @@ You can use regular expressions to check for values to condition against.  To fi
 
 The dialog response defines how to reply to the user.
 
-You can reply with one of these response types:
+You can reply in the following ways:
 
 - [Simple text response](#simple-text)
+- [Rich responses](#multimedia)
 - [Conditional responses](#multiple)
-- [Complex response](#complex)
 
 ### Simple text response
 {: #simple-text}
@@ -190,30 +191,69 @@ If you want to provide a text response, simply enter the text that you want the 
 
 ![Shows a node that shows a user ask, Where are you located, and the dialog response is, We have no brick and mortar stores! But, with an internet connection, you can shop us from anywhere.](images/response-simple.png)
 
-To include a context variable value in the response, use the syntax `$variable-name` to specify it. See [Context variables](dialog-runtime.html#context) for more information.
+To include a context variable value in the response, use the syntax `$variable_name` to specify it. See [Context variables](dialog-runtime.html#context) for more information. For example, if you know that the $user context variable is set to the current user's name before a node is proceseed, then you can refer to it in the text response of the node like this:
 
 ```
 Hello $user
 ```
 {: screen}
 
-If you include one of these special characters in your response, escape it by adding a backslash (`\`) in front of it. Escaping the character prevents the service from misinterpreting it as being one of the following artifact types:
+If the current user's name is `Norman`, then the response that is displayed to Norman is `Hello Norman`.
 
-| Artifact | Special Character | Example |
-|----------|-------------------|---------|
-| Context variable | `$` | `The transaction fee is \$2.` |
-| Entity | `@` | `Send us your feedback at feedback\@example.com.` |
-| Intent | `#` | `We are the \#1 seller of lobster rolls in Maine.` |
+If you include one of these special characters in a text response, escape it by adding a backslash (`\`) in front of it. Escaping the character prevents the service from misinterpreting it as being one of the following artifact types:
+
+| Special character | Artifact | Example |
+|-------------------|----------|---------|
+| `$` | Context variable | `The transaction fee is \$2.` |
+| `@` | Entity | `Send us your feedback at feedback\@example.com.` |
+| `#` | Intent | `We are the \#1 seller of lobster rolls in Maine.` |
 {: caption="Special characters to escape in responses" caption-side="top"}
 
-You can include a hypertext link in a response by using HTML syntax. For example: `Contact us at <a href="https://www.ibm.com>ibm.com</a>.` The HTML is rendered properly in the "Try it out" pane. However, be sure to test that the client application you use to deploy the assistant can render HTML syntax properly.
+You can include a hypertext link in a response by using HTML syntax. For example: `Contact us at <a href="https://www.ibm.com">ibm.com</a>.` The HTML is rendered properly in the "Try it out" pane. However, be sure to test that the client application you use to deploy the assistant can render HTML syntax properly.
+
+Learn more about the following tasks:
+
+- [Adding multiple lines](dialog-overview.html#multiline)
+- [Adding variety](dialog-overview.html#variety)
+
+#### Adding multiple lines
+{: #multiline}
+
+If you want a single text response to include multiple lines separated by carriage returns, then follow these steps:
+
+1.  Add each line that you want to show to the user as a separate sentence into its own response variation field. For example:
+
+  <table>
+  <caption>Multiple line response</caption>
+  <tr>
+    <th>Response variations</th>
+  </tr>
+  <tr>
+    <td>Hi.</td>
+  </tr>
+  <tr>
+    <td>How are you today?</td>
+  </tr>
+  </table>
+
+1.  For the response variation setting, choose **multiline**.
+
+    **Note**: If you are using a workspace that was created before support for rich response types was added to the service, then you might not see the *multiline* option. Add a second text response type to the current node response. This action changes how the response is represented in the underlying JSON. As a result, the multiline option becomes available. Choose the multiline variation type. Now, you can delete the second text response type that you added to the response.
+
+When the response is shown to the user, both response variations are displayed, one on each line, like this:
+
+```
+Hi.
+How are you today?
+```
+{: screen}
 
 #### Adding variety
 {: #variety}
 
 If your users return to your conversation service frequently, they might be bored to hear the same greetings and responses every time.  You can add *variations* to your responses so that your conversation can respond to the same condition in different ways.
 
-<iframe class="embed-responsive-item" id="youtubeplayer" title="Adding response variations" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/nAlIW3YPrAs?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
+<iframe class="embed-responsive-item" id="youtubeplayer0" title="Adding response variations" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/nAlIW3YPrAs?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
 
 In this example, the answer that the service provides in response to questions about store locations differs from one interaction to the next:
 
@@ -221,12 +261,173 @@ In this example, the answer that the service provides in response to questions a
 
 You can choose to rotate through the response variations sequentially or in random order. By default, responses are rotated sequentially, as if they were chosen from an ordered list.
 
+To change the sequence in which individual text responses are returned, complete the following steps:
+
+1.  Add each variation of the response into its own response variation field. For example:
+
+  <table>
+  <caption>Varying responses</caption>
+  <tr>
+    <th>Response variations</th>
+  </tr>
+  <tr>
+    <td>Hello.</td>
+  </tr>
+  <tr>
+    <td>Hi.</td>
+  </tr>
+  <tr>
+    <td>Howdy!</td>
+  </tr>
+  </table>
+
+1.  For the response variation setting, choose one of the following settings:
+
+    - **sequential**: The system returns the first response variation the first time the dialog node is triggered, the second response variation the second time the node is triggered, and so on, in the same order as you define the variations in the node.
+
+      Results in responses being returned in the following order when the node is processed:
+
+      - First time:
+
+        ```
+        Hello.
+        ```
+        {: screen}
+
+      - Second time:
+
+        ```
+        Hi.
+        ```
+        {: screen}
+
+      - Third time:
+
+        ```
+        Howdy!
+        ```
+        {: screen}
+
+    - **random**: The system randomly selects a text string from the variations list the first time the dialog node is triggered, and randomly selects another variation the next time, but without repeating the same text string consecutively.
+
+      Example of the order that responses might be returned in when the node is processed:
+
+      - First time:
+
+        ```
+        Howdy!
+        ```
+        {: screen}
+
+      - Second time:
+
+        ```
+        Hi.
+        ```
+        {: screen}
+
+      - Third time:
+
+        ```
+        Hello.
+        ```
+        {: screen}
+
+### Rich responses
+{: #multimedia}
+
+You can return responses with multimedia or interactive elements such as images or clickable buttons to simplify the interaction model of your application and enhance the user experience.
+
+In addition to the default response type of **Text**, for which you specify the text to return to the user as a response, the following response types are supported:
+
+- **Image**: Embeds an image into the response. The source image file must be hosted somewhere and have a URL that you can use to reference it.
+- **Option**: Adds a list of one or more options. When a user clicks one of the options, an associated user input value is sent to the service. How options are rendered can differ depending on where you deploy the dialog. For example, in one integration channel the options might be displayed as clickable buttons, but in another they might be displayed as a dropdown list.
+- **Pause**: Forces the application to wait for a specified number of milliseconds before continuing with processing. You can choose to show an indicator that the dialog is working on typing a response. Use this response type if you need to perform an action that might take some time. For example, a parent node makes a Cloud Function call and displays the result in a child node. You could use this response type as the response for the parent node to give the programmatic call time to complete, and then jump to the child node to show the result. This response type does not render in the "Try it out" pane. You must access a node that uses this response type from a test deployment to see how your users will experience it.
+
+#### Adding rich responses
+{: #add-multimedia}
+
+To add a rich response, complete the following steps:
+
+1.  Click the drop-down menu in the response field to choose a response type, and then provide any required information:
+
+    - **Image**. Add the full URL to the hosted image file into the **Image source** field. The image must be in .jpg, .gif, or .png format.
+
+        For example: `https://www.example.com/assets/common/logo.png`.
+
+        If you want to display an image title and description above the embedded image in the response, then add them in the fields provided.
+
+    - **Option**. Complete the following steps:
+
+      1.  Click **Add option**.
+      1.  In the **List label** field, enter the option to display in the list.
+      1.  In the corresponding **Value** field, enter the user input to pass to the service when this option is selected.
+
+          Specify a value that you know will trigger the correct intent when it is submitted. For example, it might be a user example from the training data for the intent.
+      1.  Repeat the previous steps to add more options to the list.
+      1.  Optionally, add a list introduction in the **Title** field and additional information in the **Description** field to be displayed above the option list in the response.
+
+      For example, you can construct a response like this:
+
+        <table>
+        <caption>Response options</caption>
+        <tr>
+          <th>List title</th>
+          <th>List description</th>
+          <th>Option label</th>
+          <th>User input submitted when clicked</th>
+        </tr>
+        <tr>
+          <td>Insurance types</td>
+          <td>Which of these items do you want to insure?</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>Boat</td>
+          <td>I want to buy boat insurance</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>Car</td>
+          <td>I want to buy car insurance</td>
+        </tr>
+         <tr>
+          <td></td>
+          <td></td>
+          <td>Home</td>
+          <td>I want to buy home insurance</td>
+        </tr>
+        </table>
+
+    - **Pause**. Add the length of time for the pause to last as a number of milliseconds (ms) to the **Duration** field.
+
+        The value cannot exceed 10,000 ms. Users are typically willing to wait about 8 seconds (8,000 ms) for someone to enter a response. To prevent a typing indicator from being displayed during the pause, choose **Off**.
+
+        Add another response type, such as a text response type, after the pause to clearly denote that the pause is over.
+        {: tip}
+
+    - **Text**. Add the text to return to the user in the text field. Optionally, choose a variation setting for the text response. See [Simple text response](dialog-overview.html#simple-text) for more details.
+
+1.  Click **Add response type** to add another response type to the current response.
+
+    You might want to add multiple response types to a single response to provide a richer answer to a user query. For example, if a user asks for store locations, you could show a map and display a button for each store location that the user can click to get address details. To build that type of response, you can use a combination of image, options, and text response types. Another example is using a text response type before a pause response type so you can warn users before pausing the dialog.
+
+    **Note**: You cannot add more than 5 response types to a single response. Meaning, if you define three conditional responses for a dialog node, each conditional response can have no more than 5 response types added to it.
+
+1.  If you added more than one response type, you can click the **Move** up or down arrows to arrange the response types in the order you want the service to process them.
+
+For information about the JSON format of these rich response types, see [Defining responses using the JSON editor](dialog-responses-json.html).
+
 ### Conditional responses
 {: #multiple}
 
 A single dialog node can provide different responses, each one triggered by a different condition.  Use this approach to address multiple scenarios in a single node.
 
-<iframe class="embed-responsive-item" id="youtubeplayer" title="Adding conditional responses" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/Q5_-f7_Iyvg?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
+<iframe class="embed-responsive-item" id="youtubeplayer1" title="Adding conditional responses" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/Q5_-f7_Iyvg?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
 
 The node still has a main condition, which is the condition for using the node and processing the conditions and responses that it contains.
 
@@ -243,83 +444,17 @@ To add conditional responses to a node, complete the following steps:
     The node response section changes to show a pair of condition and response fields. You can add a condition and a response into them.
 1.  To customize a response further, click the **Edit response** ![Edit response](images/edit-slot.png) icon next to the response.
 
-    You must open the response for editing to change the value of a context variable when the response is triggered, for example. You update or add context values for each individual conditional response; there is no common JSON editor that shows you the context information for all of the responses at once.
+    You must open the response for editing to complete the following tasks:
+
+    - **Update context**. To change the value of a context variable when the response is triggered, specify the context value in the context editor. You update context for each individual conditional response; there is no common context editor or JSON editor for all conditional responses.
+    - **Add rich responses**. To add more than one text response or to add response types other than text responses to a single conditional response, you must open the edit response view.
+    - **Configure a jump**. To instruct the service to jump to a different node after this conditional response is processed, select **Jump to** from the *And finally* section of the response edit view. Identify the node that you want the service to process next. See [Configuring the Jump to action](dialog-overview.html#jump-to-config) for more information.
+
+      A **Jump to** action that is configured for the node is not processed until all of the conditional responses are processed. Therefore, if a conditional response is configured to jump to another node, and the conditional response is triggered, then the jump configured for the node is never processed, and so does not occur.
 
 1.  Click **Add response** to add another conditional response.
 
-The conditions within a node are evaluated in order, just as nodes are. Be sure that your conditional responses are listed in the correct order. If you need to change the order, select a condition and response pair and move it up or down in the list using the arrows that are displayed. A **Jump to** action that is configured for the node is not processed until after all of the conditional responses are processed.
-
-### A complex response
-{: #complex}
-
-To specify a more complex response, you can use the JSON editor to specify the response in the `"output":{}` property. The output.text field is always stored as a JSON array. If you try to save it in any other format, your text is replaced with an empty JSON array.
-
-To specify more than one statement that you want to display on separate lines, define the output as a JSON array.
-
-```json
-{
-  "output": {
-    "text": ["Hello there.", "How are you?"]
-  }
-}
-```
-{: codeblock}
-
-The first sentence is displayed on one line, and the second sentence is displayed as a new line after it.
-
-To implement more complex behavior, you can define the output text as a complex JSON object. For example, you can use a complex object in the JSON output to mimic the behavior of adding response variations to the node. You can include the following properties in the complex object:
-
-- **values**: A JSON array of strings that holds multiple versions of output text that this dialog node can return. The order in which values in the array are returned depends on the attribute `selection_policy`.
-
-- **selection_policy**: The following values are valid:
-
-    - **random**: The system randomly selects output text from the `values` array and does not repeat them consecutively. For example, consider output.text that contains three values. For the first three times, a random value is selected but not repeated another time. After all the output values are given, the system randomly selects another value and repeats the process.
-
-        ```json
-        {
-            "output":{
-                "text":{
-                    "values":["Hello.","Hi.","Howdy!"],
-                    "selection_policy":"random"
-                }
-            }
-        }
-        ```
-        {: codeblock}
-
-    The system returns one greeting from these three options that it picks at random. The next time the response is triggered, another greeting from the list is displayed. The greeting is again chosen at random, except the previously used greeting is intentionally not repeated.
-
-    - **sequential**: The system returns the first output text the first time the dialog node is triggered, the second output text the second time the node is triggered, and so on.
-
-        ```json
-        {
-            "output":{
-                "text":{
-                    "values":["Hello.", "Hi.", "Howdy!"],
-                    "selection_policy":"sequential"
-                }
-            }
-        }
-        ```
-        {: codeblock}
-
-- **append**: Specifies whether to append a value to an array or overwrite the values in the array with the new value or values. When set to false, the output collected in previously executed dialog nodes is overwritten by the text value specified in this particular node.
-
-    ```json
-    {
-        "output":{
-            "text":{
-                "values": ["Hello."],
-                "append":false
-            }
-        }
-    }
-    ```
-    {: codeblock}
-
-    In this case, all other output text is overwritten by this output text.
-
-The default behavior assumes `selection_policy = random` and `append = true`. When the values array contains more than one item, the output text is randomly selected from its elements.
+The conditions within a node are evaluated in order, just as nodes are.  Be sure that your conditional responses are listed in the correct order.  If you need to change the order, select a condition and response pair and move it up or down in the list using the arrows that are displayed.
 
 ## Defining what to do next
 {: #jump-to}
@@ -346,6 +481,8 @@ If you choose to jump to another node, specify when the target node is processed
     - If the system processes all the siblings and none of the conditions evaluate to true, the basic fallback strategy is used, and the dialog evaluates the nodes at the base level of the dialog tree.
 
     Targeting the condition is useful for chaining the conditions of dialog nodes. For example, you might want to first check whether the input contains an intent, such as `#turn_on`, and if it does, you might want to check whether the input contains entities, such as `@lights`, `@radio`, or `@wipers`. Chaining conditions helps to structure larger dialog trees.
+
+    **Note**: Avoid choosing this option when configuring a jump-to from a conditional response that goes to a node situated above the current node in the dialog tree. Otherwise, you can create an infinite loop. If the service jumps to the earlier node and checks its condition, it is likely to return false because the same user input is being evaluated that triggered the current node last time through the dialog. The service will go to the next sibling or back to root to check the conditions on those nodes, and will likely end up triggering this node again, which means the process will repeat itself.
 
 - **Response**: If the statement targets the response section of the selected dialog node, it is run immediately. That is, the system does not evaluate the condition of the selected dialog node; it processes the response of the selected dialog node immediately.
 

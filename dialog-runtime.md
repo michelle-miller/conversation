@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-11"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -53,17 +53,51 @@ The body of the /message API call request and response includes the following ob
   ```
   {: codeblock}
 
-- `output`: The dialog response to display to the user. You can use this section to define objects, such as variables, that are not meant to be persisted. For example, if you want to permanently delete a context variable named `temp` that you defined elsewhere in the dialog, you can use the following expression to do so.
+- `output`: The dialog response to return to the user.
 
   ```json
   {
   "output": {
-    "text" : {},
-    "deleted_variable" : "<? context.remove('temp') ?>"
+    "generic": [
+      {
+        "values": [
+          {
+            "text": "This is my response text."
+          }
+        ],
+        "response_type": "text",
+        "selection_policy": "sequential"
+      }
+    ]
+  }
+  }
   ```
   {: codeblock}
 
-  See [A complex response](dialog-overview.html#complex) for more information about the output object.
+In the resulting API /message response, the text response is formatted as follows:
+
+```json
+{
+   "text": "This is my response text.",
+   "response_type": "text"
+}
+```
+
+**Note**: The following `output` object format is supported for backwards compatibility. Any workspaces that specify a text response by using this format will continue to function properly. With the introduction of rich response types, the `output.text` structure was augmented with the `output.generic` structure to facilitate supporting other types of responses in addition to text. Use the new format when you create new nodes to give yourself more flexibility, because you can subsequently change the response type, if needed.
+
+  ```json
+  {
+  "output": {
+    "text": {
+      "values": [
+        "This is my response text."
+      ]
+    }
+  }
+  ```
+  {: codeblock}
+
+There are response types other than a text response that you can define. See [Responses](dialog-overview.html#responses) for more details.
 
 You can learn more about the /message API call from the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/conversation/api/v1/){: new_window}.
 
@@ -155,7 +189,7 @@ To subsequently refer to these context variables, use the syntax `$name` where *
 
 For example, you might specify the following expression as the dialog response:
 
-`The customer, $age-year-old <? $full_name.first ?>, wants a pizza with <? $toppings_array.join(' and ') ?>, and then $dessert` 
+`The customer, $age-year-old <? $full_name.first ?>, wants a pizza with <? $toppings_array.join(' and ') ?>, and then $dessert.`
 
 The resulting output is displayed as follows:
 

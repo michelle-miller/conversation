@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-05"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -27,7 +27,7 @@ You can write expressions that access objects and properties of objects by using
 To expand variable values inside other variables or invoke methods on properties and global objects, use the `<? expression ?>` expression syntax. For example:
 
 - **Expanding a property**
-    - `"output":{"text":"Your name is <? context.userName ?>"}`
+    - `"output":{"generic":[{"values":[{"text":"Your name is <? context.userName ?>"}]...`
 
 - **Invoking methods on properties of global objects**
     - `"context":{"email": "<? @email.literal ?>"}`
