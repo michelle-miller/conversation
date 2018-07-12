@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-09"
+lastupdated: "2018-07-11"
 
 ---
 
@@ -90,13 +90,39 @@ Use the {{site.data.keyword.conversationshort}} tool to create entities.
 
       ![Screen capture of defining an entity](images/define_entity.png)
 
+      The {{site.data.keyword.conversationshort}} service can also recommend synonyms for your entity values. The recommender finds related synonyms based on contextual similarity extracted from a vast body of existing information, including large sources of written text, and uses natural language processing techniques to identify words similar to the existing synonyms in your entity value.
+
+    - Select `Show recommendations`
+
+      ![Synonym recommendation screen 1](images/synonym_1.png)
+
+    - The {{site.data.keyword.conversationshort}} service will make several recommendations for synonyms
+
+      **NOTE**: The more coherent your entity value synonyms are, the more relevant and better focused your recommendations will be. For example, if you have several words that are focused on a theme, you will get better suggestions than if you have one or two random words.
+
+      ![Synonym recommendation screen 2](images/synonym_2.png)
+
+    - Select any synonyms you want to include, and click `Add selected`
+
+      ![Synonym recommendation screen 3](images/synonym_3.png)
+
+    - The {{site.data.keyword.conversationshort}} service adds those synonyms to your entity, and suggests additional synonyms
+
+      **NOTE**: If you receive no additional synonym recommendations, it could be because your entity is already well defined, or it contains content that the recommender is not currently able to expand upon.
+
+      **NOTE**: If you choose not to select a recommended synonym, the system will treat that as a term you are not interested in, and will alter the next set of recommendations you see when you press `Add selected` or `Next set`.
+
+      ![Synonym recommendation screen 4](images/synonym_4.png)
+
+      Continue adding synonyms as desired. When you're finished accepting recommendations, click the `X` to close.
+
     ***Patterns***
     {: #patterns}
 
     - The **Patterns** field lets you define specific patterns for an entity value. A pattern **must** be entered as a regular expression in the field.
 
       - For each entity value, there can be a maximum of up to 5 patterns.
-      - Each pattern (regular expression) is limited to 128 characters.
+      - Each pattern (regular expression) is limited to 512 characters.
 
       ![Screen capture of defining a pattern entity](images/patternents1.png)
       {: #pattern-entities}
@@ -149,6 +175,82 @@ Use the {{site.data.keyword.conversationshort}} tool to create entities.
 {: #creating-results}
 
 The entity you created is added to the **Entities** tab, and the system begins to train itself on the new data.
+
+## Defining contextual entities
+
+When you define specific values for an entity, the service finds entity mentions only when a term in the user input exactly matches (or closely matches if fuzzy matching is enabled) a value or synonym defined. When you define a contextual entity, a model is trained on both the entity *value* and the *context* in which the entity is used in sentences that you annotate. This new contextual entity model enables the service to calculate a confidence score that identifies how likely a word or phrase is to be an instance of an entity, based on how it is used in the user input.
+
+### Creating contextual entities from the **Intents** tab
+{: #create-open-entities}
+
+In order to train a contextual entity model, you can take advantage of your intent examples, which provide readily-available sentences to annotate. Using intent user examples to define contextual entities does not affect the classification of an intent.
+
+1.  In the {{site.data.keyword.conversationshort}} tool, open your skill and then click the **Intents** tab. If **Intents** is not visible, use the ![Menu](images/Menu_16.png) menu to open the page.
+
+1.  Select an intent. For this example, the intent `#place_order` defines the order function for an online retailer.
+
+    ![Select #place_order intent](images/oe-intent.png)
+
+1.  Review the intent examples for potential entity values. Highlight a potential entity value from the intent examples, in this case `computer`.
+
+    ![Review intent examples](images/oe-intent-review.png)
+
+    **Note**: To directly edit an intent example, select the Edit icon ![Edit icon](images/oe-intent-edit.png) instead of highlighting a value for annotation.
+
+1.  A Search box opens, allowing you to search for an appropriate entity for the highlighted entity value.
+
+    ![Search box initial state](images/oe-intent-search1.png)
+
+1.  In this example, searching `prod` brings up matches for both the `@product` entity, and for entity values `shirt` and `pens`. This is an important distinction - `@product` is an entity that can contain multiple entity values, in this case `@product:pencil`, `@product:shirt` and `@product:pens`
+
+    ![Search box with search parameter prod](images/oe-intent-search2.png)
+
+    You can also create a new entity by choosing `@(create new entity)`.
+
+1.  Select `@product` to add `computer` as a value for that entity.
+
+    **NOTE**: You should create *at least* 10 annotations for each contextual entity; more annotations are recommended for production use.
+
+1.  Now, click the annotation you just created. A box will appear with the words `Go to: @product` at the bottom. Clicking that link will take you directly to the entity.
+
+    ![Verify value computer for product entity](images/oe-verify-value.png)
+
+### Working with counterexamples
+
+If you have an intent example with an annotation, and a word in that example is part of your entity values, but the value is **not** annotated, it is considered a counterexample:
+
+1.  The `#Customer_Care_Appointments` intent includes two intent examples with the word `visit`.
+
+    ![Visit examples intent](images/oe-counter-1.png)
+
+1.  In the first example, you want to annotate the word `visit` as an entity value of the `@meeting` entity. This makes `visit` equivalent to other `@meeting` entity values such as `appointment`, as in "I'd like to make an appointment" or "I'd like to schedule a visit".
+
+    ![@meeting entity](images/oe-counter-2.png)
+
+1.  For the second example, the word `visit` is being used in a different context than a meeting. In this case, you can select the word `appointment` from the intent example, and annotate it as an entity value of the `@meeting` entity. Because the word `visit` in the same example is not annotated, it will serve as a counterexample.
+
+    ![Visit unselected](images/oe-counter-3.png)
+
+### Viewing annotations from the **Entities** tab
+{: #annotate-open-entities}
+
+To see the intent examples you have used in annotating your contextual entities:
+
+1.  From the **Entities** tab, open an entity, for example, `@cuisine`.
+
+    ![Cuisine entity highlighted in list](images/oe-annotate1.png)
+
+1.  Select the *Annotation* view.
+
+    ![Annotation view selector highlighted](images/oe-annotate2.png)
+
+    If you have already [created annotated entities from the Intents tab](entities.html#create-open-entities), you will see a list of user examples with their associated intents.
+
+    **NOTE**: Contextual entities understand values that you have not explicitly defined. The system makes predictions about additional entity values based on how your user examples are annotated, and uses those values to train other entities. Any similar user examples are added to the *Annotation* view, so you can see how this option impacts training.
+
+    If you do not want your contextual entities to use this expanded understanding of entity values, select all the user examples in the *Annotation* view for that entity and choose **Delete**.
+
+    ![Examples and intents list](images/oe-annotate3a.png)
 
 ## Editing entities
 
