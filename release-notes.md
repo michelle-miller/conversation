@@ -54,6 +54,17 @@ The method used to authenticate with IAM service instances is different from the
 
 The following new features and changes to the service are available.
 
+### 13 July 2018
+{: #13July2018}
+
+- **Rich response types temporarily disabled**: The rich responses feature is being temporarily disabled to address an issue that can occur in edge cases. A code update is in the works that will support rich responses again soon.
+
+  If you edited any nodes that contain a custom JSON response in the `output` object that do not also contain a "text" (or "generic") object in the output, they might have been impacted.
+
+  The initial implementation replaced custom objects with an empty text object. For example, if your node contained a response like this: `{"output":{"buttons":{...}}` and you edited it since yesterday, it might have been replaced with `"output":{"text":{"values":[],"selection_policy":"sequential"}}}`.
+
+  The upcoming code change will prevent the removal of this type of custom output.
+
 ### 12 July 2018
 {: #12July2018}
 
