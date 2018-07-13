@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-07-13"
 
 ---
 
@@ -154,6 +154,8 @@ As you make changes to your dialog, you can test it at any time to see how it re
 If you determine that the wrong intents or entities are being recognized, you might need to modify your intent or entity definitions.
 
 If the correct intents and entities are being recognized, but the wrong nodes are being triggered in your dialog, make sure your conditions are written properly.
+
+See [Dialog building tips](dialog-tips.html) for tips that might help you as you get started.
 
 ## Searching your dialog
 {: #search}
