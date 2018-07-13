@@ -27,6 +27,7 @@ Watson Assistant
         dialog-overview.md
         dialog-runtime.md
         dialog-build.md
+        dialog-tips.md
         dialog-slots.md
         dialog-actions.md
         dialog-api.md

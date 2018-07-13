@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-07-13"
 
 ---
 
@@ -152,11 +152,11 @@ Use the {{site.data.keyword.conversationshort}} tool to create entities.
       Grouping can be helpful if, for example, you wanted the {{site.data.keyword.conversationshort}} service to ask users for their phone number, and then use only the area code of their provided number in a response.
 
       In order to assign the user-entered area code as a context variable, the following syntax can be used to capture the group match within the dialog node's response section:
-      
+
       - Variable: area_code
       - Value: `<? @fullUSphone.groups[1] ?>` 
 
-      For additional information about using capture groups in dialog runtime, see [Storing pattern entity values](dialog-runtime.html#context-pattern-entities).
+      For additional information about using capture groups in your dialog, see [Storing and recognizing entity pattern groups in input](dialog-tips.html#get-pattern-entities).
 
       The pattern matching engine employed by the {{site.data.keyword.conversationshort}} service has some syntax limitations, which are necessary in order to avoid performance concerns which can occur when using other regular expression engines.
         - Entity patterns may not contain:
