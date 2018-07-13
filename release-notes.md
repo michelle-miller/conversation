@@ -27,7 +27,7 @@ Send the version parameter with every API request. The service uses the API vers
 
 The current version is `2018-07-10`.
 
-The "Try it out" pane in the {{site.data.keyword.conversationshort}} tooling is using version 2018-07-10.
+The "Try it out" pane in the {{site.data.keyword.conversationshort}} tooling is using version `2017-05-26`.
 
 ## Beta features
 
