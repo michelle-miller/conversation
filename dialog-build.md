@@ -155,7 +155,7 @@ If you determine that the wrong intents or entities are being recognized, you mi
 
 If the correct intents and entities are being recognized, but the wrong nodes are being triggered in your dialog, make sure your conditions are written properly.
 
-See [Dialog tips](dialog-tips.html) for tips that might help you as you get started.
+See [Dialog building tips](dialog-tips.html) for tips that might help you as you get started.
 
 ## Searching your dialog
 {: #search}
