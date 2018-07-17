@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -113,7 +113,7 @@ You have successfully supplemented your training data with prebuilt content prov
 ## Step 5: Build a dialog
 {: #build-dialog}
 
-A [dialog](dialog-build.html) defines the flow of your conversation in the form of a logic tree. Each node of the tree has a condition that triggers it, based on user input.
+A [dialog](dialog-build.html) defines the flow of your conversation in the form of a logic tree. It matches intents (what users say) to responses (what the bot says back). Each node of the tree has a condition that triggers it, based on user input.
 
 We'll create a simple dialog that handles our #hello and #goodbye intents, each with a single node.
 
@@ -131,7 +131,7 @@ We'll create a simple dialog that handles our #hello and #goodbye intents, each 
     ![Shows the Welcome node open in edit view](images/gs-edit-welcome-node.png)
 1.  Click ![Close](images/close.png) to close the edit view.
 
-You created a dialog node that is triggered by the `welcome` condition, which is a special condition that indicates that the user has started a new conversation. Your node specifies that when a new conversation starts, the system should respond with the welcome message.
+You created a dialog node that is triggered by the `welcome` condition. (`welcome` is a special condition that functions like an intent, but does not begin with a `#`.) It is triggered when a new conversation starts. Your node specifies that when a new conversation starts, the system should respond with the welcome message that you add to the response section of this first node.
 
 ### Testing the start node
 
