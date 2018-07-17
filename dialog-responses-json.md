@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -125,10 +125,16 @@ This example displays an image with a title and descriptive text.
 
 ```json
 {
-  "response_type": "image",
-  "source": "http://example.com/image.jpg",
-  "title": "Example image",
-  "description": "An example image returned as part of a multimedia response."
+  "output": {
+    "generic":[
+      {
+        "response_type": "image",
+        "source": "http://example.com/image.jpg",
+        "title": "Example image",
+        "description": "An example image returned as part of a multimedia response."
+      }
+    ]
+  }
 }
 ```
 
@@ -161,33 +167,39 @@ This example displays two options:
 
 ```json
 {
-  "response_type": "option",
-  "title": "Choose from the following options:",
-  "preference": "button",
-  "options": [
-    {
-      "label": "Buy something",
-      "value": {
-        "input": {
-          "text": "Place order"
-        }
-      }
-    },
-    {
-      "label": "Exit",
-      "value": {
-        "input": {
-          "text": "Exit"
-        },
-        "intents": [
+  "output": {
+    "generic":[
+      {
+        "response_type": "option",
+        "title": "Choose from the following options:",
+        "preference": "button",
+        "options": [
           {
-            "intent": "exit_app",
-            "confidence": 1.0
+            "label": "Buy something",
+            "value": {
+              "input": {
+                "text": "Place order"
+              }
+            }
+          },
+          {
+            "label": "Exit",
+            "value": {
+              "input": {
+                "text": "Exit"
+              },
+              "intents": [
+                {
+                  "intent": "exit_app",
+                  "confidence": 1.0
+                }
+              ]
+            }
           }
         ]
       }
-    }
-  ]
+    ]
+  }
 }
 ```
 
@@ -211,9 +223,15 @@ This examples sends the "user is typing" event while pausing for 5 seconds.
 
 ```json
 {
-  "response_type": "pause",
-  "time": 5000,
-  "typing": true
+  "output": {
+    "generic":[
+      {
+        "response_type": "pause",
+        "time": 5000,
+        "typing": true
+      }
+    ]
+  }
 }
 ```
 
@@ -239,11 +257,17 @@ This examples displays a greeting message to the user.
 
 ```json
 {
-"response_type": "text",
-"values": [
-  { "text": "Hello." },
-  { "text": "Hi there." }
-  ],
-"selection_policy": "random"
-}
+  "output": {
+    "generic":[
+      {
+        "response_type": "text",
+        "values": [
+          { "text": "Hello." },
+          { "text": "Hi there." }
+        ],
+        "selection_policy": "random"
+      }
+    ]
+  }
+}  
 ```
