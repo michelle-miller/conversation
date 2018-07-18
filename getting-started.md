@@ -37,7 +37,7 @@ You created your service instance. Click **Manage**, then **Open tool**. Go to S
 
 If you created a {{site.data.keyword.conversationshort}} service instance, you're all set with these prerequisites. Go to [Step 1](#launch-tool).
 
-1.  Go to the [{{site.data.keyword.conversationshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")]( https://console.bluemix.net/catalog/services/conversation) page in the {{site.data.keyword.Bluemix_notm}} Catalog.
+1.  Go to the [{{site.data.keyword.conversationshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/conversation) page in the {{site.data.keyword.Bluemix_notm}} Catalog.
 1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
 1.  Click **Create**.
 

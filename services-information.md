@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-17"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -53,18 +53,18 @@ If you want to upgrade from one plan to another, see [Upgrading](upgrading.html)
 
 IBM Cloud has a network of global data centers that provide performance benefits to its cloud services. See [IBM Cloud global data centers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/data-centers/){: new_window} for more details.
 
-{{site.data.keyword.cloud_notm}} is migrating from managing user access with Cloud Foundry to using token-based Identity and Access Management (IAM) authentication. IAM is being rolled out in different regions at different times.
+{{site.data.keyword.cloud_notm}} is migrating from managing user access with Cloud Foundry to using token-based Identity and Access Management (IAM) authentication. IAM is being rolled out in different locations at different times.
 
-You can create {{site.data.keyword.conversationshort}} service instances that are hosted in the following data center regions:
+You can create {{site.data.keyword.conversationshort}} service instances that are hosted in the following data center locations:
 
-| Region      | Region code | Authentication type | IAM adoption date | Notes |
-|-------------|-------------|---------------------|-------------------|-------|
-| Sydney      | syd         | IAM                 | 7 May 2018 | Instances created before May 7 were syndicated to the US South data center |
-| Germany     | eu-de       | Cloud Foundry       | Planned for July | N/A |
-| United Kingdom |  eu-gb   | N/A                 | All Instances are syndicated to the US South data center |
-| US East     | us-east     | IAM                 | 14 June 2018 | N/A |
-| US South    | us-south    | Cloud Foundry       | Planned for July | N/A |
-{: caption="Data center regions" caption-side="top"}
+| Location    | Location code | Authentication type | IAM adoption date | Notes |
+|-------------|---------------|---------------------|-------------------|-------|
+| Sydney      | syd           | IAM                 | 7 May 2018 | Instances created before May 7 were syndicated to the US South data center |
+| Germany     | eu-de         | Cloud Foundry       | Planned for July | N/A |
+| United Kingdom |  eu-gb     | N/A                 | All Instances are syndicated to the US South data center |
+| US East     | us-east       | IAM                 | 14 June 2018 | N/A |
+| US South    | us-south      | Cloud Foundry       | Planned for July | N/A |
+{: caption="Data center locations" caption-side="top"}
 
 ## Authenticating API calls
 {: #authenticate-api-calls}
@@ -73,9 +73,17 @@ The authentication mechanism used by your service instance impacts how you must 
 
 1.  Get the service credentials.
 
-    - Click the service instance on the [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps?watson){: new_window}.
+    - Click the service instance on the [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps?category=watson){: new_window}.
 
     - Click to open your service instance, click **Service credentials**, and then click **View credentials**.
+
+      **Cloud Foundry credentials**
+
+      ![Shows the service credentials page for Cloud Foundry-hosted instances.](images/cf-cred-ui.png)
+
+      **IAM credentials**
+
+      ![Shows the service credentials page for IAM-hosted instances.](images/iam-creds.png)
 
 1.  Use these credentials in your API call.
 
@@ -92,7 +100,7 @@ The authentication mechanism used by your service instance impacts how you must 
 
      **IAM API call**
 
-    - The base url must include the region. Use the syntax `gateway-<region>.watsonplatform.net` to specify the region in which you created the service instance. The region codes are listed in the *Data center regions* table above.
+    - The base url must include the location. Use the syntax `gateway-<location>.watsonplatform.net` to specify the location in which you created the service instance. The location codes are listed in the *Data center locations* table.
     - Provide the appropriate type of token in the header. You can pass either a bearer token or an API key.
 
       - Tokens support authenticated requests without embedding service credentials in every call. The following example shows a bearer token being used.
@@ -112,11 +120,13 @@ The authentication mechanism used by your service instance impacts how you must 
         ```
         {: codeblock}
 
-        **Note**: When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/assistant/api/v1/curl.html?curl#authentication){: new_window} in the API reference.
+        **Note**: When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens.
 
-      See [Authenticating with IAM tokens ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/watson/getting-started-iam.html){: new_window}.
+        IAM resources cannot be managed with the Cloud Foundry Command Line Interface (CLI). For example, Cloud Foundry CLI commands (beginning with `cf`) that create or manage service instances do not work with instances hosted in locations using IAM. Instead, you must use the IBM Cloud CLI and its associated commands. See [Commands for managing resource groups and resources](https://console.bluemix.net/docs/cli/reference/bluemix_cli/bx_cli.html#commands-for-managing-resource-groups-and-resources) for more details.
 
-IAM resources cannot be managed with the Cloud Foundry Command Line Interface (CLI). For example, Cloud Foundry CLI commands (beginning with `cf`) that create or manage service instances do not work with instances hosted in regions using IAM. Instead, you must use the IBM Cloud CLI and its associated commands. See [Commands for managing resource groups and resources](https://console.bluemix.net/docs/cli/reference/bluemix_cli/bx_cli.html#commands-for-managing-resource-groups-and-resources) for more details.
+        See [Authenticating with IAM tokens ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/watson/getting-started-iam.html){: new_window} for more information.
+
+    For examples, see  [Authentication ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/assistant/api/v1/node.html?node#authentication){: new_window} for your language in the API reference.
 
 For information about the data centers in which other IBM Cloud services are hosted, see [Services by region ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/resources/services_region.html#services_region){: new_window}.
 
