@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-11"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -68,7 +68,7 @@ The top part of the page includes the following controls:
 
     ![Time period control](images/oview-time2.png)
 
-   A week always runs from Monday through Sunday. Use a custom range if you want to filter by different start and end dates for a week or month, such as a week that runs from Thursday to the following Wednesday, or a month that begins on any date other than the first. If the last interval of the selected date range is incomplete, the graph will show as a dotted line.
+   A week always runs from Monday through Sunday. This means that the selection "This week" means displays data since the start of the previous Monday, which may not be a full week. Likewise, the selections "Past 2 weeks" and "Past 3 weeks", may display a partial current week plus one or two previous weeks. Use a custom range if you want to filter by different start and end dates for a week or month, such as a week that runs from Thursday to the following Wednesday, or a month that begins on any date other than the first. If the last interval of the selected date range is incomplete, the graph will show as a dotted line.
 
     ![Incomplete interval](images/oview-dotted.png)
 
