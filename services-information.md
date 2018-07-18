@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-06"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -66,36 +66,55 @@ You can create {{site.data.keyword.conversationshort}} service instances that ar
 | US South    | us-south    | Cloud Foundry       | Planned for July | N/A |
 {: caption="Data center regions" caption-side="top"}
 
+## Authenticating API calls
+{: #authenticate-api-calls}
+
 The authentication mechanism used by your service instance impacts how you must provide credentials when making an API call.
 
-### Cloud Foundry API calls
-{: #cf-api}
+1.  Get the service credentials.
 
-- Provide your username and password credentials.
+    - Click the service instance on the [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps?watson){: new_window}.
 
-```curl
-curl -X GET \
- --user {username}:{password} \
-   'https://gateway.watson.net/assistant/api/v1/workspaces?version=2017-05-26'
-```
-{: codeblock}
+    - Click to open your service instance, click **Service credentials**, and then click **View credentials**.
 
-### IAM API calls
-{: #iam-api}
+1.  Use these credentials in your API call.
 
-- The base url must include the region. Use the syntax `gateway-<region>.watsonplatform.net` to specify the region in which you created the service instance. The region codes are listed in the *Data center regions* table above.
-- Provide the appropriate type of token in the header. You can pass either a bearer token or an API key. Tokens support authenticated requests without embedding service credentials in every call. API keys use basic authentication. In the following example, a bearer token is being used. See [Authenticating with IAM tokens ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/watson/getting-started-iam.html){: new_window}.
+    **Cloud Foundry API call**
 
-```curl
-curl -X GET \
-'https://gateway-syd.watsonplatform.net/assistant/api/v1/workspaces?version=2017-05-26' \
- --header 'Authorization: Bearer eyJhbGciOiJIUz......sgrKIi8hdFs'
-```
-{: codeblock}
+    Provide your username and password credentials.
 
-If you are not sure which type of authentication to use, view the service credentials by clicking the service instance on the [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps?watson){: new_window}.
+    ```curl
+    curl -X GET \
+    --user {username}:{password} \
+    'https://gateway.watson.net/assistant/api/v1/workspaces?version=2017-05-26'
+    ```
+    {: codeblock}
 
-When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/assistant/api/v1/curl.html?curl#authentication){: new_window} in the API reference.
+     **IAM API call**
+
+    - The base url must include the region. Use the syntax `gateway-<region>.watsonplatform.net` to specify the region in which you created the service instance. The region codes are listed in the *Data center regions* table above.
+    - Provide the appropriate type of token in the header. You can pass either a bearer token or an API key.
+
+      - Tokens support authenticated requests without embedding service credentials in every call. The following example shows a bearer token being used.
+
+        ```curl
+        curl -X GET \
+        'https://gateway-syd.watsonplatform.net/assistant/api/v1/workspaces?version=2017-05-26' \
+        --header 'Authorization: Bearer eyJhbGciOiJIUz......sgrKIi8hdFs'
+        ```
+        {: codeblock}
+
+      - API keys use basic authentication. The following example shows an apikey being used.
+
+        ```curl
+        curl -X GET -u "apikey:3Df... ...Y7Pc9" \
+        'https://gateway-us-east.watsonplatform.net/assistant/api/v1/workspaces?version=2017-05-26' \
+        ```
+        {: codeblock}
+
+        **Note**: When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/assistant/api/v1/curl.html?curl#authentication){: new_window} in the API reference.
+
+      See [Authenticating with IAM tokens ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/watson/getting-started-iam.html){: new_window}.
 
 IAM resources cannot be managed with the Cloud Foundry Command Line Interface (CLI). For example, Cloud Foundry CLI commands (beginning with `cf`) that create or manage service instances do not work with instances hosted in regions using IAM. Instead, you must use the IBM Cloud CLI and its associated commands. See [Commands for managing resource groups and resources](https://console.bluemix.net/docs/cli/reference/bluemix_cli/bx_cli.html#commands-for-managing-resource-groups-and-resources) for more details.
 

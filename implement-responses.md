@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-07-17"
 
 ---
 
@@ -61,10 +61,16 @@ The `image` response type instructs the client application to display an image, 
 
 ```json
 {
-  "response_type": "image",
-  "source": "http://example.com/image.jpg",
-  "title": "Image example",
-  "description": "This is an example image"
+  "output": {
+    "generic":[
+      {
+        "response_type": "image",
+        "source": "http://example.com/image.jpg",
+        "title": "Image example",
+        "description": "This is an example image"
+      }
+    ]
+  }
 }
 ```
 
@@ -76,28 +82,34 @@ The `option` response type instructs the client application to display a user in
 
 ```json
 {
-  "response_type": "option",
-  "title": "Available options",
-  "description": "Please select one of the following options:",
-  "preference": "button",
-  "options": [
-    {
-      "label": "Option 1",
-      "value": {
-        "input": {
-          "text": "option 1"
-        }
+  "output": {
+    "generic":[
+      {
+        "response_type": "option",
+        "title": "Available options",
+        "description": "Please select one of the following options:",
+        "preference": "button",
+        "options": [
+          {
+            "label": "Option 1",
+            "value": {
+              "input": {
+                "text": "option 1"
+              }
+            }
+          },
+          {
+            "label": "Option 2",
+            "value": {
+              "input": {
+                "text": "option 2"
+              }
+            }
+          }
+        ]
       }
-    },
-    {
-      "label": "Option 2",
-      "value": {
-        "input": {
-          "text": "option 2"
-        }
-      }
-    }
-  ]
+    ]
+  }
 }
 ```
 
@@ -111,9 +123,15 @@ The `pause` response type instructs the application to wait for a specified inte
 
 ```json
 {
-  "response_type": "pause",
-  "time": 500,
-  "typing": false
+  "output": {
+    "generic":[
+      {
+        "response_type": "pause",
+        "time": 500,
+        "typing": false
+      }
+    ]
+  }
 }
 ```
 
@@ -127,8 +145,14 @@ The `text` response type is used for ordinary text responses from the dialog:
 
 ```json
 {
-  "response_type": "text",
-  "text": "OK, you want to fly to Boston next Monday."
+  "output": {
+    "generic":[
+      {
+        "response_type": "text",
+        "text": "OK, you want to fly to Boston next Monday."
+      }
+    ]
+  }
 }
 ```
 
