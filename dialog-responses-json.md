@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-17"
+lastupdated: "2018-07-18"
 
 ---
 
@@ -162,8 +162,10 @@ Displays a set of buttons or a drop-down list users can use to choose an option.
 
 This example displays two options:
 
-- Option 1 (labeled `Buy something`) sends a simple string message (`Place order`), which is sent to the workspace as the input text.
-- Option 2 (labeled `Exit`) sends a complex message that includes both input text and an array of intents. The response can include any field that is a valid part of a {{site.data.keyword.conversationshort}} message. (For more information about the structure of message input, see the [API Reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/conversation/api/v1/?curl#send_message){: new_window}.)
+- Option 1 (labeled `Buy something`) sends a simple string message (`Place order`).
+- Option 2 (labeled `Exit`) sends a simple string message (`Exit`).
+
+Whichever option is chosen by the user, its associated message is sent as input text to be evaluated by the service.
 
 ```json
 {
@@ -187,13 +189,7 @@ This example displays two options:
             "value": {
               "input": {
                 "text": "Exit"
-              },
-              "intents": [
-                {
-                  "intent": "exit_app",
-                  "confidence": 1.0
-                }
-              ]
+              }
             }
           }
         ]
