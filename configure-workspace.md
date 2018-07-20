@@ -101,11 +101,11 @@ After you create the service instance, you can give other people access to it. T
 
 To share a workspace with other people, you must give them access to the service instance that hosts the workspace.
 
-**Note**: New service instances created on IBM Cloud are using IBM Cloud Identity and Access Management (IAM) instead of being managed by Cloud Foundry. This transition is being rolled out at different times in different regions. During the transition, keep the following things in mind:
+**Note**: New service instances created on IBM Cloud are using IBM Cloud Identity and Access Management (IAM) instead of being managed by Cloud Foundry. This transition is being rolled out at different times in different locations. During the transition, keep the following things in mind:
 
   - If you are using a service instance that is managed by Cloud Foundry, then your steps will be slightly different from those described in the procedure below. For Cloud Foundry-managed instances, you must choose your organization from the *Cloud Foundry access* section, and then assign the person to the **Developer** space role.
 
-  If you are not sure which type of access management your instance uses, check the [release notes](release-notes.html) to find out whether IAM is being used in your region.
+  If you are not sure which type of access management your instance uses, check the [Data centers](services-information.html#regions) to find out whether IAM is being used in your location.
 
 1.  Go to the {{site.data.keyword.watson}} Developer Console [Projects ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/developer/watson/projects) page, and log in. Click **Manage > Account > Users** from the header menu.
 1.  Click **Invite users**, and then enter the email addresses of the people on your team to whom you want to give access.
