@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-20"
+lastupdated: "2018-07-30"
 
 ---
 
@@ -35,6 +35,13 @@ The number of entities, entity values, and synonyms that you can create depends 
 {: caption="Service plan details" caption-side="top"}
 
 System entities that you enable for use count toward your plan usage totals.
+
+| Service plan | Contextual entities and annotations |
+|--------------|------------------------------------:|
+| Premium      |        30 contextual entities with 3000 annotations |
+| Standard     |        20 contextual entities with 2000 annotations |
+| Lite         |        10 contextual entities with 1000 annotations |
+{: caption="Service plan details continued" caption-side="top"}
 
 ## Creating entities
 {: #creating-entities}
