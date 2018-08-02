@@ -194,7 +194,7 @@ You can export a number of intents to a CSV file, so you can then import and reu
 
     ![Screen shot shows where the Export icon is located on the Intents page](images/ExportIntent.png)
 
-## Resolving intent conflicts
+## Resolving intent conflicts ![Premium only](images/premium0.png)
 {: #conflict-intents}
 
 The {{site.data.keyword.conversationshort}} application detects a conflict when two or more intent examples in *separate* intents are so similar that {{site.data.keyword.conversationshort}} is confused as to which intent to use.
