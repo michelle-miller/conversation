@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-03"
+lastupdated: "2018-08-06"
 ---
 
 {:shortdesc: .shortdesc}
@@ -54,8 +54,8 @@ The method used to authenticate with IAM service instances is different from the
 
 The following new features and changes to the service are available.
 
-### 3 August 2018
-{: #3August2018}
+### 6 August 2018
+{: #6August2018}
 
 - **Intent conflict resolution ![Premium plan only](images/premium0.png)**: The tool can now help you to resolve conflicts when two or more user examples in separate intents are similar to one another. Non-distinct user examples can weaken the training data and make it harder for the service to map user input to the appropriate intent at run time. See [Resolving intent conflicts](intents.html#conflict-intents) for details.
 
