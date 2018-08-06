@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-14"
+lastupdated: "2018-08-06"
 ---
 
 {:shortdesc: .shortdesc}
@@ -54,6 +54,15 @@ The method used to authenticate with IAM service instances is different from the
 
 The following new features and changes to the service are available.
 
+### 6 August 2018
+{: #6August2018}
+
+- **Intent conflict resolution ![Premium plan only](images/premium0.png)**: The tool can now help you to resolve conflicts when two or more user examples in separate intents are similar to one another. Non-distinct user examples can weaken the training data and make it harder for the service to map user input to the appropriate intent at run time. See [Resolving intent conflicts](intents.html#conflict-intents) for details.
+
+- **Disambiguation** ![Premium plan only](images/premium0.png): Enable disambiguation to allow your assistant to ask the user for help when it needs to decide between two or more viable dialog nodes to process for a response. See [Disambiguation](dialog-runtime.html#disambiguation) for more details.
+
+- **Jump-to fix**: Fixed a bug in the Dialogs tool which prevented you from being able to configure a jump-to that targets the response of a node with the `anything_else` special condition.
+
 ### 12 July 2018
 {: #12July2018}
 
@@ -102,7 +111,7 @@ The following new features and changes to the service are available.
 
   When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/assistant/api/v1/curl.html?curl#authentication){: new_window} in the API reference.
 
-  If you are not sure which type of authentication to use, view the service credentials by clicking the service instance on the [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps?watson){: new_window}.
+  If you are not sure which type of authentication to use, view the service credentials by clicking the service instance on the [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps?category=ai){: new_window}.
 
 ### 25 May 2018
 {: #25May2018}

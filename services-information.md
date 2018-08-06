@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-18"
+lastupdated: "2018-08-03"
 
 ---
 
@@ -61,7 +61,7 @@ You can create {{site.data.keyword.conversationshort}} service instances that ar
 |-------------|---------------|---------------------|-------------------|-------|
 | Sydney      | syd           | IAM                 | 7 May 2018 | Instances created before May 7 were syndicated to the US South data center |
 | Germany     | eu-de         | Cloud Foundry       | Planned for August 2018 | N/A |
-| United Kingdom |  eu-gb     | N/A                 | Instances are syndicated to US South |
+| United Kingdom |  eu-gb     | N/A                 | N/A        | Instances are syndicated to US South |
 | US East     | us-east       | IAM                 | 14 June 2018 | N/A |
 | US South    | us-south      | Cloud Foundry       | Planned for August 2018 | N/A |
 {: caption="Data center locations" caption-side="top"}
