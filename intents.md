@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-31"
+lastupdated: "2018-08-06"
 
 ---
 
@@ -197,6 +197,9 @@ You can export a number of intents to a CSV file, so you can then import and reu
 ## Resolving intent conflicts ![Premium only](images/premium0.png)
 {: #conflict-intents}
 
+This feature is available only to Premium users.
+{: tip}
+
 The {{site.data.keyword.conversationshort}} application detects a conflict when two or more intent examples in *separate* intents are so similar that {{site.data.keyword.conversationshort}} is confused as to which intent to use.
 
 To resolve conflicts:
@@ -244,6 +247,10 @@ To resolve conflicts:
 {: #resolving-intent-conflict-results}
 
 You have resolved a conflict, and can continue your review of other intents with conflicts.
+
+Watch this video to learn more.
+
+<iframe class="embed-responsive-item" id="youtubeplayer0" title="Intent conflict resolution overview" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/9gQtjCBxjdc?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
 
 ## Deleting intents
 {: #delete_intents}
