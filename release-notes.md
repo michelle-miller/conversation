@@ -27,7 +27,7 @@ Send the version parameter with every API request. The service uses the API vers
 
 The current version is `2018-07-10`.
 
-The "Try it out" pane in the {{site.data.keyword.conversationshort}} tooling is using version `2017-05-26`.
+The "Try it out" pane in the {{site.data.keyword.conversationshort}} tooling is using version `2018-07-10`.
 
 ## Beta features
 
@@ -60,6 +60,8 @@ The following new features and changes to the service are available.
 - **Intent conflict resolution ![Premium plan only](images/premium0.png)**: The tool can now help you to resolve conflicts when two or more user examples in separate intents are similar to one another. Non-distinct user examples can weaken the training data and make it harder for the service to map user input to the appropriate intent at run time. See [Resolving intent conflicts](intents.html#conflict-intents) for details.
 
 - **Disambiguation** ![Premium plan only](images/premium0.png): Enable disambiguation to allow your assistant to ask the user for help when it needs to decide between two or more viable dialog nodes to process for a response. See [Disambiguation](dialog-runtime.html#disambiguation) for more details.
+
+- **Digression return message**: You can now specify text to display when the user returns to a node after a digression. The user will have seen the prompt for the node already. You can change the message slightly to let users know they are returning to where they left off. For example, specify a response like, `Where were we? Oh, yes...` See [Digressions](dialog-runtime.html#digressions) for more details.
 
 - **Jump-to fix**: Fixed a bug in the Dialogs tool which prevented you from being able to configure a jump-to that targets the response of a node with the `anything_else` special condition.
 
