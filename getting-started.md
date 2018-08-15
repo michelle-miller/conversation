@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-17"
+lastupdated: "2018-08-08"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-07-17"
 # Getting started tutorial
 {: #gettingstarted}
 
-In this short tutorial, we introduce the {{site.data.keyword.conversationshort}} tool and go through the process of creating your first conversation.
+In this short tutorial, we introduce the {{site.data.keyword.conversationshort}} tool and go through the process of creating your first assistant.
 {: shortdesc}
 
 ## Before you begin
@@ -52,8 +52,14 @@ On the **Manage** page, click **Launch tool**.
 
 If you're prompted to log into the tool, provide your {{site.data.keyword.Bluemix_notm}} credentials.
 
-If you're not at a {{site.data.keyword.conversationshort}} service dashboard page, go to the [{{site.data.keyword.cloud_notm}} Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard) and select the {{site.data.keyword.conversationshort}} service instance.
+If you're not at a project details page for the {{site.data.keyword.conversationshort}} service, go to the {{site.data.keyword.watson}} Developer Console [Projects ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/watson/projects) page and select the project.
 {: tip}
+
+<!-- Remove this text after dedicated instances have the developer console: begin -->
+
+{{site.data.keyword.Bluemix_dedicated_notm}}: Select your service instance from the Dashboard to launch the tooling.
+
+<!-- Remove this text after dedicated instances have the Developer Console: end -->
 
 ## Step 2: Create a workspace
 {: #create-workspace}
@@ -64,109 +70,72 @@ A [*workspace*](configure-workspace.html) is a container for the artifacts that 
 
 1.  From the home page of the {{site.data.keyword.conversationshort}} tool, click the **Workspaces** tab.
 1.  Click **Create**.
+
+    ![Shows the service with no workspaces created yet.](images/gs-ass-service-created.png)
 1.  Give your workspace the name `{{site.data.keyword.conversationshort}} tutorial`. If the dialog you plan to build will use a language other than English, then choose the appropriate language from the list. Click **Create**. Youʼll land on the **Intents** tab of your new workspace.
 
-![Shows an animation of a user creating a {{site.data.keyword.conversationshort}} tutorial workspace.](images/gs-create-workspace-animated.gif){: gif}
+![Shows an animation of a user creating a {{site.data.keyword.conversationshort}} tutorial workspace.](images/gs-ass-create-workspace.gif){: gif}
 
-## Step 3: Create intents
-{: #create-intents}
-
-An [intent](intents.html) represents the purpose of a user's input. You can think of intents as the actions your users might want to perform with your application.
-
-For this example, we're going to keep things simple and define only two intents: one for saying hello, and one for saying goodbye.
-
-1.  Make sure you're on the Intents tab. (You should already be there, if you just created the workspace.)
-1.  Click **Add intent**.
-1.  Name the intent `hello`, and then click **Create intent**.
-1.  Type `hello` into the **Add user example** field, and then press **Enter**.
-
-   *Examples* tell the {{site.data.keyword.conversationshort}} service what kinds of user input you want to match to the intent. The more examples you provide, the more accurate the service can be at recognizing user intents.
-1.  Add four more examples:
-    - `good morning`
-    - `greetings`
-    - `hi`
-    - `howdy`
-
-1.  Click the **Close** ![Close arrow](images/close_arrow.png) icon to finish creating the #hello intent.
-1.  Create another intent named #goodbye with these five examples:
-    - `bye`
-    - `farewell`
-    - `goodbye`
-    - `I'm done`
-    - `see you later`
-
-You've created two intents, #hello and #goodbye, and provided example user input to train {{site.data.keyword.watson}} to recognize these intents in your users' input.
-
-![Shows Intents page listing the #goodbye and #hello intents](images/gs-add-intents-result.png)
-
-## Step 4: Add intents from a content catalog
+## Step 3: Add intents from a content catalog
 {: #add-catalog}
 
-Add training data that was built by IBM to your workspace by adding intents from a content catalog. In particular, you will give your assistant access to the `eCommerce` content catalog so your dialog can address user requests to complete common online transactions.
+Add training data that was built by IBM to your workspace by adding intents from a content catalog. In particular, you will give your assistant access to the `General` content catalog so your dialog can greet users, and end conversations with them.
 
 1.  In the {{site.data.keyword.conversationshort}} tool, click the **Content Catalog** tab.
-1.  Find **eCommerce** in the list, and then click **Add to workspace**.
-1.  Open the **Intents** tab to review the intents and associated example utterances that were added to your training data. You can recognize them because each intent name begins with the prefix `#eCommerce_`. You will add the `#eCommerce_Cancel_Product_Order` intent to your dialog in a later step.
+1.  Find **General** in the list, and then click **Add to workspace**.
 
-You have successfully supplemented your training data with prebuilt content provided by IBM.
+    ![Shows the Content Catalog and highlights the Add to workspace button for the General catalog.](images/gs-ass-add-general-catalog.png)
+1.  Open the **Intents** tab to review the intents and associated example utterances that were added to your training data. You can recognize them because each intent name begins with the prefix `#General_`. You will add the `#General_Greetings` and `#General_Ending` intents to your dialog in the next step.
 
-## Step 5: Build a dialog
+    ![Shows the intents that are displayed in the Intents tab after the General catalog is added.](images/gs-ass-general-added.png)
+
+You have successfully started to build your training data by adding prebuilt content from IBM to your workspace.
+
+## Step 4: Build a dialog
 {: #build-dialog}
 
-A [dialog](dialog-build.html) defines the flow of your conversation in the form of a logic tree. It matches intents (what users say) to responses (what the bot says back). Each node of the tree has a condition that triggers it, based on user input.
+A [dialog](dialog-build.html) defines the flow of your conversation in the form of a logic tree. Each node of the tree has a condition that triggers it, based on user input.
 
-We'll create a simple dialog that handles our #hello and #goodbye intents, each with a single node.
-
-### Adding a start node
+We'll create a simple dialog that handles the `#General_Greetings` and `#General_Ending` intents, each with a single node.
 
 1.  In the {{site.data.keyword.conversationshort}} tool, click the **Dialog** tab.
-1.  Click **Create**. You'll see two nodes:
+
+    ![Shows the empty Dialog tab.](images/gs-ass-empty-dialog.png)
+1.  Click **Create**.
+
+    You'll see two nodes:
     - **Welcome**: Contains a greeting that is displayed to your users when they first engage with the bot.
     - **Anything else**: Contains phrases that are used to reply to users when their input is not recognized.
 
-    ![Shows the dialog tree with the Welcome and Anything else nodes](images/gs-add-dialog-node-animated-cover.png)
+    ![Shows the dialog with the two default nodes, Welcome and Anything else.](images/gs-ass-dialog-init-nodes.png)
 1.  Click the **Welcome** node to open it in the edit view.
 1.  Replace the default response with the text, `Welcome to the {{site.data.keyword.conversationshort}} tutorial!`.
 
-    ![Shows the Welcome node open in edit view](images/gs-edit-welcome-node.png)
+    ![Shows the Welcome node open in edit view and that a revised response has been added.](images/gs-ass-edited-welcome-node.png)
 1.  Click ![Close](images/close.png) to close the edit view.
 
-You created a dialog node that is triggered by the `welcome` condition. (`welcome` is a special condition that functions like an intent, but does not begin with a `#`.) It is triggered when a new conversation starts. Your node specifies that when a new conversation starts, the system should respond with the welcome message that you add to the response section of this first node.
-
-### Testing the start node
-
-You can test your dialog at any time to verify the dialog. Let's test it now.
-
-- Click the ![Try it](images/ask_watson.png) icon to open the "Try it out" pane. You should see your welcome message.
-
-    ![Testing the dialog node](images/gs-tryitout-welcome-node.png)
-
-### Adding nodes to handle intents
-
-Now let's add nodes to handle our intents between the `Welcome` node and the `Anything else` node.
+    Now let's add nodes to handle our intents between the `Welcome` node and the `Anything else` node.
 
 1.  Click the More icon ![More options](images/kabob.png) on the **Welcome** node, and then select **Add node below**.
-1.  Type `#hello` in the **Enter a condition** field of this node. Then select the **#hello** option.
-1.  Add the response, `Good day to you.`
+1.  Type `#General_Greetings` in the **Enter a condition** field of this node. Then select the **`#General_Greetings`** option.
+1.  Add the response, `Good day to you!`
 1.  Click ![Close](images/close.png) to close the edit view.
 
-   ![Adding a hello node to the dialog.](images/gs-add-hello-node.png)
-1.  Click the More icon ![More options](images/kabob.png) on this node, and then select **Add node below** to create a peer node. In the peer node, specify `#eCommerce_Cancel_Product_Order` as the condition.
-1.  Add the following text as the response.
+   ![Adding a general greeting node to the dialog.](images/gs-ass-add-general-greeting.gif){: gif}
+1.  Click the More icon ![More options](images/kabob.png) on this node, and then select **Add node below** to create a peer node. In the peer node, specify `#General_Ending` as the condition, and `OK. See you later.` as the response.
 
-    `I can help you cancel your order.`
+1.  Click ![Close](images/close.png) to close the edit view.
 
-    ![Adding a cancel order node to the dialog.](images/gs-add-ecommerce-node.png)
-1.  Click the More icon ![More options](images/kabob.png) on this node, and then select **Add node below** to create another peer node. In the peer node, specify `#goodbye` as the condition, and `OK. See you later!` as the response.
+   ![Shows that a general ending node was also added to the dialog.](images/gs-ass-general-ending-added.png)
 
-   ![Adding a goodbye node to the dialog.](images/gs-add-goodbye-node.png)
+## Step 5: Test the dialog
 
-### Testing intent recognition
+You built a simple dialog to recognize and respond to both hello and goodbye inputs. Let's see how well it works.
 
-You  built a simple dialog to recognize and respond to both hello and goodbye inputs. Let's see how well it works.
+1.  Click the ![Ask Watson](images/ask_watson.png) icon to open the "Try it out" pane. The welcome message that you added is displayed.
 
-1.  Click the ![Try it](images/ask_watson.png) icon to open the "Try it out" pane. There's that reassuring welcome message.
-1.  At the bottom of the pane, type `Hello` and press Enter. The output indicates that the #hello intent was recognized, and the appropriate response (`Good day to you.`) appears.
+   ![Shows the welcome message being displayed in the Try it out pane.](images/gs-ass-welcome-message.png)
+1.  At the bottom of the pane, type `Hello` and press Enter. The output indicates that the `#General_Greetings` intent was recognized, and the appropriate response (`Good day to you.`) appears.
 1.  Try the following input:
     - `bye`
     - `howdy`
@@ -174,22 +143,44 @@ You  built a simple dialog to recognize and respond to both hello and goodbye in
     - `good morning`
     - `sayonara`
 
-1.  Enter `I want to cancel an order I placed.` and press Enter. The output indicates that the `#eCommerce_Cancel_Product_Order` intent was recognized, and the response that you added for it is displayed.
-
-  **Note**: In a dialog that is used by an assistant in production, you would likely add more child nodes that collect the order number and any other necessary information from the user, and then make a programmatic call to your order tracking backend service to cancel the order on the user's behalf.
-
-  ![Shows an animation of the user testing the dialog in the Try it out pane.](images/gs-test-dialog.gif){: gif}
+  ![Shows an animation of the user testing the dialog in the Try it out pane by entering the inputs listed above and getting the appropriate responses.](images/gs-ass-dialog-test.gif){: gif}
 
 {{site.data.keyword.watson}} can recognize your intents even when your input doesn't exactly match the examples you included. The dialog uses intents to identify the purpose of the user's input regardless of the precise wording used, and then responds in the way you specify.
 
-### Result of building a dialog
+## Step 6: Add a business function to the dialog
+{: #add-ecommerce}
 
-That's it. You created a simple conversation with three intents and a dialog to recognize them.
+Add the *Customer Care* content catalog to your training data, so your dialog can address user requests for contact information.
 
-## Step 6: Review the sample workspace
+1.  In the {{site.data.keyword.conversationshort}} tool, click the **Content Catalog** tab.
+1.  Find **Customer Care** in the list, and then click **Add to workspace**.
+1.  Open the **Intents** tab to review the intents and associated example utterances that were added to your training data. You can recognize them because each intent name begins with the prefix `#Customer_Care_`. You will add the `#Customer_Care_Contact_Us` intent to your dialog in a later step.
+
+    ![Shows the customer care intents that were added from the catalog in the Intents page.](images/gs-ass-customer-care-intents.png)
+1.  Open the **Dialog** tab. Click the More icon ![More options](images/kabob.png) on the `#General_Greetings` node, and then select **Add node below** to create a peer node. In the peer node, specify `#Customer_Care_Contact_Us` as the condition.
+1.  Add the following text as the response:
+
+    ```
+    Contact us by phone 24 hours a day, 7 days a week at 958-234-3456. To give us feedback, submit a feedback form through our <a href="https://www.example.com/feedback.html" target="_blank">website</a>.
+    ```
+    {: codeblock}
+
+    ![Shows the contact us intent node being added to the dialog node.](images/gs-ass-add-customer-care-node.png)
+1.  Click ![Close](images/close.png) to close the edit view.
+
+    ![Shows that a contact us node was added to the dialog.](images/gs-ass-full-dialog-tree.png)
+1.  Test the node you just added. Click the ![Try it](images/ask_watson.png) icon to open the "Try it out" pane, and then enter `How can I contact you?`
+
+    The `#Customer_Care_Contact_Us` intent is recognized, and the response that you specified for it to return is displayed.
+
+    ![Shows an animation of the user entering, how can i contact you?, into the Try it out pane and the bot answering with a phone number and link to a website.](images/gs-ass-test-dialog-contact-us.gif){: gif}
+
+You have successfully added a node to the dialog that addresses the type of business-related question that real users might ask.
+
+## Step 7: Review the sample workspace
 {: #review-sample-workspace}
 
-Open the sample workspace to see intents similar to the ones you just created plus many more, and see how they are used in a complex dialog.
+Open the sample workspace to see intents similar to the ones you just created plus many more, and see how they are used in a more complex dialog.
 
 1.  Go back to the Workspaces page.
    You can click the ![Back to workspaces button](images/workspaces-button.png) button from the navigation menu.
