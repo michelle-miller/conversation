@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-28"
+lastupdated: "2018-08-12"
 
 ---
 
@@ -70,6 +70,20 @@ curl -X POST
 **Note**: The `customer_id` string cannot include the semicolon (`;`) or equal sign (`=`) characters. You are responsible for ensuring that each `customer ID` property is unique across your customers.
 
 You can pass multiple **customer ID** values with semicolon-separated `customer_id={value}` pairs. For example: `'X-Watson-Metadata: customer_id=abc;customer_id=xyz'`
+
+### Querying user data
+{: #query_customer_id}
+
+Use the `/logs` API `filter` parameter to search an application log for specific user data. For example, to search for data specific to a `customer_id` that matches `my_best_customer`, the query might be:
+
+``` curl
+curl -X GET
+ --user {username}:{password}
+'https://gateway.watson.net/assistant/api/v1/workspaces/{workspaceID}/logs?version=2018-05-26&filter=customer_id::my_best_customer'
+```
+{: codeblock}
+
+See the [Filter query reference](filter-reference.html) for additional details.
 
 ### Deleting data
 To delete any message log data associated with a specific user that the service might have stored, use the `DELETE /user_data` API endpoint. Specify the customer ID of the user by passing a `customer_id` parameter with the request.
