@@ -56,6 +56,7 @@ Watson Assistant
         tutorial-slots.md
         tutorial-slots-complex.md
         tutorial-digressions.md
+        tutorial-car-dashboard.md
         [Tutorial: Defining contextual entities](https://www.ibm.com/cloud/garage/demo/try-watson-assistant-contextual-entities)
     {: .navgroup-end}
 

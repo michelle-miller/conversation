@@ -83,6 +83,8 @@ In the resulting API /message response, the text response is formatted as follow
 }
 ```
 
+There are response types other than a text response that you can define. See [Responses](dialog-overview.html#responses) for more details.
+
 **Note**: The following `output` object format is supported for backwards compatibility. Any workspaces that specify a text response by using this format will continue to function properly. With the introduction of rich response types, the `output.text` structure was augmented with the `output.generic` structure to facilitate supporting other types of responses in addition to text. Use the new format when you create new nodes to give yourself more flexibility, because you can subsequently change the response type, if needed.
 
   ```json
@@ -97,7 +99,7 @@ In the resulting API /message response, the text response is formatted as follow
   ```
   {: codeblock}
 
-There are response types other than a text response that you can define. See [Responses](dialog-overview.html#responses) for more details.
+If you specify an API version that pre-dates the introduction of the rich response types (version `2018-07-10`), then a workspace that contains non-textual or multiple response types will produce the first text response only. Only one text response can fit into the message `output.text` object. With version `2018-07-10`, existing workspaces with text responses in the older format produce both the `output.text` and `output.generic` objects to represent the text response.
 
 You can learn more about the /message API call from the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/conversation/api/v1/){: new_window}.
 
@@ -748,15 +750,15 @@ To change the digression behavior for an individual node, complete the following
 
 1.  **Optional**: For any nodes where you enable returns from digressions away, consider specifying the text response using a syntax that supports adding a version of the response that can be shown to users who return to the node after a digression.
 
-    If you do not take action, the same text response is displayed a second time to let users know they have returned to the node they digressed away from. You can make it clearer to users that they have returned to the original conversation thread by specifying a unique message to be displayed upon their return. For example, if the original text response for the node is, `What's the order number?`, you might want to display a message like, `Now let's get back to where we left off. What is the order number?`, when users return to the node after completing a dialog branch that they digressed to.
+    If you do not take action, the same text response is displayed a second time to let users know they have returned to the node they digressed away from. You can make it clearer to users that they have returned to the original conversation thread by specifying a unique message to be displayed upon their return. For example, if the original text response for the node is, `What's the order number?`, you might want to display a message like, `Now let's get back to where we left off. What is the order number?`, when users return to the node.
 
-    To do so, use the following syntax to specify the node text response:
+    To do so, replace the current text response with a response that uses the following syntax:
 
     `<? (returning_from_digression)? "post-digression message" : "first-time message" ?>`
 
     For example: `<? (returning_from_digression)? "Now, let's get back to where we left off. What is the order number?" : "What's the order number?" ?>`
 
-    **Note**: You cannot include SpEL expressions or shorthand syntax in the text responses that you add. In fact, you cannot use shorthand syntax at all. Instead, you must build the message by concatenating the text strings and full SpEL expression syntax together to form the full response. For example, use the following syntax to include a context variable in a text response that you would normally specify as, `What can I do for you, $username?`:
+    **Note**: You cannot include SpEL expressions or shorthand syntax in the text responses that you add. In fact, you cannot use shorthand syntax at all. Instead, you must build the message by concatenating the text strings and full SpEL expression syntax together to form the full response. For example, use the following syntax to include a context variable in a text response that you would normally specify as, `What can I do for you today, $username?`:
 
     `<? (returning_from_digression)? "Where were we, " + context["username"] + "? Oh right, I was asking what can I do for you today." : "What can I do for you today, " + context["username"] + "?" ?>`
 
