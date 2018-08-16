@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-24"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -20,8 +20,6 @@ lastupdated: "2018-01-24"
 # 部署概述
 
 配置好工作空间并构建工作对话后，可以通过将工作空间连接到客户将使用的接口来部署应用程序。还可以将工作空间连接到其他服务（包括其他 {{site.data.keyword.watson}} 服务）。有多种方式可以执行此操作。
-
-- [**在 Slack 中测试**](test-deploy.html)：可以使用测试部署工具，通过工作空间和预构建的 Slack 应用程序，快速在 Slack 通道中部署聊天机器人。此选项是最快、最简单的工作空间测试方法，但有一些限制。
 
 - [**使用 {{site.data.keyword.conversationshort}} 连接器部署到通道**](conversation-connector.html)：可以使用 {{site.data.keyword.conversationshort}} 连接器，通过工作空间和您自己的 Slack 或 Facebook 应用程序，将聊天机器人部署到 Slack 或 Facebook Messenger。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-02"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -33,12 +33,6 @@ Node.js 应用程序显示 {{site.data.keyword.conversationshort}} 如何在简�
 利用 {{site.data.keyword.conversationshort}} 可以构建使用意向、实体和对话的应用程序，而此 Node.js 应用程序就是这一类型的成熟的应用程序。
 
 [观看演示 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://conversation-demo.ng.bluemix.net/){: new_window}。
-
-## 短信天气机器人
-
-此应用程序演示 {{site.data.keyword.conversationshort}} 如何与不同的机器人工具包（例如，Facebook 和 Twilio）配合使用，使用户能够与机器人进行直观、自然的会话。该演示集成了 WeatherInsights 服务，能够直观、自然地进行天气相关会话。
-
- [观看演示 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://text-bot.mybluemix.net/  ){: new_window} 或 [派生代码 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/watson-developer-cloud/text-bot){: new_window}。
 
 ## {{site.data.keyword.conversationshort}} 和 {{site.data.keyword.discoveryshort}}
 

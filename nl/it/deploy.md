@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-24"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -20,8 +20,6 @@ lastupdated: "2018-01-24"
 # Panoramica della distribuzione
 
 Dopo aver configurato il tuo spazio di lavoro e creato un dialogo di lavoro, puoi distribuire l'applicazione connettendo lo spazio di lavoro all'interfaccia che verrà utilizzata dai tuoi clienti. Puoi anche connettere il tuo spazio di lavoro ad altri servizi (inclusi altri servizi {{site.data.keyword.watson}}). Ci sono diversi modi per farlo.
-
-- [**Esecuzione di test in Slack**](test-deploy.html): puoi utilizzare lo strumento di distribuzione di test per distribuire velocemente una chatbot in un canale Slack, utilizzando il tuo spazio di lavoro e una app Slack precostruita. Questa opzione è il modo più veloce e semplice per eseguire il test del tuo spazio di lavoro, ma presenta delle limitazioni. 
 
 - [**Distribuzione a un canale con il connettore {{site.data.keyword.conversationshort}}**](conversation-connector.html): puoi utilizzare il connettore {{site.data.keyword.conversationshort}} per distribuire una chatbot a Slack o Facebook Messenger utilizzando il tuo spazio di lavoro o la tua app Slack o Facebook.
 
