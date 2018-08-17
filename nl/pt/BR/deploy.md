@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-24"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -20,8 +20,6 @@ lastupdated: "2018-01-24"
 # Visão geral da implementação
 
 Depois de ter configurado sua área de trabalho e construído um diálogo de trabalho, é possível implementar seu aplicativo conectando-se a área trabalho à interface que seus clientes irão usar. Também é possível conectar sua área de trabalho a outros serviços (incluindo outros serviços {{site.data.keyword.watson}}). Há várias maneiras de fazer isso.
-
-- [**Testando no Slack**](test-deploy.html): é possível usar a ferramenta de implementação de teste para implementar rapidamente um robô de bate-papo em um canal do Slack, usando sua área de trabalho e um app Slack pré-construído. Essa opção é a maneira mais rápida e fácil de testar sua área de trabalho, mas tem limitações.
 
 - [**Implementando em um canal com o conector do {{site.data.keyword.conversationshort}}**](conversation-connector.html): é possível usar o conector do {{site.data.keyword.conversationshort}} para implementar um robô de bate-papo no Slack ou Facebook Messenger, usando sua área de trabalho e seu próprio app Slack ou Facebook.
 

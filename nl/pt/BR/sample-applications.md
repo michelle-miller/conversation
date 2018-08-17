@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-02"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -33,12 +33,6 @@ O aplicativo Node.js mostra como o {{site.data.keyword.conversationshort}} usa i
 Esse aplicativo Node.js é um exemplo totalmente desenvolvido do tipo de aplicativo que você pode construir com {{site.data.keyword.conversationshort}} que usa intenções, entidades e diálogo.
 
 [Visualize a demo ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://conversation-demo.ng.bluemix.net/){: new_window}.
-
-## Robô de clima da mensagem de texto
-
-Esse aplicativo demonstra como o {{site.data.keyword.conversationshort}} pode ser usado com diferentes kits de robô, como aqueles do Facebook e do Twilio, para permitir que os usuários tenham uma conversa intuitiva e natural com os robôs. A demo integra o serviço WeatherInsights para ter uma conversa intuitiva e natural sobre o tempo.
-
- [Consulte a demo ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://text-bot.mybluemix.net/ ){: new_window} ou [bifurcar o código ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/watson-developer-cloud/text-bot){: new_window}.
 
 ## {{site.data.keyword.conversationshort}} e {{site.data.keyword.discoveryshort}}
 

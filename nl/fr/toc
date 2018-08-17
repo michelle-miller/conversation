@@ -34,7 +34,6 @@ Watson Assistant
     {: .topicgroup}
     Déploiement
         deploy.md
-        test-deploy.md
         conversation-connector.md
         develop-app.md
         integrations.md

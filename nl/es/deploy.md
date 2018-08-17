@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-24"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -20,8 +20,6 @@ lastupdated: "2018-01-24"
 # Visión general del despliegue
 
 Después de haber configurado el espacio de trabajo y de haber creado un diálogo de trabajo, puede desplegar la aplicación conectando el espacio de trabajo a la interfaz que utilizarán sus clientes. También puede conectar su espacio de trabajo a otros servicios (incluidos otros servicios {{site.data.keyword.watson}}). Existen varias maneras de hacerlo.
-
-- [**Realización de pruebas en Slack**](test-deploy.html): Utilice la herramienta de despliegue de prueba para desplegar con rapidez un chatbot en un canal de Slack, utilizando su espacio de trabajo y una app Slack creada de forma previa. Esta opción constituye la forma más rápida y sencilla de probar el espacio de trabajo, sin embargo, tiene algunas limitaciones. 
 
 - [**Despliegue en un canal con el conector de {{site.data.keyword.conversationshort}}**](conversation-connector.html): Utilice el conector de {{site.data.keyword.conversationshort}} para desplegar un chatbot en Slack o Facebook Messenger, utilizando su espacio de trabajo y su propia app Slack o Facebook. 
 

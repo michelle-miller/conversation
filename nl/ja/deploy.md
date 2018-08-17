@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-24"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -20,8 +20,6 @@ lastupdated: "2018-01-24"
 # デプロイメントの概要
 
 ワークスペースを構成して作業ダイアログを構築した後、顧客が使用するインターフェースにワークスペースを接続することにより、アプリケーションをデプロイできます。 他のサービス (他の {{site.data.keyword.watson}} サービスを含む) にワークスペースを接続することもできます。 これを行うには、さまざまな方法があります。
-
-- [**Slack でのテスト**](test-deploy.html): テスト・デプロイメント・ツールを使用すると、ワークスペースと事前に構築済みの Slack アプリを使って、Slack チャネル内にチャット・ボットを即時にデプロイできます。このオプションは、ワークスペースをテストする方法の中で最も速くかつ簡単ですが、制限事項があります。
 
 - [**{{site.data.keyword.conversationshort}} コネクターを使用したチャネルへのデプロイ**](conversation-connector.html): {{site.data.keyword.conversationshort}} コネクターを使用すると、ワークスペースと独自の Slack アプリか Facebook アプリを使って、Slack か Facebook Messenger にチャット・ボットをデプロイできます。
 

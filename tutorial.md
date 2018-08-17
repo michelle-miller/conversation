@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-15"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -116,7 +116,8 @@ Add a dialog node that recognizes when the user input maps to the intent that yo
     Click **Add response type**. Select **Image** from the drop-down list. In the **Image source** field, add `https://www.ibmlearningcenter.com/wp-content/uploads/2018/02/IBM-Learning-Center-Food4.jpg`.
 1.  Move the image response type up, so it is displayed in the response before the text is displayed. Click the **Move** up arrow to reorder the two response types.
 
-    ![Shows the image response type listed before the text response type for the #about_restaurant node.](images/gs-ass-image-response-type.png)
+    ![Shows the image response type listed before the text response type.](images/gs-ass-image-response-type.png)
+
 1.  Click ![Close](images/close.png) to close the edit view.
 
 ### Test the #about_restaurant dialog node
@@ -134,10 +135,22 @@ Test the intent by checking whether user utterances that are similar to, but not
 
 Congratulations! You have added a custom intent, and a dialog node that knows how to handle it.
 
+The `#about_restaurant` intent is designed to recognize a variety of general questions about the restaurant. You added a single node to capture such questions. The response is long, but it is a single statement that can potentially answer questions about all of the following topics:
+
+- The restaurant owners
+- The restaurant history
+- The philosophy
+- The number of sites
+- The days of operation
+- The meals served
+- The fact that the restaurant bakes cakes to order
+
+For general, low-hanging fruit types of questions, a single, general answer is suitable.
+
 ## Step 3: Answer questions about the menu
 {: #menu}
 
-A common question from potential restaurant customers is about the menu. The Truck Stop Gourmand restaurant changes the menu daily. In addition to its standard menu, it has vegetarian and cake shop menus. When a user asks about the menu, the dialog needs to find out which menu to share, and then provide a hyperlink to the menu that is kept up to date daily on the restaurant's website. You never want to hard-code information into a dialog node if that information changes often.
+A key question from potential restaurant customers is about the menu. The Truck Stop Gourmand restaurant changes the menu daily. In addition to its standard menu, it has vegetarian and cake shop menus. When a user asks about the menu, the dialog needs to find out which menu to share, and then provide a hyperlink to the menu that is kept up to date daily on the restaurant's website. You never want to hard-code information into a dialog node if that information changes regularly.
 
 ### Add a #menu intent
 
@@ -145,9 +158,11 @@ A common question from potential restaurant customers is about the menu. The Tru
 1.  Click **Add intent**.
 
     ![Shows the the Add Intent button on the Intents page.](images/gs-ass-intent-add.png)
+
 1.  Enter `menu` in the *Intent name* field, and then click **Create intent**.
 
     ![Shows the menu intent being added and the Create intent button.](images/gs-ass-intent-create-menu.png)
+
 1.  Add the following user examples:
 
     ```
@@ -180,9 +195,11 @@ Add a dialog node that recognizes when the user input maps to the intent that yo
 1.  Click the **More** ![More options](images/kabob.png) icon on the `#about_restaurant` node, and then select **Add node below**.
 
     ![Shows a dialog node being added below the #about_restaurant node.](images/gs-ass-dialog-add-menu.png)
+
 1.  Start to type `#menu` into the **Enter a condition** field of this node. Then select the `#menu` option.
 
     ![Shows the #menu intent being added as the condition for a dialog node.](images/gs-ass-menu-add.png)
+
 1.  Add the following text as the response:
 
     `In keeping with our commitment to giving you only fresh local ingredients, our menu changes daily to accommodate the produce we pick up in the morning. You can find today's menu on our website.`
@@ -192,20 +209,24 @@ Add a dialog node that recognizes when the user input maps to the intent that yo
     Click **Add response type**. Select **Option** from the drop-down list.
 
     ![Shows the option response type being added to the #menu dialog node response.](images/gs-ass-add-option-response-type.png)
+
 1.  In the **Title** field, add *Which menu do you want to see?*
 
     ![Shows the title field filled in and the Add option button.](images/gs-ass-add-option-button.png)
-1.  Click **Add option**, and then add label and value information for each menu type to create the following options:
+
+1.  Click **Add option**.
+
+1.  In the **Label** field, add `Standard`. The text you add as the label is displayed in the response to the user as a selectable option.
+
+1.  In the **Value** field, add `standard menu`. The text you specify as the value is what gets sent to the service as new user input when a user chooses this option from the list, and clicks it.
+
+1.  Repeat the previous two steps to add label and value information for the remaining menu types:
 
     <table>
     <caption>Option response type details</caption>
     <tr>
       <th>Label</th>
       <th>Value</th>
-    </tr>
-    <tr>
-      <td>Standard</td>
-      <td>standard menu</td>
     </tr>
     <tr>
       <td>Vegetarian</td>
@@ -218,21 +239,24 @@ Add a dialog node that recognizes when the user input maps to the intent that yo
     </table>
 
     ![Shows the options list filled in with menu types.](images/gs-ass-options-list.png)
+
 1.  Click ![Close](images/close.png) to close the edit view.
 
 ### Add a @menu entity
 {: #add-menu-entity}
 
-To recognize the different types of menus that customers indicate they want to see, you will add a `@menu` entity. Entities represent a class of object or a data type that is relevant to a user's purpose. By checking for the presence of specific entities in the user input, you can build a dialog with responses that addresses the user's request with greater specificity. In this case, you will add a `@menu` entity that can distinguish between different menu types.
+To recognize the different types of menus that customers indicate they want to see, you will add a `@menu` entity. Entities represent a class of object or a data type that is relevant to a user's purpose. By checking for the presence of specific entities in the user input, you can add more responses, each one tailored to address a distinct user request. In this case, you will add a `@menu` entity that can distinguish between different menu types.
 
 1.  Click the **Entities** tab.
 
     ![Shows the empty entities page with the Add entity button.](images/gs-ass-add-entity.png)
+
 1.  Click **Add entity**.
 
 1.  Enter `menu` into the entity name field.
 
     ![Shows the @menu entity being added and the Create entity button.](images/gs-ass-entity-create-menu.png)
+
 1.  Click **Create entity**.
 
 1.  Add `standard` to the *Value name* field, and then add `standard menu` to the **Synonyms** field, and press Enter.
@@ -244,6 +268,7 @@ To recognize the different types of menus that customers indicate they want to s
     - carte du jour
 
     ![Shows the standard value being added to the @menu entity.](images/gs-ass-add-standard-value.png)
+
 1.  Click **Add value** to add the `@menu:standard` value.
 
 1.  Add `vegetarian` to the *Value name* field, and then add `vegetarian menu` to the **Synonyms** field, and press Enter.
@@ -258,6 +283,7 @@ To recognize the different types of menus that customers indicate they want to s
     - plants-only
 
     ![Shows the vegetarian value being added to the @menu entity.](images/gs-ass-add-vegetarian-value.png)
+
 1.  Click **Add value** to add the `@menu:vegetarian` value.
 
 1.  Add `cake` to the *Value name* field, and then add `cake menu` to the **Synonyms** field, and press Enter.
@@ -269,6 +295,7 @@ To recognize the different types of menus that customers indicate they want to s
     - bakery offerings
 
     ![Shows the cake value being added to the @menu entity.](images/gs-ass-add-cake-value.png)
+
 1.  Click **Add value** to add the `@menu:cake` value.
 
 1.  Click the **Close** ![Close arrow](images/close_arrow.png) icon to finish adding the `@menu` entity.
@@ -276,7 +303,7 @@ To recognize the different types of menus that customers indicate they want to s
 ### Add child nodes that are triggered by the @menu entity types
 {: #trigger-menu-entity}
 
-In this step, you will child nodes to the dialog node that checks for the `#menu` intent. Each child node will show a different response depending on the `@menu` entity type the user chooses from the options list.
+In this step, you will add child nodes to the dialog node that checks for the `#menu` intent. Each child node will show a different response depending on the `@menu` entity type the user chooses from the options list.
 
 1.  Click the **Dialogs** tab.
 1.  Find the `#menu` node in the dialog tree.
@@ -286,11 +313,13 @@ In this step, you will child nodes to the dialog node that checks for the `#menu
 1.  Click the **More** ![More options](images/kabob.png) icon on the `#menu` node, and then select **Add child node**.
 
     ![Shows a child node being added to the #menu dialog node.](images/gs-ass-add-child-node.png)
+
 1.  Start to type `@menu:standard` into the **Enter a condition** field of this node. Then select the `@menu:standard` option.
 
 1.  Add the following message in the response text field, `To see our menu, go to the <a href="https://www.example.com/menu.html" target="blank">menu</a> page on our website.`
 
     ![Shows an @menu:standard child node being added to the #menu dialog node.](images/gs-ass-standard-menu-node.png)
+
 1.  Click ![Close](images/close.png) to close the edit view.
 
 1.  Click the **More** ![More options](images/kabob.png) icon on the `@menu:standard` node, and then select **Add node below**.
@@ -300,6 +329,7 @@ In this step, you will child nodes to the dialog node that checks for the `#menu
 1.  Add the following message in the response text field, `To see our vegetarian menu, go to the <a href="https://www.example.com/vegetarian-menu.html" target="blank">vegetarian menu</a> page on our website.`
 
     ![Shows an @menu:vegetarian child node being added to the #menu dialog node.](images/gs-ass-vegetarian-menu-node.png)
+
 1.  Click ![Close](images/close.png) to close the edit view.
 
 1.  Click the **More** ![More options](images/kabob.png) icon on the `@menu:vegetarian` node, and then select **Add node below**.
@@ -309,6 +339,7 @@ In this step, you will child nodes to the dialog node that checks for the `#menu
 1.  Add the following message in the response text field, `To see our cake shop menu, go to the <a href="https://www.example.com/menu.html" target="blank">cake shop menu</a> page on our website.`
 
     ![Shows an @menu:cake child node being added to the #menu dialog node.](images/gs-ass-cake-menu-node.png)
+
 1.  Click ![Close](images/close.png) to close the edit view.
 
 1.  The standard menu is likely to be requested most often, so move it to the bottom of the child nodes list. Placing it last can help prevent it from being triggered accidentally when someone asks for a specialty menu instead the standard menu.
@@ -316,6 +347,7 @@ In this step, you will child nodes to the dialog node that checks for the `#menu
 1.  Click the **More** ![More options](images/kabob.png) icon on the `@menu:standard` node, and then select **Move**.
 
     ![Shows the @menu:standard node being moved to come after the @menu:cake node.](images/gs-ass-move-standard-menu-node.png)
+
 1.  Select the `@menu:cake` node, and then choose **Below node**.
 
     ![Shows the child nodes below the #menu node after they are reordered.](images/gs-ass-reordered-menu-nodes.png)
@@ -345,12 +377,14 @@ Test the dialog nodes that you added to recognize menu questions.
 
 1.  Close the web browser page.
 
-Well done. You have succesfully added an intent and entity that can recognize user requests for menu details, and can direct users to the appropriate menu that is hosted on the restaurant's website.
+Well done. You have succesfully added an intent and entity that can recognize user requests for menu details, and can direct users to the appropriate menu.
+
+The `#menu` intent represents a common, key need of potential restaurant customers. Due to its importance and popularity, you added a more complex section to the dialog to address it well.
 
 ## Step 4: Manage cake orders
 {: #manage-orders}
 
-Customers place orders in person, over the phone, or by using the order form on the website. After the order is placed, users can cancel the order through the chat bot. First, define an entity that can recognize order numbers. Then, add an intent that recognizes when users want to cancel a cake order.
+Customers place orders in person, over the phone, or by using the order form on the website. After the order is placed, users can cancel the order through the virtual assistant. First, define an entity that can recognize order numbers. Then, add an intent that recognizes when users want to cancel a cake order.
 
 ### Adding an order number pattern entity
 {: add-pattern-entity}
@@ -647,10 +681,13 @@ If you do more testing, you might find that the dialog isn't very helpful in sce
 
 Now, when you test, you can provide a set of number or a mix of numbers and text as input, and the dialog reminds you of the correct order number format. You have successfully tested your dialog, found a weakness in it, and corrected it.
 
+Another way you can address this type of scenario is to add a node with slots. See the [Adding a node with slots to a dialog](tutorial-slots.html) tutorial to learn more about using slots.
+{:tip}
+
 ## Step 5: Add the personal touch
 {: #get-username}
 
-If the user shows interest in the bot itself, you want the chat bot to recognize that curiosity and engage with the user in a more personal way. You might remember the `#General_About_You` intent, which is provided with the *General* content catalog, that we considered using earlier, before you added your own custom `#about_restaurant` intent. It is built to recognize just such questions from the user. Add a node that condition on this intent. In your response, you can ask for the user's name and save it to a $username variable that you can use elsewhere in the dialog, if available.
+If the user shows interest in the bot itself, you want the virtual assistant to recognize that curiosity and engage with the user in a more personal way. You might remember the `#General_About_You` intent, which is provided with the *General* content catalog, that we considered using earlier, before you added your own custom `#about_restaurant` intent. It is built to recognize just such questions from the user. Add a node that condition on this intent. In your response, you can ask for the user's name and save it to a $username variable that you can use elsewhere in the dialog, if available.
 
 First, you need to make sure the service will recognize a name if the user provides one. So, you can enable the `@sys-person` entity, which is designed to recognize common first and last names (in English).
 
@@ -673,7 +710,7 @@ Now, add a dialog node that can recognize the user's interest in the bot, and re
 1.  Add the following message in the response text field:
 
     ```
-    I am a chat bot that is designed to answer your questions about the Truck Stop Gourmand restaurant. What's your name?
+    I am a virtual assistant that is designed to answer your questions about the Truck Stop Gourmand restaurant. What's your name?
     ```
     {: codeblock}
 

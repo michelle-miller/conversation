@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-24"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -20,8 +20,6 @@ lastupdated: "2018-01-24"
 # 部署概觀
 
 配置工作區並建置運作中對話之後，您就可以藉由將工作區連接至客戶將使用的介面來部署應用程式。您也可以將工作區連接至其他服務（包括其他 {{site.data.keyword.watson}} 服務）。您可以利用各種方式來執行此動作。
-
-- [**在 Slack 中測試**](test-deploy.html)：您可以使用測試部署工具，以使用工作區及預先建置的 Slack 應用程式來快速部署 Slack 頻道中的聊天機器人。此選項是測試工作區最快速且最簡單的方式，但有一些限制。
 
 - [**使用 {{site.data.keyword.conversationshort}} 連接器部署至頻道**](conversation-connector.html)：您可以使用 {{site.data.keyword.conversationshort}} 連接器，利用您的工作區及您自己的 Slack 或 Facebook 應用程式，將聊天機器人部署至 Slack 或 Facebook Messenger。
 

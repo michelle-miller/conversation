@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-02"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -33,12 +33,6 @@ Node.js 앱은 {{site.data.keyword.conversationshort}}가 단순 대화 인터�
 이 Node.js 앱은 인텐트, 엔티티 및 대화 상자를 사용하는 {{site.data.keyword.conversationshort}}을 사용하여 빌드할 수 있는 앱 유형의 완전히 개발된 예제입니다.
 
 [데모 보기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://conversation-demo.ng.bluemix.net/){: new_window}.
-
-## 문자 메시지 날씨 봇
-
-이 앱은 여러 봇 킷(예: Facebook 및 Twilio의 봇 킷)과 함께 {{site.data.keyword.conversationshort}}을 사용하여 사용자가 봇과 직관적이고 자연스러운 대화를 나눌 수 있게 하는 방법을 보여줍니다. 데모는 날씨에 대한 직관적이고 자연스러운 대화를 나눌 수 있도록 WeatherInsights 서비스를 통합합니다.
-
- [데모 보기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://text-bot.mybluemix.net/  ){: new_window} 또는 [코드 포크 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/watson-developer-cloud/text-bot){: new_window}.
 
 ## {{site.data.keyword.conversationshort}} 및 {{site.data.keyword.discoveryshort}}
 
