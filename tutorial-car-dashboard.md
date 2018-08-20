@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-09"
+lastupdated: "2018-08-20"
 
 ---
 
@@ -78,7 +78,7 @@ Add an intent on the Intents tab. An intent is the purpose or goal expressed in 
 
 1.  Click the **Close** ![Close arrow](images/close_arrow.png) icon to finish adding the `#turn_on` intent.
 
-You now have three intents, the `#turn_on` intent that you just added, and the `#hello` and `#goodbye` intents that were added in the *Getting started tutorial* that you completed as a prerequisite step. Each intent has a set of example utterances that help train Watson to recognize the intents in user input.
+You now have four intents, the `#turn_on` intent that you just added, and the `#General_Greetings`, `#General_Endings`, and `#Customer_Care_Contact_Us` intents that were added in the *Getting started tutorial* that you completed as a prerequisite step. Each intent has a set of example utterances that help train Watson to recognize the intents in user input.
 
 ## Step 2: Add entities
 {: #entities}
@@ -116,17 +116,46 @@ Create entities that might occur in user input that has the #turn_on intent to r
 1.  Click **Add value** to finish defining the `radio` value for the `@appliance` entity.
 1.  Add other types of appliances.
 
-    - Value: `headlights`. Synonym: `lights`.
-    - Value: `air conditioning`. Synonyms: `air` and `AC`.
+    <table>
+    <caption>Other types of @appliances</caption>
+    <tr>
+      <th>Value</th>
+      <th>Synonyms</th>
+    </tr>
+    <tr>
+      <td>`headlights`</td>
+      <td>`lights`</td>
+    </tr>
+    <tr>
+      <td>`air conditioning`</td>
+      <td>`air` and `AC`</td>
+    </tr>
+    </table>
 
 1.  Click the toggle to turn fuzzy matching **On** for the `@appliance` entity.
     This setting helps the service recognize references to entities in user input even when the entity is specified in a way that does not exactly match the syntax you use here.
 1.  Click the **Close** ![Close arrow](images/close_arrow.png) icon to finish adding the `@appliance` entity.
 1.  Repeat Steps 2-8 to create the @`genre` entity with fuzzy matching on, and these values and synonyms:
 
-    - Value: `classical`. Synonym: `symphonic`.
-    - Value: `rhythm and blues` Synonym: `r&b`.
-    - Value: `rock`. Synonym: `rock & roll`, `rock and roll`, and `pop`.
+    <table>
+    <caption>Other types of @genre</caption>
+    <tr>
+      <th>Value</th>
+      <th>Synonyms</th>
+    </tr>
+    <tr>
+      <td>`classical`</td>
+      <td>`symphonic`</td>
+    </tr>
+    <tr>
+      <td>`rhythm and blues`</td>
+      <td>`r&b`</td>
+    </tr>
+    <tr>
+      <td>`rock`</td>
+      <td>`rock & roll`, `rock and roll`, and `pop`</td>
+    </tr>
+    </table>
 
 You defined two entities: `@appliance` (representing an appliance the bot can turn on) and `@genre` (representing a genre of music the user can choose to listen to).
 
@@ -140,7 +169,7 @@ In this complex dialog, you will create dialog branches that handle the #turn_on
 ### Add a root node for #turn_on
 Create a dialog branch to respond to the #turn_on intent. Start by creating the root node:
 
-1.  Click the More icon ![More options](images/kabob.png) on the **#hello** node, and then select **Add node below**.
+1.  Click the More icon ![More options](images/kabob.png) on the **`#General_Greetings`** node, and then select **Add node below**.
 1.  Start typing `#turn_on` in the condition field, and then select it from the list.
     This condition is triggered by any input that matches the #turn_on intent.
 1.  Do not enter a response in this node. Click ![Close](images/close.png) to close the node edit view.
