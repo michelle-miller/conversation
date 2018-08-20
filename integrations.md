@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-11"
+lastupdated: "2017-08-17"
 
 ---
 
@@ -25,3 +25,5 @@ This plugin enables developers to easily integrate a {{site.data.keyword.convers
 
 To use the Botkit middleware plugin, clone or download the 
 [GitHub repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/botkit-middleware){: new_window}.
+
+To see an example of how to integrate {{site.data.keyword.conversationshort}} with Slack using Botkit, you can watch this [video](https://developer.ibm.com/tv/integrate-ibm-watson-assistant-slack/){: new_window} on **developerWorks TV**.
