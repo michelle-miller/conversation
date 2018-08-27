@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -78,7 +78,7 @@ Add an intent on the Intents tab. An intent is the purpose or goal expressed in 
 
 1.  Click the **Close** ![Close arrow](images/close_arrow.png) icon to finish adding the `#turn_on` intent.
 
-You now have four intents, the `#turn_on` intent that you just added, and the `#General_Greetings`, `#General_Endings`, and `#Customer_Care_Contact_Us` intents that were added in the *Getting started tutorial* that you completed as a prerequisite step. Each intent has a set of example utterances that help train Watson to recognize the intents in user input.
+You now have four intents: the `#turn_on` intent that you just added, and the `#General_Greetings`, `#General_Endings`, and `#Customer_Care_Contact_Us` intents that were added in the *Getting started tutorial* that you completed as a prerequisite step. Each intent has a set of example utterances that help train Watson to recognize the intents in user input.
 
 ## Step 2: Add entities
 {: #entities}
