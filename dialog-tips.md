@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-03"
+lastupdated: "2018-09-04"
 
 ---
 
@@ -40,9 +40,9 @@ Review these tips from experienced dialog designers.
 ## Adding nodes
 {: #tips-nodes}
 
-- Add node descriptions.
+- Add a node name that describes the purpose of the node.
 
-  You know what the node does right now, but months from now you might not. Your future self and any team members will thank you for adding a description. And descriptions display in the logs, which can help you debug a conversation later.
+  You know what the node does right now, but months from now you might not. Your future self and any team members will thank you for adding a descriptive node name. And the node name is displayed in the log, which can help you debug a conversation later.
 - To gather the information that is required to perform a task, try using a node with slots instead of a bunch of separate nodes to elicit information from users. See [Gathering information with slots](dialog-slots.html#dialog-slots).
 - For a complex process flow, tell users about any information they will need to provide at the start of the process.
 - Understand how the service travels through the dialog tree and the impact that folders, branches, jump-tos, and digressions have on the route. See [Dialog flow](dialog-overview.html#dialog-flow).
