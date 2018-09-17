@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="watson-assistant" arm="969310" audience="service" href="/docs/services/conversation/getting-started.html"}
+{: .toc subcollection="watson-assistant" audience="service" href="/docs/services/conversation/getting-started.html"}
 Watson Assistant
 
     {: .navgroup id="learn"}
@@ -39,6 +39,7 @@ Watson Assistant
         deploy.md
         conversation-connector.md
         develop-app.md
+        implement-responses.md
         integrations.md
 
     {: .topicgroup}
@@ -57,7 +58,6 @@ Watson Assistant
         tutorial-slots-complex.md
         tutorial-digressions.md
         tutorial-car-dashboard.md
-        [Tutorial: Defining contextual entities](https://www.ibm.com/cloud/garage/demo/try-watson-assistant-contextual-entities)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -80,6 +80,7 @@ Watson Assistant
         [Java SDK](https://github.com/watson-developer-cloud/java-sdk)
         [Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
         [Python SDK](https://github.com/watson-developer-cloud/python-sdk)
+        [Ruby SDK](https://github.com/watson-developer-cloud/ruby-sdk)
         [.NET SDK](https://github.com/watson-developer-cloud/dotnet-standard-sdk)
         [OpenWhisk SDK](https://github.com/watson-developer-cloud/openwhisk-sdk/)
         [Salesforce SDK](https://github.com/watson-developer-cloud/salesforce-sdk)
@@ -97,6 +98,6 @@ Watson Assistant
     {: .topicgroup}
     Developer community
         [StackOverflow](https://stackoverflow.com/questions/tagged/watson-conversation+or+watson-assistant)
-        [developerWorks Answers](https://developer.ibm.com/answers/search.html?f=&amp;sort=relevance&amp;q=%5Bwatson-conversation%5D+%5Bwatson-assistant%5D+%24)
+        [IBM Developer Answers](https://developer.ibm.com/answers/search.html?f=&amp;sort=relevance&amp;q=%5Bwatson-conversation%5D+%5Bwatson-assistant%5D+%24)
         [WDC Slack channel](http://wdc-slack-inviter.mybluemix.net/)
     {: .navgroup-end}
