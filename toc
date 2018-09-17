@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="watson-assistant" audience="service" href="/docs/services/conversation/getting-started.html"}
+{: .toc subcollection="watson-assistant" arm="969310" audience="service" href="/docs/services/conversation/getting-started.html"}
 Watson Assistant
 
     {: .navgroup id="learn"}
@@ -39,7 +39,6 @@ Watson Assistant
         deploy.md
         conversation-connector.md
         develop-app.md
-        implement-responses.md
         integrations.md
 
     {: .topicgroup}
@@ -58,6 +57,7 @@ Watson Assistant
         tutorial-slots-complex.md
         tutorial-digressions.md
         tutorial-car-dashboard.md
+        [Tutorial: Defining contextual entities](https://www.ibm.com/cloud/garage/demo/try-watson-assistant-contextual-entities)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
