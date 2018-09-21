@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-06"
+lastupdated: "2018-09-21"
 ---
 
 {:shortdesc: .shortdesc}
@@ -25,7 +25,7 @@ API requests require a version parameter that takes a date in the format `versio
 
 Send the version parameter with every API request. The service uses the API version for the date you specify, or the most recent version before that date. Don't default to the current date. Instead, specify a date that matches a version that is compatible with your app, and don't change it until your app is ready for a later version.
 
-The current version is `2018-07-10`.
+The current version is `2018-09-20`.
 
 The "Try it out" pane in the {{site.data.keyword.conversationshort}} tooling is using version `2018-07-10`.
 
@@ -53,6 +53,11 @@ The method used to authenticate with IAM service instances is different from the
 {: #change-log}
 
 The following new features and changes to the service are available.
+
+### 21 September 2018
+{: #21September2018}
+
+- **New API version**: The current API version is now `2018-09-20`. In this version, the `errors[].path` attribute of the error object that is returned by the API is expressed as a [JSON Pointer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://tools.ietf.org/html/rfc6901) instead of in dot notation form.
 
 ### 6 August 2018
 {: #6August2018}
