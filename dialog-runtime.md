@@ -673,6 +673,7 @@ Watch this video to learn more.
 
 - [Before you begin](dialog-runtime.html#prereqs)
 - [Customizing digressions](dialog-runtime.html#enable-digressions)
+- [Digression usage tips](#digress-tips)
 - [Disabling digressions into a root node](dialog-runtime.html#disable-digressions)
 - [Digression tutorial](dialog-runtime.html#digression-tutorial)
 - [Design considerations](dialog-runtime.html#digression-design-considerations)
