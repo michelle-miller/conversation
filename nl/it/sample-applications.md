@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-02"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -33,12 +33,6 @@ L'applicazione Node.js mostra in che modo {{site.data.keyword.conversationshort}
 Questa applicazione Node.js è un esempio interamente sviluppato del tipo di applicazione che puoi creare con {{site.data.keyword.conversationshort}} che utilizza intenti, entità e dialogo.
 
 [Visualizza la demo ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://conversation-demo.ng.bluemix.net/){: new_window}.
-
-## Bot del meteo con messaggi di testo
-
-Questa applicazione mostra come è possibile utilizzare {{site.data.keyword.conversationshort}} con diversi kit di bot, come quelli di Facebook e Twilio, per consentire agli utenti di avere una conversazione intuitiva e naturale con i bot. La demo integra il servizio WeatherInsights per avere una conversazione intuitiva e naturale sul meteo.
-
- [Vedi la demo ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://text-bot.mybluemix.net/  ){: new_window} o [duplica il codice ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/watson-developer-cloud/text-bot){: new_window}.
 
 ## {{site.data.keyword.conversationshort}} e {{site.data.keyword.discoveryshort}}
 

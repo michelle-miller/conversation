@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-24"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -20,8 +20,6 @@ lastupdated: "2018-01-24"
 # 배치 개요
 
 작업공간을 구성하고 작업 대화 상자를 빌드한 후, 고객이 사용할 인터페이스에 작업공간을 연결하여 애플리케이션을 배치할 수 있습니다. 또한 다른 서비스(기타 {{site.data.keyword.watson}} 서비스 포함)에 작업공간을 연결할 수 있습니다. 이를 수행할 수 있는 다양한 방법이 있습니다.
-
-- [**Slack에서 테스트**](test-deploy.html): 테스트 배치 도구를 사용하여 작업공간과 사전빌드된 Slack 앱을 사용하여 Slack 채널에 채팅 봇을 신속하게 배치할 수 있습니다. 이 옵션은 작업공간을 테스트하는 가장 빠르고 쉬운 방법이지만 제한사항이 있습니다.
 
 - [**{{site.data.keyword.conversationshort}} 커넥터**를 사용하여 채널에 배치](conversation-connector.html): {{site.data.keyword.conversationshort}}커넥터를 사용하여 작업공간과 자신의 Slack 또는 Facebook 앱에 연결하여 Slack 또는 Facebook Messenger에 채팅 봇을 배치할 수 있습니다. 
 

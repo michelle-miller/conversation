@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-02"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -33,12 +33,6 @@ La app Node.js muestra cómo {{site.data.keyword.conversationshort}} utiliza int
 Esta app Node.js es un ejemplo completamente desarrollado del tipo de app que puede crear con {{site.data.keyword.conversationshort}} que utiliza intenciones, entidades y diálogo.
 
 [Consulte la demo ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://conversation-demo.ng.bluemix.net/){: new_window}.
-
-## Bot meteorológico de mensajes de texto
-
-Esta app muestra cómo se puede utilizar {{site.data.keyword.conversationshort}} con distintos kits de bots, como los de Facebook y de Twilio, para permitir que los usuarios tengan una conversación intuitiva y natural con los bots. La demo integra el servicio WeatherInsights para mantener una conversación intuitiva y natural sobre el tiempo.
-
- [Consulte la demo ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://text-bot.mybluemix.net/  ){: new_window} o [ramificación del código![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/watson-developer-cloud/text-bot){: new_window}.
 
 ## {{site.data.keyword.conversationshort}} y {{site.data.keyword.discoveryshort}}
 

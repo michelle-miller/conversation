@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-07"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -83,6 +83,8 @@ In the resulting API /message response, the text response is formatted as follow
 }
 ```
 
+There are response types other than a text response that you can define. See [Responses](dialog-overview.html#responses) for more details.
+
 **Note**: The following `output` object format is supported for backwards compatibility. Any workspaces that specify a text response by using this format will continue to function properly. With the introduction of rich response types, the `output.text` structure was augmented with the `output.generic` structure to facilitate supporting other types of responses in addition to text. Use the new format when you create new nodes to give yourself more flexibility, because you can subsequently change the response type, if needed.
 
   ```json
@@ -97,7 +99,7 @@ In the resulting API /message response, the text response is formatted as follow
   ```
   {: codeblock}
 
-There are response types other than a text response that you can define. See [Responses](dialog-overview.html#responses) for more details.
+If you specify an API version that pre-dates the introduction of the rich response types (version `2018-07-10`), then a workspace that contains non-textual or multiple response types will produce the first text response only. Only one text response can fit into the message `output.text` object. With version `2018-07-10`, existing workspaces with text responses in the older format produce both the `output.text` and `output.generic` objects to represent the text response.
 
 You can learn more about the /message API call from the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/conversation/api/v1/){: new_window}.
 
@@ -671,6 +673,7 @@ Watch this video to learn more.
 
 - [Before you begin](dialog-runtime.html#prereqs)
 - [Customizing digressions](dialog-runtime.html#enable-digressions)
+- [Digression usage tips](#digress-tips)
 - [Disabling digressions into a root node](dialog-runtime.html#disable-digressions)
 - [Digression tutorial](dialog-runtime.html#digression-tutorial)
 - [Design considerations](dialog-runtime.html#digression-design-considerations)
@@ -753,6 +756,53 @@ To change the digression behavior for an individual node, complete the following
 The #reservation and #cuisine nodes represent two dialog branches that can participate in a single user-directed digression. The digression settings that are configured for each individual node are what make this type of digression possible at run time.
 
 ![Shows two dialogs, one that sets the digressions away from the reservation slots node and one that sets the digression into the cuisine node.](images/digression-settings.png)
+
+### Digression usage tips
+{: #digress-tips}
+
+This section describes solutions to situations that you might encounter when using digressions.
+
+- **Custom return message**: For any nodes where you enable returns from digressions away, consider adding wording that lets users know they are returning to where they left off in a previous dialog flow. In your text response, use a special syntax that lets you add two versions of the response.
+
+  If you do not take action, the same text response is displayed a second time to let users know they have returned to the node they digressed away from. You can make it clearer to users that they have returned to the original conversation thread by specifying a unique message to be displayed when they return.
+
+  For example, if the original text response for the node is, `What's the order number?`, then you might want to display a message like, `Now let's get back to where we left off. What is the order number?` when users return to the node.
+
+  To do so, use the following syntax to specify the node text response:
+
+  `<? (returning_from_digression)? "post-digression message" : "first-time message" ?>`
+
+  For example:
+
+  ```bash
+  <? (returning_from_digression)? "Now, let's get back to where we left off.
+  What is the order number?" : "What's the order number?" ?>
+  ```
+  {: codeblock}
+
+  **Note**: You cannot include SpEL expressions or shorthand syntax in the text responses that you add. In fact, you cannot use shorthand syntax at all. Instead, you must build the message by concatenating the text strings and full SpEL expression syntax together to form the full response. For example, use the following syntax to include a context variable in a text response that you would normally specify as, `What can I do for you, $username?`:
+
+  ```bash
+  <? (returning_from_digression)? "Where were we, " +
+  context["username"] + "? Oh right, I was asking what can I do
+  for you today." : "What can I do for you today, " +
+  context["username"] + "?" ?>
+  ```
+
+  For full SpEL expression syntax details, see [Expression for accessing objects](expression-language.html#shorthand-syntax).
+
+- **Preventing returns**: In some cases, you might want to prevent a return to the interrupted conversation flow based on a choice the user makes in the current dialog flow. You can use special syntax to prevent a return from a specific node.
+
+  For example, you might have a node that conditions on `#General_Connect_To_Agent` or a similar intent. When triggered, if you want to get the user's confirmation before you transfer them to an external service, you might add a response such as, `Do you want me to transfer you to an agent now?` You could then add two child nodes that condition on `#yes` and `#no` respectively.
+  
+  The best way to manage digressions for this type of branch is to set the root node to allow digression returns. However, on the `#yes` node, include the SpEL expression `<? clearDialogStack() ?>` in the response. For example:
+  
+    ```bash
+  OK. I will transfer you now. <? clearDialogStack() ?>
+  ```
+  {: codeblock}
+
+  This SpEL expression prevents the digression return from happening from this node. When a confirmation is requested, if the user says yes, the proper response is displayed, and the dialog flow that was interrupted is not resumed. If the user says no, then the user is returned to the flow that was interrupted.
 
 ### Disabling digressions into a root node
 {: #disable-digressions}

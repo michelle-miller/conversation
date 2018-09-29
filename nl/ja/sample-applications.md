@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-02"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -33,12 +33,6 @@ Node.js アプリは、シンプルなチャット・インターフェースで
 この Node.js アプリは、インテント、エンティティー、およびダイアログを使用する {{site.data.keyword.conversationshort}} で構築できる、開発が完成したアプリ・タイプのサンプルです。
 
 [デモを見る![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://conversation-demo.ng.bluemix.net/){: new_window}。
-
-## テキスト・メッセージによる天気ボット
-
-このアプリは、{{site.data.keyword.conversationshort}} を、Facebook や Twilio のボット・キットなど、さまざまなボット・キットとともに使用して、ボットとユーザーが直感的かつ自然に会話できるようにする方法を示しています。 デモには WeatherInsights サービスが組み込まれ、天気に関して直感的かつ自然に会話ができるようにしています。
-
- [デモを見る![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://text-bot.mybluemix.net/  ){: new_window}または[コードをフォークする![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/watson-developer-cloud/text-bot){: new_window}。
 
 ## {{site.data.keyword.conversationshort}} と {{site.data.keyword.discoveryshort}}
 

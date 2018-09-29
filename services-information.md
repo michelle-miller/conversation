@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-03"
+lastupdated: "2018-09-11"
 
 ---
 
@@ -60,10 +60,10 @@ You can create {{site.data.keyword.conversationshort}} service instances that ar
 | Location    | Location code | Authentication type | IAM adoption date | Notes |
 |-------------|---------------|---------------------|-------------------|-------|
 | Sydney      | syd           | IAM                 | 7 May 2018 | Instances created before May 7 were syndicated to the US South data center |
-| Germany     | eu-de         | Cloud Foundry       | Planned for August 2018 | N/A |
+| Germany     | eu-de         | Cloud Foundry       | Planned for October 2018 | N/A |
 | United Kingdom |  eu-gb     | N/A                 | N/A        | Instances are syndicated to US South |
 | US East     | us-east       | IAM                 | 14 June 2018 | N/A |
-| US South    | us-south      | Cloud Foundry       | Planned for August 2018 | N/A |
+| US South    | us-south      | Cloud Foundry       | Planned for October 2018 | N/A |
 {: caption="Data center locations" caption-side="top"}
 
 ## Authenticating API calls
@@ -135,7 +135,7 @@ For information about the data centers in which other IBM Cloud services are hos
 
 To learn more about service terms and data security, read the following information:
 
-- [Service terms ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/software/sla/sladb.nsf/sla/bm-0038-08){: new_window}
+- [Service terms ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/software/sla/sladb.nsf/sla/home?OpenDocument){: new_window}
 - [Data security and privacy ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/software/sla/sladb.nsf/sla/csdsp?OpenDocument){: new_window}
 - [Information security](information-security.html)
 

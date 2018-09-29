@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-02"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -33,12 +33,6 @@ Die Node.js-App veranschaulicht, wie {{site.data.keyword.conversationshort}} Abs
 Diese Node.js-App ist ein vollständig entwickeltes Beispiel für den Typ einer App, die Sie mit {{site.data.keyword.conversationshort}} erstellen können und die Absichten, Entitäten sowie ein Dialogmodul verwendet.
 
 [Demo ansehen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://conversation-demo.ng.bluemix.net/){: new_window}
-
-## Textnachrichtenbot für Wetterlage
-
-Diese App demonstriert, wie {{site.data.keyword.conversationshort}} mit verschiedenen Bot-Kits wie beispielsweise aus Facebook und Twilio verwendet werden kann, um Benutzern einen intuitiven und natürlichen Dialog mit den Bots zu ermöglichen. Das Demo integriert den Service 'WeatherInsights', um einen intuitiven und natürlichen Dialog über das Wetter umzusetzen.
-
- [Demo ansehen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://text-bot.mybluemix.net/  ){: new_window} oder [Code ansehen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/watson-developer-cloud/text-bot){: new_window}
 
 ## {{site.data.keyword.conversationshort}} und {{site.data.keyword.discoveryshort}}
 

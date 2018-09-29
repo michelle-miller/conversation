@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-02"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -33,12 +33,6 @@ Node.js 應用程式顯示 {{site.data.keyword.conversationshort}} 如何在簡�
 此 Node.js 應用程式是您可以使用 {{site.data.keyword.conversationshort}}（使用目的、實體及對話）建置之應用程式類型的完整開發範例。
 
 [檢視展示 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://conversation-demo.ng.bluemix.net/){: new_window}。
-
-## 文字訊息天氣機器人
-
-此應用程式示範如何搭配使用 {{site.data.keyword.conversationshort}} 與不同的機器人套件（例如來自 Facebook 及 Twilio 的套件），讓使用者與機器人進行直覺式的自然交談。此展示會整合 WeatherInsights 服務，以進行有關天氣的直覺式自然交談。
-
- [查看展示 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://text-bot.mybluemix.net/  ){: new_window} 或[分出程式碼 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/watson-developer-cloud/text-bot){: new_window}。
 
 ## {{site.data.keyword.conversationshort}} 及 {{site.data.keyword.discoveryshort}}
 

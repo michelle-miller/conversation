@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-06"
+lastupdated: "2018-09-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -25,13 +25,13 @@ API requests require a version parameter that takes a date in the format `versio
 
 Send the version parameter with every API request. The service uses the API version for the date you specify, or the most recent version before that date. Don't default to the current date. Instead, specify a date that matches a version that is compatible with your app, and don't change it until your app is ready for a later version.
 
-The current version is `2018-07-10`.
+The current version is `2018-09-20`.
 
-The "Try it out" pane in the {{site.data.keyword.conversationshort}} tooling is using version `2017-05-26`.
+The "Try it out" pane in the {{site.data.keyword.conversationshort}} tooling is using version `2018-07-10`.
 
 ## Beta features
 
-IBM releases services, features, and language support for your evaluation that are classified as beta. These features might be unstable, might change frequently, and might be discontinued with short notice. Beta features also might not provide the same level of performance or compatibility that generally available features provide and are not intended for use in a production environment. Beta features are supported only on the [developerWorks Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/watson-conversation/){: new_window}.
+IBM releases services, features, and language support for your evaluation that are classified as beta. These features might be unstable, might change frequently, and might be discontinued with short notice. Beta features also might not provide the same level of performance or compatibility that generally available features provide and are not intended for use in a production environment. Beta features are supported only on the [IBM Developer Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/watson-conversation/){: new_window}.
 
 ## Updated models
 {: #updated-models}
@@ -54,6 +54,16 @@ The method used to authenticate with IAM service instances is different from the
 
 The following new features and changes to the service are available.
 
+### 26 September 2018
+{: #26September2018}
+
+- **{{site.data.keyword.conversationfull}} is available in {{site.data.keyword.icpfull}}**: See the [{{site.data.keyword.icpfull}} documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0.3/featured_applications/watson_assistant.html) for more information.
+
+### 21 September 2018
+{: #21September2018}
+
+- **New API version**: The current API version is now `2018-09-20`. In this version, the `errors[].path` attribute of the error object that is returned by the API is expressed as a [JSON Pointer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://tools.ietf.org/html/rfc6901) instead of in dot notation form.
+
 ### 6 August 2018
 {: #6August2018}
 
@@ -62,6 +72,8 @@ The following new features and changes to the service are available.
 - **Disambiguation** ![Premium plan only](images/premium0.png): Enable disambiguation to allow your assistant to ask the user for help when it needs to decide between two or more viable dialog nodes to process for a response. See [Disambiguation](dialog-runtime.html#disambiguation) for more details.
 
 - **Jump-to fix**: Fixed a bug in the Dialogs tool which prevented you from being able to configure a jump-to that targets the response of a node with the `anything_else` special condition.
+
+- **Digression return message**: You can now specify text to display when the user returns to a node after a digression. The user will have seen the prompt for the node already. You can change the message slightly to let users know they are returning to where they left off. For example, specify a response like, `Where were we? Oh, yes...` See [Digressions](dialog-runtime.html#digressions) for more details.
 
 ### 12 July 2018
 {: #12July2018}

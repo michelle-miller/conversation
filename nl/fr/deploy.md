@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-24"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -20,8 +20,6 @@ lastupdated: "2018-01-24"
 # Présentation du déploiement
 
 Une fois que vous avez configuré votre espace de travail et généré un dialogue actif, vous pouvez déployer votre application en connectant l'espace de travail à l'interface que vos clients utiliseront. Vous pouvez également connecter votre espace de travail à d'autres services (y compris d'autres services {{site.data.keyword.watson}}). Pour ce faire, vous pouvez procéder de différentes manières.
-
-- [**Utilisation de l'option Test in Slack**](test-deploy.html) : vous pouvez utiliser l'outil de déploiement de test pour déployer rapidement un agent conversationnel dans un canal Slack à l'aide de votre espace de travail et d'une application Slack préconfigurée. Cette option est le moyen le plus rapide et le plus facile de tester  votre espace de travail, mais elle comporte quelques limitations.
 
 - [**Déploiement sur un canal avec le connecteur {{site.data.keyword.conversationshort}}**](conversation-connector.html) : vous pouvez utiliser le connecteur {{site.data.keyword.conversationshort}} pour déployer un agent conversationnel sur Slack ou Facebook Messenger, à l'aide de votre espace de travail et de votre propre application Slack ou Facebook. 
 
