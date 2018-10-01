@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-17"
+lastupdated: "2018-09-29"
 
 ---
 
@@ -29,11 +29,9 @@ You can view this tutorial for Node.js (Javascript), Python 3, or Java by clicki
 
 ## Setting up the {{site.data.keyword.conversationshort}} service
 
-The example application we will create in this section implements several functions of a cognitive personal assistant. The application code will connect to a {{site.data.keyword.conversationshort}} workspace, where the cognitive processing (such as the detection of user intents) takes place.
+The example application we will create in this section connects to a {{site.data.keyword.conversationshort}} workspace, where the cognitive processing (such as the detection of user intents) takes place. Before continuing with this example, you need to set up the required {{site.data.keyword.conversationshort}} workspace:
 
-Before continuing with this example, you need to set up the required {{site.data.keyword.conversationshort}} workspace:
-
-1.  Download the workspace <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/conversation/conversation-simple-example.json" download="conversation-simple-example.json">JSON file</a>.
+1.  Download the workspace <a target="_blank" href="https://watson-developer-cloud.github.io/doc-tutorial-downloads/assistant/assistant-simple-example.json" download="assistant-simple-example.json">JSON file</a>.
 1.  [Import the workspace](/docs/services/conversation/configure-workspace.html#creating-workspaces) into an instance of the {{site.data.keyword.conversationshort}} service.
 
 ## Getting service information
@@ -56,12 +54,12 @@ var AssistantV1 = require('watson-developer-cloud/assistant/v1');
 
 // Set up Assistant service wrapper.
 var service = new AssistantV1({
-  username: 'USERNAME', // replace with service username
-  password: 'PASSWORD', // replace with service password
-  version: '2018-02-16'
+  username: '{username}', // replace with service username
+  password: '{password}', // replace with service password
+  version: '2018-07-10'
 });
 
-var workspace_id = 'WORKSPACE_ID'; // replace with workspace ID
+var workspace_id = '{workspace_id}'; // replace with workspace ID
 
 // Start conversation with empty message.
 service.message({
@@ -75,9 +73,9 @@ function processResponse(err, response) {
     return;
   }
   
-  // Display the output from dialog, if any.
-  if (response.output.text.length != 0) {
-      console.log(response.output.text[0]);
+  // Display the output from dialog, if any. Assumes a single text response.
+  if (response.output.generic.length != 0) {
+      console.log(response.output.generic[0].text);
   }
 }
 ```
@@ -92,11 +90,11 @@ import watson_developer_cloud
 
 # Set up Assistant service.
 service = watson_developer_cloud.AssistantV1(
-  username = 'USERNAME', # replace with service username
-  password = 'PASSWORD', # replace with service password
-  version = '2018-02-16'
+  username = '{username}', # replace with service username
+  password = '{password}', # replace with service password
+  version = '2018-07-10'
 )
-workspace_id = 'WORKSPACE_ID' # replace with workspace ID
+workspace_id = '{workspace_id}' # replace with workspace ID
 
 # Start conversation with empty message.
 response = service.message(
@@ -106,9 +104,9 @@ response = service.message(
   }
 )
 
-# Print the output from dialog, if any.
-if response['output']['text']:
-  print(response['output']['text'][0])
+# Print the output from dialog, if any. Assumes a single text response.
+if response['output']['generic']:
+  print(response['output']['generic'][0]['text'])
 ```
 {: codeblock}
 {: python}
@@ -120,9 +118,11 @@ if response['output']['text']:
  */
 
 import com.ibm.watson.developer_cloud.assistant.v1.Assistant;
+import com.ibm.watson.developer_cloud.assistant.v1.model.DialogRuntimeResponseGeneric;
 import com.ibm.watson.developer_cloud.assistant.v1.model.MessageOptions;
 import com.ibm.watson.developer_cloud.assistant.v1.model.MessageRequest;
 import com.ibm.watson.developer_cloud.assistant.v1.model.MessageResponse;
+import java.util.List;
 import java.util.logging.LogManager;
 
 public class AssistantSimpleExample {
@@ -132,16 +132,20 @@ public class AssistantSimpleExample {
     LogManager.getLogManager().reset();
 
     // Set up Assistant service.
-    Assistant service = new Assistant("2018-02-16");
-    service.setUsernameAndPassword("USERNAME", // replace with service username
-                                   "PASSWORD"); // replace with service password
-    String workspaceId = "WORKSPACE_ID"; // replace with workspace ID
+    Assistant service = new Assistant("2018-07-10");
+    service.setUsernameAndPassword("{username}", // replace with service username
+                                   "{password}"); // replace with service password
+    String workspaceId = "{workspace_id}"; // replace with workspace ID
 
     // Start assistant with empty message.
     MessageOptions options = new MessageOptions.Builder(workspaceId).build();
     MessageResponse response = service.message(options).execute();
 
-    System.out.println(response.getOutput().getText().get(0));
+    // Print the output from dialog, if any. Assumes a single text response.
+    List<DialogRuntimeResponseGeneric> responseGeneric = response.getOutput().getGeneric();
+    if(responseGeneric.size() > 0) {
+      System.out.println(responseGeneric.get(0).getText());
+    }
   }
 }
 ```
@@ -205,12 +209,12 @@ var AssistantV1 = require('watson-developer-cloud/assistant/v1');
 
 // Set up Assistant service wrapper.
 var service = new AssistantV1({
-  username: 'USERNAME', // replace with service username
-  password: 'PASSWORD', // replace with service password
-  version: '2018-02-16'
+  username: '{username}', // replace with service username
+  password: '{password}', // replace with service password
+  version: '2018-07-10'
 });
 
-var workspace_id = 'WORKSPACE_ID'; // replace with workspace ID
+var workspace_id = '{workspace_id}'; // replace with workspace ID
 
 // Start conversation with empty message.
 service.message({
@@ -229,9 +233,9 @@ function processResponse(err, response) {
     console.log('Detected intent: #' + response.intents[0].intent);
   }
 
-  // Display the output from dialog, if any.
-  if (response.output.text.length != 0) {
-      console.log(response.output.text[0]);
+  // Display the output from dialog, if any. Assumes a single text response.
+  if (response.output.generic.length != 0) {
+      console.log(response.output.generic[0].text);
   }
 
   // Prompt for the next round of input.
@@ -252,11 +256,11 @@ import watson_developer_cloud
 
 # Set up Assistant service.
 service = watson_developer_cloud.AssistantV1(
-  username = 'USERNAME', # replace with service username
-  password = 'PASSWORD', # replace with service password
-  version = '2018-02-16'
+  username = '{username}', # replace with service username
+  password = '{password}', # replace with service password
+  version = '2018-07-10'
 )
-workspace_id = 'WORKSPACE_ID' # replace with workspace ID
+workspace_id = '{workspace_id}' # replace with workspace ID
 
 # Initialize with empty value to start the conversation.
 user_input = ''
@@ -272,13 +276,13 @@ while True:
     }
   )
 
-  # If an intent was detected, print it to the console.
+  # If an intent was detected, print it to the console. Assumes a single text response.
   if response['intents']:
     print('Detected intent: #' + response['intents'][0]['intent'])
 
   # Print the output from dialog, if any.
-  if response['output']['text']:
-    print(response['output']['text'][0])
+  if response['output']['generic']:
+    print(response['output']['generic'][0]['text'])
 
   # Prompt for next round of input.
   user_input = input('>> ')
@@ -292,6 +296,7 @@ while True:
  */
 
 import com.ibm.watson.developer_cloud.assistant.v1.Assistant;
+import com.ibm.watson.developer_cloud.assistant.v1.model.DialogRuntimeResponseGeneric;
 import com.ibm.watson.developer_cloud.assistant.v1.model.InputData;
 import com.ibm.watson.developer_cloud.assistant.v1.model.MessageOptions;
 import com.ibm.watson.developer_cloud.assistant.v1.model.MessageRequest;
@@ -305,12 +310,12 @@ public class AssistantSimpleExample {
 
     // Suppress log messages in stdout.
     LogManager.getLogManager().reset();
-
+    
     // Set up Assistant service.
-    Assistant service = new Assistant("2018-02-16");
-    service.setUsernameAndPassword("USERNAME", // replace with service username
-                                   "PASSWORD"); // replace with service password
-    String workspaceId = "WORKSPACE_ID"; // replace with workspace ID
+    Assistant service = new Assistant("2018-07-10");
+    service.setUsernameAndPassword("{username}", // replace with service username
+                                   "{password}"); // replace with service password
+    String workspaceId = "{workspace_id}"; // replace with workspace ID
 
     // Initialize with empty value to start the conversation.
     MessageOptions options = new MessageOptions.Builder(workspaceId).build();
@@ -318,17 +323,19 @@ public class AssistantSimpleExample {
     // Main input/output loop
     do {
       // Send message to Assistant service.
-      MessageResponse response = service.message(options).execute();      
-      String responseText = response.getOutput().getText().get(0);
-      List<RuntimeIntent> responseIntents = response.getIntents();
-
+      MessageResponse response = service.message(options).execute();
+      
       // If an intent was detected, print it to the console.
+      List<RuntimeIntent> responseIntents = response.getIntents();
       if(responseIntents.size() > 0) {
         System.out.println("Detected intent: #" + responseIntents.get(0).getIntent());
       }
 
-      // Print the output from dialog, if any.
-      System.out.println(responseText);
+      // Print the output from dialog, if any. Assumes a single text response.
+      List<DialogRuntimeResponseGeneric> responseGeneric = response.getOutput().getGeneric();
+      if(responseGeneric.size() > 0) {
+        System.out.println(responseGeneric.get(0).getText());
+      }
 
       // Prompt for next round of input.
       System.out.print(">> ");
@@ -344,7 +351,7 @@ public class AssistantSimpleExample {
 
 This version of the application begins the same way as before: sending an empty message to the {{site.data.keyword.conversationshort}} service to start the conversation.
 
-The `processResponse()` function now displays any intent detected by the dialog along with the output text, and then it then prompts for the next round of user input.
+The `processResponse()` function now displays any intent detected by the dialog along with the output text, and then it prompts for the next round of user input.
 {: javascript }
 
 It then displays any intent detected by the dialog along with the output text, and then it prompts for the next round of user input. (We're using a `while True` loop for now, since we haven't yet implemented a way of ending the conversation.)
@@ -372,7 +379,7 @@ Welcome to the {{site.data.keyword.conversationshort}} example!
 
 The {{site.data.keyword.conversationshort}} service is detecting the correct intents, and yet every turn of the conversation returns the welcome message from the conversation_start node (`Welcome to the {{site.data.keyword.conversationshort}} example!`).
 
-This is happening because the {{site.data.keyword.conversationshort}} service is stateless; it is the responsibility of the application to maintain state information. Because we are not yet doing anything to maintain state, the {{site.data.keyword.conversationshort}} service sees every round of user input as the first turn of a new conversation, triggering the conversation_start node.
+This is happening because the {{site.data.keyword.conversationshort}} workspace is stateless; it is the responsibility of the application to maintain state information. Because we are not yet doing anything to maintain state, the {{site.data.keyword.conversationshort}} dialog sees every round of user input as the first turn of a new conversation, triggering the conversation_start node.
 
 ## Maintaining state
 
@@ -390,12 +397,12 @@ var AssistantV1 = require('watson-developer-cloud/assistant/v1');
 
 // Set up Assistant service wrapper.
 var service = new AssistantV1({
-  username: 'USERNAME', // replace with service username
-  password: 'PASSWORD', // replace with service password
-  version: '2018-02-16'
+  username: '{username}', // replace with service username
+  password: '{password}', // replace with service password
+  version: '2018-07-10'
 });
 
-var workspace_id = 'WORKSPACE_ID'; // replace with workspace ID
+var workspace_id = '{workspace_id}'; // replace with workspace ID
 
 // Start conversation with empty message.
 service.message({
@@ -414,9 +421,9 @@ function processResponse(err, response) {
     console.log('Detected intent: #' + response.intents[0].intent);
   }
 
-  // Display the output from dialog, if any.
-  if (response.output.text.length != 0) {
-      console.log(response.output.text[0]);
+  // Display the output from dialog, if any. Assumes a single text response.
+  if (response.output.generic.length != 0) {
+      console.log(response.output.generic[0].text);
   }
 
   // Prompt for the next round of input.
@@ -439,11 +446,11 @@ import watson_developer_cloud
 
 # Set up Assistant service.
 service = watson_developer_cloud.AssistantV1(
-  username = 'USERNAME', # replace with service username
-  password = 'PASSWORD', # replace with service password
-  version = '2018-02-16'
+  username = '{username}', # replace with service username
+  password = '{password}', # replace with service password
+  version = '2018-07-10'
 )
-workspace_id = 'WORKSPACE_ID' # replace with workspace ID
+workspace_id = '{workspace_id}' # replace with workspace ID
 
 # Initialize with empty value to start the conversation.
 user_input = ''
@@ -465,9 +472,9 @@ while True:
   if response['intents']:
     print('Detected intent: #' + response['intents'][0]['intent'])
 
-  # Print the output from dialog, if any.
-  if response['output']['text']:
-    print(response['output']['text'][0])
+  # Print the output from dialog, if any. Assumes a single text response.
+  if response['output']['generic']:
+    print(response['output']['generic'][0]['text'])
 
   # Update the stored context with the latest received from the dialog.
   context = response['context']
@@ -485,6 +492,7 @@ while True:
 
 import com.ibm.watson.developer_cloud.assistant.v1.Assistant;
 import com.ibm.watson.developer_cloud.assistant.v1.model.Context;
+import com.ibm.watson.developer_cloud.assistant.v1.model.DialogRuntimeResponseGeneric;
 import com.ibm.watson.developer_cloud.assistant.v1.model.InputData;
 import com.ibm.watson.developer_cloud.assistant.v1.model.MessageOptions;
 import com.ibm.watson.developer_cloud.assistant.v1.model.MessageRequest;
@@ -498,12 +506,12 @@ public class AssistantSimpleExample {
 
     // Suppress log messages in stdout.
     LogManager.getLogManager().reset();
-
+    
     // Set up Assistant service.
-    Assistant service = new Assistant("2018-02-16");
-    service.setUsernameAndPassword("USERNAME", // replace with service username
-                                   "PASSWORD"); // replace with service password
-    String workspaceId = "WORKSPACE_ID"; // replace with workspace ID
+    Assistant service = new Assistant("2018-07-10");
+    service.setUsernameAndPassword("{username}", // replace with service username
+                                   "{password}"); // replace with service password
+    String workspaceId = "{workspace_id}"; // replace with workspace ID
 
     // Initialize with empty value to start the conversation.
     MessageOptions options = new MessageOptions.Builder(workspaceId).build();
@@ -520,12 +528,12 @@ public class AssistantSimpleExample {
         System.out.println("Detected intent: #" + responseIntents.get(0).getIntent());
       }
 
-      // Print the output from dialog, if any.
-      List<String> responseText = response.getOutput().getText();
-      if(responseText.size() > 0) {
-        System.out.println(responseText.get(0));
+      // Print the output from dialog, if any. Assumes a single text response.
+      List<DialogRuntimeResponseGeneric> responseGeneric = response.getOutput().getGeneric();
+      if(responseGeneric.size() > 0) {
+        System.out.println(responseGeneric.get(0).getText());
       }
-
+      
       // Update the stored context with the latest received from the dialog.
       context = response.getContext();
 
@@ -577,7 +585,7 @@ options = new MessageOptions.Builder(workspaceId).input(input).context(context).
 {: codeblock }
 {: java }
 
-This ensures that the context is maintained from one turn to the next, so the {{site.data.keyword.conversationshort}} service no longer thinks every turn is the first:
+This ensures that the context is maintained from one turn to the next, so the {{site.data.keyword.conversationshort}} dialog no longer thinks every turn is the first:
 
 ```
 >> hello
@@ -598,13 +606,11 @@ However, nothing else is happening. When we ask for the time, we get no answer; 
 
 ## Implementing app actions
 
-In addition to the output text to be displayed to the user, our {{site.data.keyword.conversationshort}} dialog uses the `output` object in the response JSON to signal when the application needs to carry out an action, based on the detected intents.
+In addition to the output text to be displayed to the user, our {{site.data.keyword.conversationshort}} dialog uses the `actions` property in the response JSON to signal when the application needs to carry out an action, based on the detected intents.
 
-These action flags are sent using the `action` property, which our dialog defines as part of the response JSON. When the dialog determines that the application needs to do something, it sets the value of `action` to the appropriate value, either `display_time` or `end_conversation`.
+The `actions` property is an array of objects representing any actions the dialog needs to invoke in response to user input. Each object in this array includes properties that describe a requested action. An action can be either a client action or a server action, indicated by the `type` property; for our purposes, we're only interested in client actions, which are actions the dialog is asking the client app to perform.
 
-Keep in mind that `output` is just a JSON object, and you can add any valid content to it that you want. For a more complex application, you might use an array with multiple action flags.
-
-But in our example, we're using a simple key/value pair that supports a single action flag. Our application code needs to check the value of the `action` property in the response and then carry out any specified action. (This version also removes the display of detected intents, now that we're sure those are being correctly identified.)
+Our application code needs to check the `actions` property for requested client actions. (This version also removes the display of detected intents, now that we're sure those are being correctly identified.)
 
 ```javascript
 // Example 4: implements app actions.
@@ -614,12 +620,12 @@ var AssistantV1 = require('watson-developer-cloud/assistant/v1');
 
 // Set up Assistant service wrapper.
 var service = new AssistantV1({
-  username: 'USERNAME', // replace with service username
-  password: 'PASSWORD', // replace with service password
-  version: '2018-02-16'
+  username: '{username}', // replace with service username
+  password: '{password}', // replace with service password
+  version: '2018-07-10'
 });
 
-var workspace_id = 'WORKSPACE_ID'; // replace with workspace ID
+var workspace_id = '{workspace_id}'; // replace with workspace ID
 
 // Start conversation with empty message.
 service.message({
@@ -635,18 +641,23 @@ function processResponse(err, response) {
 
   var endConversation = false;
 
-  // Check for action flags.
-  if (response.output.action === 'display_time') {
-    // User asked what time it is, so we output the local system time.
-    console.log('The current time is ' + new Date().toLocaleTimeString() + '.');
-  } else if (response.output.action === 'end_conversation') {
-    // User said goodbye, so we're done.
-    console.log(response.output.text[0]);
-    endConversation = true;
+  // Check for client actions requested by the dialog. Assumes at most a single
+  // action.
+  if (response.actions) {
+    if (response.actions[0].type === 'client') {
+      if (response.actions[0].name === 'display_time') {
+        // User asked what time it is, so we output the local system time.
+        console.log('The current time is ' + new Date().toLocaleTimeString() + '.');
+      } else if (response.actions[0].name === 'end_conversation') {
+        // User said goodbye, so we're done.
+        console.log(response.output.generic[0].text);
+        endConversation = true;
+      }
+    }
   } else {
-    // Display the output from dialog, if any.
-    if (response.output.text.length != 0) {
-        console.log(response.output.text[0]);
+    // Display the output from dialog, if any. Assumes a single text response.
+    if (response.output.generic.length != 0) {
+        console.log(response.output.generic[0].text);
     }
   }
 
@@ -673,11 +684,11 @@ import time
 
 # Set up Assistant service.
 service = watson_developer_cloud.AssistantV1(
-  username = 'USERNAME', # replace with service username
-  password = 'PASSWORD', # replace with service password
-  version = '2018-02-16'
+  username = '{username}', # replace with service username
+  password = '{password}', # replace with service password
+  version = '2018-07-10'
 )
-workspace_id = 'WORKSPACE_ID' # replace with workspace ID
+workspace_id = '{workspace_id}' # replace with workspace ID
 
 # Initialize with empty value to start the conversation.
 user_input = ''
@@ -696,15 +707,16 @@ while current_action != 'end_conversation':
     context = context
   )
 
-  # Print the output from dialog, if any.
-  if response['output']['text']:
-    print(response['output']['text'][0])
+  # Print the output from dialog, if any. Assumes a single text response.
+  if response['output']['generic']:
+    print(response['output']['generic'][0]['text'])
 
   # Update the stored context with the latest received from the dialog.
   context = response['context']
-  # Check for action flags sent by the dialog.
-  if 'action' in response['output']:
-    current_action = response['output']['action']
+  # Check for client actions requested by the dialog.
+  if 'actions' in response:
+    if response['actions'][0]['type'] == 'client':
+      current_action = response['actions'][0]['name']
   # User asked what time it is, so we output the local system time.
   if current_action == 'display_time':
     print('The current time is ' + time.strftime('%I:%M:%S %p') + '.')
@@ -722,16 +734,16 @@ while current_action != 'end_conversation':
 
 import com.ibm.watson.developer_cloud.assistant.v1.Assistant;
 import com.ibm.watson.developer_cloud.assistant.v1.model.Context;
+import com.ibm.watson.developer_cloud.assistant.v1.model.DialogRuntimeResponseGeneric;
 import com.ibm.watson.developer_cloud.assistant.v1.model.InputData;
 import com.ibm.watson.developer_cloud.assistant.v1.model.MessageOptions;
 import com.ibm.watson.developer_cloud.assistant.v1.model.MessageRequest;
 import com.ibm.watson.developer_cloud.assistant.v1.model.MessageResponse;
-import com.ibm.watson.developer_cloud.assistant.v1.model.RuntimeIntent;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.LogManager;
-import org.json.JSONObject;
 
 public class AssistantSimpleExample {
   public static void main(String[] args) {
@@ -740,10 +752,10 @@ public class AssistantSimpleExample {
     LogManager.getLogManager().reset();
 
     // Set up Assistant service.
-    Assistant service = new Assistant("2018-02-16");
-    service.setUsernameAndPassword("USERNAME", // replace with service username
-                                   "PASSWORD"); // replace with service password
-    String workspaceId = "WORKSPACE_ID"; // replace with workspace ID
+    Assistant service = new Assistant("2018-07-10");
+    service.setUsernameAndPassword("{username}", // replace with service username
+                                   "{password}"); // replace with service password
+    String workspaceId = "{workspace_id}"; // replace with workspace ID
 
     // Initialize with empty value to start the conversation.
     MessageOptions options = new MessageOptions.Builder(workspaceId).build();
@@ -755,21 +767,20 @@ public class AssistantSimpleExample {
       // Send message to Assistant service.
       MessageResponse response = service.message(options).execute();
 
-      // Print the output from dialog, if any.
-      List<String> responseText = response.getOutput().getText();
-      if(responseText.size() > 0) {
-        System.out.println(responseText.get(0));
+      // Print the output from dialog, if any. Assumes a single text response.
+      List<DialogRuntimeResponseGeneric> responseGeneric = response.getOutput().getGeneric();
+      if(responseGeneric.size() > 0) {
+        System.out.println(responseGeneric.get(0).getText());
       }
 
       // Update the stored context with the latest received from the dialog.
       context = response.getContext();
 
-      // Check for action flags sent by the dialog.
-      JSONObject outputObj = new JSONObject(response.getOutput().toString());
-      if(outputObj.has("action")) {
-        currentAction = outputObj.getString("action");
-      }
-      else {
+      // Check for client actions requested by the dialog.
+      if(response.get("actions") != null) {
+        List<Map<String, String>> actions = (List<Map<String, String>>) response.get("actions");
+        currentAction = actions.get(0).get("name");
+      } else {
         currentAction = "";
       }
 
@@ -795,16 +806,13 @@ public class AssistantSimpleExample {
 {: codeblock}
 {: java}
 
-The processResponse() function now checks the value of the `action` property of the `output` object received from the {{site.data.keyword.conversationshort}} service. If the value is either `display_time` or `end_conversation`, the application carries out the appropriate action.
+The processResponse() function now checks the `actions` property of the response JSON to see if it contains either of the possible client actions (`display_time` or `end_conversation`). If so, the application carries out the appropriate action.
 {: javascript}
 
-The app now checks the value of the `action` property of the `output` object received from the {{site.data.keyword.conversationshort}} service. If the value is `display_time`, the application carries out the appropriate action. If the value is `end_conversation`, the app knows not to prompt for more user input, and the `while` loop ends.
+The app now checks the `actions` property of the response JSON to see if it contains either of the possible client actions. If the value is `display_time`, the application carries out the appropriate action. If the value is `end_conversation`, the app knows not to prompt for more user input, and the `while` loop ends.
 {: python}
 
-The app now checks the value of the `action` property of the `output` object received from the {{site.data.keyword.conversationshort}} service. If the value is `display_time`, the application carries out the appropriate action. If the value is `end_conversation`, the app knows not to prompt for more user input, and the `do-while` loop ends.
-{: java}
-
-**Note:** Because `action` is a custom property we defined in our response JSON, we cannot access it directly using the OutputData class. Instead, we convert the output back to JSON and then use the [JSON-java (org.json) ![External link icon](../../icons/launch-glyph.svg "External link icon")]](https://github.com/stleary/JSON-java){: new_window} package to parse it. (Make sure you have installed this package before you compile this version of the example.)
+The app now checks the `actions` property of the response JSON to see if it contains either of the possible client actions. If the value is `display_time`, the application carries out the appropriate action. If the value is `end_conversation`, the app knows not to prompt for more user input, and the `do-while` loop ends.
 {: java}
 
 ```
