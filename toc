@@ -14,13 +14,8 @@ Watson Assistant
 
     {: .navgroup id="howto"}
     configure-workspace.md
-
-    {: .topicgroup}
-    Defining intents and entities
-        intents-entities.md
-        intents.md
-        entities.md
-        catalog.md
+    catalog.md
+    intents.md
 
     {: .topicgroup}
     Building a dialog
@@ -33,6 +28,8 @@ Watson Assistant
         dialog-api.md
         dialog-responses-json.md
         implement-responses.md
+
+    entities.md
 
     {: .topicgroup}
     Deploying

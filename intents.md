@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-06"
+lastupdated: "2018-10-01"
 
 ---
 
@@ -23,6 +23,23 @@ lastupdated: "2018-08-06"
 {: shortdesc}
 
 <iframe class="embed-responsive-item" id="youtubeplayer" title="Working with intents" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/WbXTZBq-Xlk" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen> </iframe>
+
+## Intent creation overview
+{: #intent-described}
+
+- Plan the intents for your application.
+
+  Consider what your customers might want to do, and what you want your application to be able to handle on their behalf. For example, you might want your application to help your customers make a purchase. If so, you can add a `#buy_something` intent. (The `#` prepended to the intent name helps to clearly identify it as an intent.)
+
+- Teach Watson about your intents.
+
+  Once you decide which business requests you want your application to handle for your customers, you must teach Watson about them. For each business goal (such as `#buy_something`), you must provide at least 10 examples of utterances that your customers typically use to indicate their goal. For example, `I want to make a purchase.`
+  
+  Ideally, find real-world user utterance examples that you can extract from existing business processes. The user examples should be tailored to your specific business. For example, if you are an insurance company, your user examples might look more like this, `I want to buy a new XYZ insurance plan.`
+  
+  The examples you provide are used by the service to build a machine learning model that can recognize the same and similar types of utterances and map them to the appropriate intent.
+
+Start with a few intents, and test them as you iteratively expand the scope of the application.
 
 ## Intent limits
 {: #intent-limits}
