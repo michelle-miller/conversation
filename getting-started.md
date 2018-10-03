@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-08"
+lastupdated: "2018-10-02"
 
 ---
 
@@ -183,7 +183,7 @@ You have successfully added a node to the dialog that addresses the type of busi
 Open the sample workspace to see intents similar to the ones you just created plus many more, and see how they are used in a more complex dialog.
 
 1.  Go back to the Workspaces page.
-   You can click the ![Back to workspaces button](images/workspaces-button.png) button from the navigation menu.
+   You can click the ![Back to workspaces button](images/workspaces.png) button from the navigation menu.
 1.  On the **Customer Service - Sample** workspace tile, click the **Edit sample** button.
 
 ## Next steps

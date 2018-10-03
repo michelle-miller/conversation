@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-03"
 ---
 
 {:shortdesc: .shortdesc}
@@ -63,6 +63,7 @@ The following new features and changes to the service are available.
 {: #21September2018}
 
 - **New API version**: The current API version is now `2018-09-20`. In this version, the `errors[].path` attribute of the error object that is returned by the API is expressed as a [JSON Pointer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://tools.ietf.org/html/rfc6901) instead of in dot notation form.
+- **Web actions support**: You can now call {{site.data.keyword.openwhisk_short}} web actions from a dialog node. See [Making programmatic calls from a dialog node](dialog-actions.html) for more details.
 
 ### 6 August 2018
 {: #6August2018}
