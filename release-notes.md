@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-03"
+lastupdated: "2018-10-10"
 ---
 
 {:shortdesc: .shortdesc}
@@ -42,10 +42,10 @@ Existing models that you have trained will not be immediately impacted, but expi
 
 **Note:** This updating statement applies to Generally Available (GA) languages and features only.
 
-## Upcoming API authentication changes
+## API authentication changes
 {: #iam-is-coming}
 
-{{site.data.keyword.cloud_notm}} is transitioning from using Cloud Foundry to using token-based Identity and Access Management (IAM) authentication. (See [Authenticating with IAM tokens ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/watson/getting-started-iam.html) for more information.)
+**On 30 October 2018, the US South and Germany regions will transition from using Cloud Foundry to using token-based Identity and Access Management (IAM) authentication.** (See [Authenticating with IAM tokens ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/watson/getting-started-iam.html) for more information.)
 
 The method used to authenticate with IAM service instances is different from the method used to authenticate with Cloud Foundry instances. Existing applications that use Cloud Foundry will continue to work. However, if you migrate a service instance or create a new service instance in a region that uses IAM, you must update the code that handles authentication. All regions are transitioning to IAM, but on a rolling schedule. For more details, see [Data centers](services-information.html#regions).
 
