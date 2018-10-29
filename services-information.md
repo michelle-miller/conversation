@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-10"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -53,7 +53,7 @@ If you want to upgrade from one plan to another, see [Upgrading](upgrading.html)
 
 IBM Cloud has a network of global data centers that provide performance benefits to its cloud services. See [IBM Cloud global data centers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/data-centers/){: new_window} for more details.
 
-{{site.data.keyword.cloud_notm}} is migrating from managing user access with Cloud Foundry to using token-based Identity and Access Management (IAM) authentication. IAM is being rolled out in different locations at different times.
+{{site.data.keyword.cloud_notm}} changed from managing user access with Cloud Foundry to using token-based Identity and Access Management (IAM) authentication. IAM was rolled out in different locations at different times.
 
 You can create {{site.data.keyword.conversationshort}} service instances that are hosted in the following data center locations:
 
@@ -94,7 +94,7 @@ The authentication mechanism used by your service instance impacts how you must 
     ```curl
     curl -X GET \
     --user {username}:{password} \
-    'https://gateway.watson.net/assistant/api/v1/workspaces?version=2017-05-26'
+    'https://gateway.watson.net/assistant/api/v1/workspaces?version=2018-09-20'
     ```
     {: codeblock}
 
@@ -107,7 +107,7 @@ The authentication mechanism used by your service instance impacts how you must 
 
         ```curl
         curl -X GET \
-        'https://gateway-syd.watsonplatform.net/assistant/api/v1/workspaces?version=2017-05-26' \
+        'https://gateway-syd.watsonplatform.net/assistant/api/v1/workspaces?version=2018-09-20' \
         --header 'Authorization: Bearer eyJhbGciOiJIUz......sgrKIi8hdFs'
         ```
         {: codeblock}
@@ -116,7 +116,7 @@ The authentication mechanism used by your service instance impacts how you must 
 
         ```curl
         curl -X GET -u "apikey:3Df... ...Y7Pc9" \
-        'https://gateway-us-east.watsonplatform.net/assistant/api/v1/workspaces?version=2017-05-26' \
+        'https://gateway-us-east.watsonplatform.net/assistant/api/v1/workspaces?version=2018-09-20' \
         ```
         {: codeblock}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-17"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -94,13 +94,11 @@ There might come a time when you want to completely remove a set of your user's 
 To delete messages for one or more individuals, you first need to associate a message with a unique **Customer ID** for each individual. To specify the **Customer ID** for any message sent using the `/message` API, include the `X-Watson-Metadata: customer_id` property in your header. You can pass multiple **Customer ID** entries with semicolon separated `field=value` pairs, using `customer_id`, as in the following example:
 
 ```
-curl -X POST
- --user {username}:{password}
+curl -X POST -u "apikey:3Df... ...Y7Pc9"
  --header
    'Content-Type: application/json'
-   'Accept: application/json'
    'X-Watson-Metadata: customer_id={first-customer-ID};customer_id={second-customer-ID}'
- --data '{"input":{"text":"hello"}}' 'https://gateway.watson.net/conversation/api/v1/workspaces/{workspaceID}/message?version=2017-05-26'
+ --data '{"input":{"text":"hello"}}' 'https://gateway-us-south.watsonplatform.net/assistant/api/v1/workspaces/{workspaceID}/message?version=2018-09-20'
 ```
 {: codeblock}
 
@@ -112,9 +110,8 @@ curl -X POST
 Use the `/logs` API `filter` parameter to search an application log for specific user data. For example, to search for data specific to a `customer_id` that matches `my_best_customer`, the query might be:
 
 ``` curl
-curl -X GET
- --user {username}:{password}
-'https://gateway.watson.net/assistant/api/v1/workspaces/{workspaceID}/logs?version=2018-05-26&filter=customer_id::my_best_customer'
+curl -X GET -u "apikey:3Df... ...Y7Pc9"
+'https://gateway-us-south.watsonplatform.net/assistant/api/v1/workspaces/{workspaceID}/logs?version=2018-09-20&filter=customer_id::my_best_customer'
 ```
 {: codeblock}
 
@@ -130,9 +127,8 @@ Only data that was added by using the `POST /message` API endpoint with an assoc
 As an example, to delete any message data associated with a user that has the customer ID `abc` from your {{site.data.keyword.conversationshort}} instance, send the following cURL command:
 
 ``` curl
-curl -X DELETE
- --user {username}:{password}
- 'https://gateway.watson.net/assistant/api/v1/user_data?customer_id=abc&version=2017-05-26'
+curl -X DELETE -u "apikey:3Df... ...Y7Pc9"
+ 'https://gateway-us-south.watsonplatform.net/assistant/api/v1/user_data?customer_id=abc&version=2018-09-20'
 ```
 {: codeblock}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-12"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -55,15 +55,13 @@ If you need to remove a customer's message data from a {{site.data.keyword.conve
 To be able to delete message data associated with a specific user, you must first associate all messages with a unique **customer ID** for each user. To specify the **customer ID** for any messages sent using the `/message` API, include the `X-Watson-Metadata: customer_id` property in your header. For example:
 
 ```
-curl -X POST
- --user {username}:{password}
+curl -X POST -u "apikey:3Df... ...Y7Pc9"
  --header
    'Content-Type: application/json'
-   'Accept: application/json'
    'X-Watson-Metadata: customer_id=abc'
  --data
    '{"input":{"text":"hello"}}'
-   'https://gateway.watson.net/assistant/api/v1/workspaces/{workspaceID}/message?version=2017-05-26'
+   'https://gateway-eu-de.watsonplatform.net/assistant/api/v1/workspaces/{workspaceID}/message?version=2018-09-20'
 ```
 {: codeblock}
 
