@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-29"
+lastupdated: "2018-10-30"
 
 ---
 
@@ -54,9 +54,8 @@ var AssistantV1 = require('watson-developer-cloud/assistant/v1');
 
 // Set up Assistant service wrapper.
 var service = new AssistantV1({
-  username: '{username}', // replace with service username
-  password: '{password}', // replace with service password
-  version: '2018-07-10'
+  iam_apikey: '{apikey}', // replace with API key
+  version: '2018-09-20'
 });
 
 var workspace_id = '{workspace_id}'; // replace with workspace ID
@@ -90,9 +89,8 @@ import watson_developer_cloud
 
 # Set up Assistant service.
 service = watson_developer_cloud.AssistantV1(
-  username = '{username}', # replace with service username
-  password = '{password}', # replace with service password
-  version = '2018-07-10'
+  iam_apikey = '{apikey}', # replace with API key
+  version = '2018-09-20'
 )
 workspace_id = '{workspace_id}' # replace with workspace ID
 
@@ -122,6 +120,7 @@ import com.ibm.watson.developer_cloud.assistant.v1.model.DialogRuntimeResponseGe
 import com.ibm.watson.developer_cloud.assistant.v1.model.MessageOptions;
 import com.ibm.watson.developer_cloud.assistant.v1.model.MessageRequest;
 import com.ibm.watson.developer_cloud.assistant.v1.model.MessageResponse;
+import com.ibm.watson.developer_cloud.service.security.IamOptions;
 import java.util.List;
 import java.util.logging.LogManager;
 
@@ -132,9 +131,8 @@ public class AssistantSimpleExample {
     LogManager.getLogManager().reset();
 
     // Set up Assistant service.
-    Assistant service = new Assistant("2018-07-10");
-    service.setUsernameAndPassword("{username}", // replace with service username
-                                   "{password}"); // replace with service password
+    IamOptions iamOptions = new IamOptions.Builder().apiKey("{apikey}").build();
+    Assistant service = new Assistant("2018-09-20", iamOptions);
     String workspaceId = "{workspace_id}"; // replace with workspace ID
 
     // Start assistant with empty message.
@@ -209,9 +207,8 @@ var AssistantV1 = require('watson-developer-cloud/assistant/v1');
 
 // Set up Assistant service wrapper.
 var service = new AssistantV1({
-  username: '{username}', // replace with service username
-  password: '{password}', // replace with service password
-  version: '2018-07-10'
+  iam_apikey: '{apikey}', // replace with API key
+  version: '2018-09-20'
 });
 
 var workspace_id = '{workspace_id}'; // replace with workspace ID
@@ -256,8 +253,7 @@ import watson_developer_cloud
 
 # Set up Assistant service.
 service = watson_developer_cloud.AssistantV1(
-  username = '{username}', # replace with service username
-  password = '{password}', # replace with service password
+  iam_apikey = '{apikey}', # replace with API key
   version = '2018-07-10'
 )
 workspace_id = '{workspace_id}' # replace with workspace ID
@@ -302,6 +298,7 @@ import com.ibm.watson.developer_cloud.assistant.v1.model.MessageOptions;
 import com.ibm.watson.developer_cloud.assistant.v1.model.MessageRequest;
 import com.ibm.watson.developer_cloud.assistant.v1.model.MessageResponse;
 import com.ibm.watson.developer_cloud.assistant.v1.model.RuntimeIntent;
+import com.ibm.watson.developer_cloud.service.security.IamOptions;
 import java.util.List;
 import java.util.logging.LogManager;
 
@@ -310,11 +307,10 @@ public class AssistantSimpleExample {
 
     // Suppress log messages in stdout.
     LogManager.getLogManager().reset();
-    
+
     // Set up Assistant service.
-    Assistant service = new Assistant("2018-07-10");
-    service.setUsernameAndPassword("{username}", // replace with service username
-                                   "{password}"); // replace with service password
+    IamOptions iamOptions = new IamOptions.Builder().apiKey("{apikey}").build();
+    Assistant service = new Assistant("2018-09-20", iamOptions);
     String workspaceId = "{workspace_id}"; // replace with workspace ID
 
     // Initialize with empty value to start the conversation.
@@ -324,7 +320,7 @@ public class AssistantSimpleExample {
     do {
       // Send message to Assistant service.
       MessageResponse response = service.message(options).execute();
-      
+
       // If an intent was detected, print it to the console.
       List<RuntimeIntent> responseIntents = response.getIntents();
       if(responseIntents.size() > 0) {
@@ -397,9 +393,8 @@ var AssistantV1 = require('watson-developer-cloud/assistant/v1');
 
 // Set up Assistant service wrapper.
 var service = new AssistantV1({
-  username: '{username}', // replace with service username
-  password: '{password}', // replace with service password
-  version: '2018-07-10'
+  iam_apikey: '{apikey}', // replace with API key
+  version: '2018-09-20'
 });
 
 var workspace_id = '{workspace_id}'; // replace with workspace ID
@@ -446,9 +441,8 @@ import watson_developer_cloud
 
 # Set up Assistant service.
 service = watson_developer_cloud.AssistantV1(
-  username = '{username}', # replace with service username
-  password = '{password}', # replace with service password
-  version = '2018-07-10'
+  iam_apikey = '{apikey}', # replace with API key
+  version = '2018-09-20'
 )
 workspace_id = '{workspace_id}' # replace with workspace ID
 
@@ -498,6 +492,7 @@ import com.ibm.watson.developer_cloud.assistant.v1.model.MessageOptions;
 import com.ibm.watson.developer_cloud.assistant.v1.model.MessageRequest;
 import com.ibm.watson.developer_cloud.assistant.v1.model.MessageResponse;
 import com.ibm.watson.developer_cloud.assistant.v1.model.RuntimeIntent;
+import com.ibm.watson.developer_cloud.service.security.IamOptions;
 import java.util.List;
 import java.util.logging.LogManager;
 
@@ -506,11 +501,10 @@ public class AssistantSimpleExample {
 
     // Suppress log messages in stdout.
     LogManager.getLogManager().reset();
-    
+
     // Set up Assistant service.
-    Assistant service = new Assistant("2018-07-10");
-    service.setUsernameAndPassword("{username}", // replace with service username
-                                   "{password}"); // replace with service password
+    IamOptions iamOptions = new IamOptions.Builder().apiKey("{apikey}").build();
+    Assistant service = new Assistant("2018-09-20", iamOptions);
     String workspaceId = "{workspace_id}"; // replace with workspace ID
 
     // Initialize with empty value to start the conversation.
@@ -533,7 +527,7 @@ public class AssistantSimpleExample {
       if(responseGeneric.size() > 0) {
         System.out.println(responseGeneric.get(0).getText());
       }
-      
+
       // Update the stored context with the latest received from the dialog.
       context = response.getContext();
 
@@ -620,9 +614,8 @@ var AssistantV1 = require('watson-developer-cloud/assistant/v1');
 
 // Set up Assistant service wrapper.
 var service = new AssistantV1({
-  username: '{username}', // replace with service username
-  password: '{password}', // replace with service password
-  version: '2018-07-10'
+  iam_apikey: '{apikey}', // replace with API key
+  version: '2018-09-20'
 });
 
 var workspace_id = '{workspace_id}'; // replace with workspace ID
@@ -684,9 +677,8 @@ import time
 
 # Set up Assistant service.
 service = watson_developer_cloud.AssistantV1(
-  username = '{username}', # replace with service username
-  password = '{password}', # replace with service password
-  version = '2018-07-10'
+  iam_apikey = '{apikey}', # replace with API key
+  version = '2018-09-20'
 )
 workspace_id = '{workspace_id}' # replace with workspace ID
 
@@ -739,6 +731,7 @@ import com.ibm.watson.developer_cloud.assistant.v1.model.InputData;
 import com.ibm.watson.developer_cloud.assistant.v1.model.MessageOptions;
 import com.ibm.watson.developer_cloud.assistant.v1.model.MessageRequest;
 import com.ibm.watson.developer_cloud.assistant.v1.model.MessageResponse;
+import com.ibm.watson.developer_cloud.service.security.IamOptions;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -752,9 +745,8 @@ public class AssistantSimpleExample {
     LogManager.getLogManager().reset();
 
     // Set up Assistant service.
-    Assistant service = new Assistant("2018-07-10");
-    service.setUsernameAndPassword("{username}", // replace with service username
-                                   "{password}"); // replace with service password
+    IamOptions iamOptions = new IamOptions.Builder().apiKey("{apikey}").build();
+    Assistant service = new Assistant("2018-09-20", iamOptions);
     String workspaceId = "{workspace_id}"; // replace with workspace ID
 
     // Initialize with empty value to start the conversation.
