@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-02"
 ---
 
 {:shortdesc: .shortdesc}
@@ -60,6 +60,11 @@ The following new features and changes to the service are available.
   For all existing service instances, you continue to use service credentials (`{username}:{password}`) for authentication.
 
   See [Authenticating API calls](services-information.html#authenticate-api-calls) for more information.
+
+### 25 October 2018
+{: #25October2018}
+
+- **Entity synonym recommendations are available in more languages**: Synonym recommendation support was added for the French, Japanese, and Spanish languages.
 
 ### 26 September 2018
 {: #26September2018}
