@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-26"
+lastupdated: "2018-10-30"
 
 ---
 
@@ -109,7 +109,7 @@ To share a workspace with other people, you must give them access to the service
 
   If you are not sure which type of access management your instance uses, check the [Data centers](services-information.html#regions) to find out whether IAM is being used in your location.
 
-1.  Go to the {{site.data.keyword.watson}} Developer Console [Projects ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/developer/watson/projects) page, and log in. Click **Manage > Account > Users** from the header menu.
+1.  Go to the {{site.data.keyword.watson}} Developer Console [Projects ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps/) page, and log in. Click **Manage > Account > Users** from the header menu.
 1.  Click **Invite users**, and then enter the email addresses of the people on your team to whom you want to give access.
 
     If you gave someone access to a service instance in Cloud Foundry, then the person might be listed as an invited user already. Click the person's name to open the access management settings for the user. Click **Assign access**, and then choose **Assign access to resources**.
@@ -120,6 +120,8 @@ To share a workspace with other people, you must give them access to the service
 
     For more information about platform management roles, see [IAM access ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/iam/users_roles.html). (Service access roles are not leveraged by {{site.data.keyword.conversationshort}}.)
 1.  Click **Invite users**.
+
+    If you are editing access for an existing user, click **Assign access**.
 
 When the people you invite next log in to {{site.data.keyword.cloud_notm}}, your account will be included in their list of accounts. If they select your account, they can see your service instance, and open and edit your workspace.
 
