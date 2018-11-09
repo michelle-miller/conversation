@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="watson-assistant" arm="969310" audience="service" href="/docs/services/conversation/getting-started.html"}
+{: .toc subcollection="conversation" audience="service" href="/docs/services/conversation/getting-started.html"}
 Watson Assistant
 
     {: .navgroup id="learn"}

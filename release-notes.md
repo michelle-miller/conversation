@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-07"
+lastupdated: "2018-11-08"
 ---
 
 {:shortdesc: .shortdesc}
@@ -47,7 +47,7 @@ Existing models that you have trained will not be immediately impacted, but expi
 
 The following new features and changes to the service are available.
 
-### 7 November 2018
+### 8 November 2018
 {: #7November2018}
 
 - **Japanese data center**: You can now create {{site.data.keyword.conversationshort}} service instances that are hosted in the Tokyo data center. See [Data centers](services-information.html#regions) for more details.
