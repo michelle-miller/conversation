@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-08"
+lastupdated: "2018-11-12"
 ---
 
 {:shortdesc: .shortdesc}
@@ -47,8 +47,15 @@ Existing models that you have trained will not be immediately impacted, but expi
 
 The following new features and changes to the service are available.
 
+### 9 November 2018
+{: #9November2018}
+
+- **Major user interface revision**: The Watson Assistant service has a new look and added features. And the documentation has moved! See [release notes](https://console.bluemix.net/docs/services/assistant/release-notes.html) for details. 
+
+  For any bookmarked links you have to documentation pages, you can get to the new version of the topic by replacing `/conversation` with `/assistant` in the URL.
+
 ### 8 November 2018
-{: #7November2018}
+{: #8November2018}
 
 - **Japanese data center**: You can now create {{site.data.keyword.conversationshort}} service instances that are hosted in the Tokyo data center. See [Data centers](services-information.html#regions) for more details.
 
