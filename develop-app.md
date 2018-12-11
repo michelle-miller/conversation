@@ -18,11 +18,15 @@ lastupdated: "2018-10-30"
 {:codeblock: .codeblock}
 {:download: .download}
 {:tip: .tip}
+{:deprecated: .deprecated}
 
 # Building a client application
 
 So you have a working dialog. Now you want to develop the application that will interact with your users and communicate with the {{site.data.keyword.conversationfull}} service.
 {: shortdesc}
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/api-client.html) instead.
+{: deprecated}
 
 You can view this tutorial for Node.js (Javascript), Python 3, or Java by clicking the language selector in the upper right. For details about all supported languages, refer to the {{site.data.keyword.watson}} [SDKs ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/watson/getting-started-sdks.html#sdks){: new_window}.
 {: tip }

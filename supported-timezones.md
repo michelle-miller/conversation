@@ -9,6 +9,7 @@ lastupdated: "2017-07-03"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -18,6 +19,9 @@ lastupdated: "2017-07-03"
 {:swift: .ph data-hd-programlang='swift'}
 
 # Time zones supported by system entities
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/supported-timezones.html) instead.
+{: deprecated}
 
 This list of supported time zones can be used with the time zone functions related to the [@sys-date and @sys-time entities](system-entities.html#sys-datetime).
 {: shortdesc}

@@ -9,6 +9,7 @@ lastupdated: "2018-11-02"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,6 +21,9 @@ lastupdated: "2018-11-02"
 # Supported languages
 The {{site.data.keyword.conversationshort}} service supports the languages listed. Individual features of the service are supported to a greater or lesser extent for each language.
 {: shortdesc}
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/lang-support.html) instead.
+{: deprecated}
 
 In the following tables, the level of language and feature support is indicated by these codes:
 

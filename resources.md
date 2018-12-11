@@ -9,6 +9,7 @@ lastupdated: "2018-10-26"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -22,7 +23,11 @@ lastupdated: "2018-10-26"
 Links to resources, videos, tutorials, and articles that can help you to get started faster and go further.
 {: shortdesc}
 
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/resources.html) instead.
+{: deprecated}
+
 ## Developer resources
+
 
 - [IBM Code Bot Asset Exchange ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/code/exchanges/bots/){: new_window}
 

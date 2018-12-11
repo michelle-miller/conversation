@@ -9,6 +9,7 @@ lastupdated: "2018-07-17"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,6 +21,9 @@ lastupdated: "2018-07-17"
 # Implementing responses
 
 A dialog node can respond to users with a response that includes text, images, or interactive elements such as clickable options. If you are building your own client application, you must implement the correct display of all response types returned by your dialog. (For more information about dialog responses, see [Responses](dialog-overview.html#responses)).
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/api-dialog-responses.html) instead.
+{: deprecated}
 
 ## Response output format
 

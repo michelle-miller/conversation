@@ -9,6 +9,7 @@ lastupdated: "2018-07-12"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -21,6 +22,9 @@ lastupdated: "2018-07-12"
 
 You can process values extracted from user utterances that you want to reference in a context variable, condition, or elsewhere in the response.
 {: shortdesc}
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/dialog-methods.html) instead.
+{: deprecated}
 
 ## Evaluation syntax
 

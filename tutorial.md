@@ -9,6 +9,7 @@ lastupdated: "2018-08-16"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -23,6 +24,9 @@ lastupdated: "2018-08-16"
 
 In this tutorial, you will use the {{site.data.keyword.conversationshort}} service to create a dialog for an assistant that helps users with inquiries about a fictitious restaurant called *Truck Stop Gourmand*.
 {: shortdesc}
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/tutorial.html) instead.
+{: deprecated}
 
 ## Learning objectives
 

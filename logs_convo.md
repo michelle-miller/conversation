@@ -9,6 +9,7 @@ lastupdated: "2018-07-11"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -22,6 +23,9 @@ lastupdated: "2018-07-11"
 
 To open a list of messages between users and your application/bot, select **User conversations** in the navigation bar.
 {: shortdesc}
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/logs.html) instead.
+{: deprecated}
 
 When you open the **User conversations** page, the default view lists results for the last day, with the newest results first. The top intent (#intent) and any recognized entity (@entity) values used in a message, and the message text are available. For intents that are not recognized, the value shown is *Irrelevant*. If an entity is not recognized, or has not been provided, the value shown is *No entities found*.
 ![Logs default page](images/logs_page1.png)

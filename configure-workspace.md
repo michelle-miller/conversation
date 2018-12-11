@@ -9,6 +9,7 @@ lastupdated: "2018-10-30"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -21,6 +22,9 @@ lastupdated: "2018-10-30"
 
 The natural-language processing for the {{site.data.keyword.conversationshort}} service happens inside a *workspace*, which is a container for all of the artifacts that define the conversation flow for an application.
 {: shortdesc}
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/create-skill.html) instead.
+{: deprecated}
 
 A single {{site.data.keyword.conversationshort}} service instance can contain multiple workspaces. A workspace contains the following types of artifacts:
 

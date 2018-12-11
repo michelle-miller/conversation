@@ -8,6 +8,7 @@ lastupdated: "2018-11-12"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -17,6 +18,9 @@ lastupdated: "2018-11-12"
 {:swift: .ph data-hd-programlang='swift'}
 
 # Release notes
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/release-notes.html) instead.
+{: deprecated}
 
 ## Service API Versioning
 {: shortdesc}

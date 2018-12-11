@@ -9,6 +9,7 @@ lastupdated: "2018-03-07"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -21,6 +22,9 @@ lastupdated: "2018-03-07"
 
 ***Content Catalogs*** provide an easy way to add common intents to your {{site.data.keyword.conversationshort}} service workspace.
 {: shortdesc}
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/catalog.html) instead.
+{: deprecated}
 
 **IMPORTANT**: Content Catalog intents are meant to provide a starting point, and not meant to be fully built-out for production use. It is recommended that you review and expand on these intents, to make them better suited to how your application will use them.
 

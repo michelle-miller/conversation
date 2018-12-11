@@ -9,6 +9,7 @@ lastupdated: "2018-10-23"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,6 +21,9 @@ lastupdated: "2018-10-23"
 # Defining entities
 
 ***Entities*** represent information in the user input that is relevant to the user's purpose.
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/entities.html) instead.
+{: deprecated}
 
 If intents represent verbs (the action a user wants to do), entities represent nouns (the object of, or the context for, that action). For example, when the *intent* is to get a weather forecast, the relevant location and date *entities* are required before the application can return an accurate forecast.
 

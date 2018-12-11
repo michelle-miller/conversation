@@ -57,7 +57,7 @@ Watson Assistant
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API reference](https://www.ibm.com/watson/developercloud/assistant/api/v1/)
+    [API reference](https://cloud.ibm.com/apidocs/assistant)
     dialog-methods.md
     expression-language.md
     filter-reference.md
@@ -94,6 +94,6 @@ Watson Assistant
     {: .topicgroup}
     Developer community
         [StackOverflow](https://stackoverflow.com/questions/tagged/watson-conversation+or+watson-assistant)
-        [IBM Developer Answers](https://developer.ibm.com/answers/search.html?f=&amp;sort=relevance&amp;q=%5Bwatson-conversation%5D+%5Bwatson-assistant%5D+%24)
+        [IBM Developer Answers](https://developer.ibm.com/answers/search.html?f=&sort=relevance&q=%5Bwatson-conversation%5D+%5Bwatson-assistant%5D+%24)
         [WDC Slack channel](http://wdc-slack-inviter.mybluemix.net/)
     {: .navgroup-end}

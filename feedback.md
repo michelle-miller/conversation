@@ -9,6 +9,7 @@ lastupdated: "2018-03-15"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -22,6 +23,9 @@ lastupdated: "2018-03-15"
 
 We value your opinion and want to hear it.
 {: shortdesc}
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/feedback.html) instead.
+{: deprecated}
 
 - To share ideas or suggest new features for the {{site.data.keyword.conversationfull}} service, go to the [IBM Watson Ideas Portal ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm-watson.ideas.aha.io/?project=ASSISTANT){: new_window}.
 

@@ -9,6 +9,7 @@ lastupdated: "2018-01-26"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -21,6 +22,9 @@ lastupdated: "2018-01-26"
 
 With the {{site.data.keyword.conversationfull}} service, you can build a solution that understands natural-language input and uses machine learning to respond to customers in a way that simulates a conversation between humans.
 {: shortdesc}
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/index.html) instead.
+{: deprecated}
 
 ## How it works
 

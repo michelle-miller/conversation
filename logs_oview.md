@@ -9,6 +9,7 @@ lastupdated: "2018-07-18"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -21,6 +22,9 @@ lastupdated: "2018-07-18"
 
 The Overview page provides a summary of interactions between users and your application/bot. You can view the amount of traffic for a given time period, as well as the intents and entities that were recognized most often in user conversations.
 {: shortdesc}
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/logs_oview.html) instead.
+{: deprecated}
 
 The statistics that are displayed on the Overview page cover a longer period of time than the period for which logs of conversations are retained. These statistics represent external traffic - users or API calls - that has interacted with your application; they do not include interactions from the *Try it out* pane in the tool.
 

@@ -9,6 +9,7 @@ lastupdated: "2018-10-16"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -23,6 +24,9 @@ lastupdated: "2018-10-16"
 
 Use the {{site.data.keyword.conversationshort}} tool to create your dialog.
 {: shortdesc}
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/dialog-build.html) instead.
+{: deprecated}
 
 ## Dialog node limits
 {: #dialog-node-limits}

@@ -9,6 +9,7 @@ lastupdated: "2018-11-08"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -22,6 +23,9 @@ lastupdated: "2018-11-08"
 
 The assistant is a hosted service that is managed by IBM Cloud, which means you do not need to worry about maintaining the infrastructure to support the service; it is taken care of for you.
 {: shortdesc}
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/services-information.html) instead.
+{: deprecated}
 
 ## Service details
 {: #service-details}

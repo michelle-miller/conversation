@@ -9,6 +9,7 @@ lastupdated: "2018-05-29"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -21,6 +22,9 @@ lastupdated: "2018-05-29"
 
 This reference section provides complete information about the available system entities. For more information about system entities and how to use them, refer to [Defining entities](entities.html#enable_system_entities) and search for "Enabling system entities".
 {: shortdesc}
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/system-entities.html) instead.
+{: deprecated}
 
 System entities are available for languages noted in the [Supported languages](lang-support.html) topic.
 
