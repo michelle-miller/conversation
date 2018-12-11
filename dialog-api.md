@@ -9,6 +9,7 @@ lastupdated: "2018-01-26"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,6 +21,9 @@ lastupdated: "2018-01-26"
 # Modifying a dialog using the API
 
 The {{site.data.keyword.conversationshort}} REST API supports modifying your dialog programmatically, without using the {{site.data.keyword.conversationshort}} tool. You can use the /dialog_nodes API to create, delete, or modify dialog nodes.
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/api-dialog-modify.html) instead.
+{: deprecated}
 
 Remember that the dialog is a tree of interconnected nodes, and that it must conform to certain rules in order to be valid. This means that any change you make to a dialog node might have cascading effects on other nodes, or on the structure of your dialog. Before using the /dialog_nodes API to modify your dialog, make sure you understand how your changes will affect the rest of the dialog. You can make a backup copy of the current dialog by exporting the workspace in which it resides. See [Exporting and copying workspaces](configure-workspace.html#exporting-and-copying-workspaces) for details.
 

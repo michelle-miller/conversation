@@ -9,6 +9,7 @@ lastupdated: "2018-08-10"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -18,6 +19,9 @@ lastupdated: "2018-08-10"
 {:swift: .ph data-hd-programlang='swift'}
 
 # Filter query reference
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/filter-reference.html) instead.
+{: deprecated}
 
 The {{site.data.keyword.conversationshort}} service REST API offers powerful log search capabilities through filter queries. You can use the /logs API `filter` parameter to search your workspace log for events that match a specified query.
 

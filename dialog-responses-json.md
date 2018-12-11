@@ -9,6 +9,7 @@ lastupdated: "2018-07-18"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,6 +21,9 @@ lastupdated: "2018-07-18"
 # Defining responses using the JSON editor
 
 In some situations, you might need to define responses using the JSON editor. (For more information about dialog responses, see [Responses](dialog-overview.html#responses)). Editing the response JSON gives you direct access to the data that will be returned to the communication channel or custom application.
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/dialog-responses-json.html) instead.
+{: deprecated}
 
 ## Generic JSON format
 

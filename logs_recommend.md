@@ -9,6 +9,7 @@ lastupdated: "2018-05-30"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,6 +21,9 @@ lastupdated: "2018-05-30"
 # Recommendations
 This page presents recommendations for ways to improve your system.
 {: shortdesc}
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/logs_intro.html) instead.
+{: deprecated}
 
 ![Recommendations tab](images/RecommendTop.png)
 

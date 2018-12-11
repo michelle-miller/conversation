@@ -9,6 +9,7 @@ lastupdated: "2018-08-01"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -21,6 +22,9 @@ lastupdated: "2018-08-01"
 
 Explore our sample applications to understand what you can develop with {{site.data.keyword.conversationshort}}.
 {: shortdesc}
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/sample-applications.html) instead.
+{: deprecated}
 
 ## Simple chat app
 

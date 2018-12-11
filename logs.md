@@ -9,6 +9,7 @@ lastupdated: "2018-10-29"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -21,6 +22,9 @@ lastupdated: "2018-10-29"
 
 The Improve component of {{site.data.keyword.conversationshort}} provides a history of interactions with users of your application. You can use this history to improve your application's understanding of users' inputs.
 {: shortdesc}
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/logs_intro.html) instead.
+{: deprecated}
 
 Sections of the **Improve** panel:
 

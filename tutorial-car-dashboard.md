@@ -9,6 +9,7 @@ lastupdated: "2018-08-27"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -23,6 +24,9 @@ lastupdated: "2018-08-27"
 
 In this tutorial, you will use the {{site.data.keyword.conversationshort}} service to create a dialog that helps users interact with a cognitive car dashboard.
 {: shortdesc}
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/tutorial-car-dashboard.html) instead.
+{: deprecated}
 
 ## Learning objectives
 

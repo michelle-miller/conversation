@@ -9,6 +9,7 @@ lastupdated: "2018-09-27"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -23,6 +24,9 @@ lastupdated: "2018-09-27"
 
 Understand how your dialog is processed when a person interacts with your instance of the deployed {{site.data.keyword.conversationshort}} service at run time.
 {: shortdesc}
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/dialog-runtime.html) instead.
+{: deprecated}
 
 ## Anatomy of a dialog call
 {: message-anatomy}

@@ -9,6 +9,7 @@ lastupdated: "2018-09-14"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -22,6 +23,9 @@ lastupdated: "2018-09-14"
 
 In this tutorial, you will enhance a simple node with slots that collects the information necessary to make a restaurant reservation.
 {: shortdesc}
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/tutorial-slots-complex.html) instead.
+{: deprecated}
 
 ## Learning objectives
 
