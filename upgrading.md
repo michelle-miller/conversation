@@ -9,6 +9,7 @@ lastupdated: "2018-04-26"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -21,6 +22,9 @@ lastupdated: "2018-04-26"
 
 Learn how to upgrade your service plan.
 {: shortdesc}
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/upgrading.html) instead.
+{: deprecated}
 
 ## Upgrading your plan
 {: #plan-upgrade}
