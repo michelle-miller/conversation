@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-03-15"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2018-03-15"
 We value your opinion and want to hear it.
 {: shortdesc}
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/feedback.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-feedback) instead.
 {: deprecated}
 
 - To share ideas or suggest new features for the {{site.data.keyword.conversationfull}} service, go to the [IBM Watson Ideas Portal ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm-watson.ideas.aha.io/?project=ASSISTANT){: new_window}.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-02"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-11-02"
 The {{site.data.keyword.conversationshort}} service supports the languages listed. Individual features of the service are supported to a greater or lesser extent for each language.
 {: shortdesc}
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/lang-support.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-language-support) instead.
 {: deprecated}
 
 In the following tables, the level of language and feature support is indicated by these codes:

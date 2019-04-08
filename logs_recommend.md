@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-05-30"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-05-30"
 This page presents recommendations for ways to improve your system.
 {: shortdesc}
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/logs_intro.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-logs-resources) instead.
 {: deprecated}
 
 ![Recommendations tab](images/RecommendTop.png)

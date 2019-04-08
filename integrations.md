@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-08-17"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-08-17"
 
 # Building a bot with BotKit
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/add-integrations.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-deploy-integration-add.html) instead.
 {: deprecated}
 
 If you want customers to be able to communicate with your workspace through social media and messaging channels, you can use the [Botkit ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://howdy.ai/botkit){: new_window} middleware plugin.

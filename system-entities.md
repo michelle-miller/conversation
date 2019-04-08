@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-05-29"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-05-29"
 This reference section provides complete information about the available system entities. For more information about system entities and how to use them, refer to [Defining entities](entities.html#enable_system_entities) and search for "Enabling system entities".
 {: shortdesc}
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/system-entities.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-system-entities) instead.
 {: deprecated}
 
 System entities are available for languages noted in the [Supported languages](lang-support.html) topic.

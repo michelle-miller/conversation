@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-10-26"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-10-26"
 Links to resources, videos, tutorials, and articles that can help you to get started faster and go further.
 {: shortdesc}
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/resources.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-resources) instead.
 {: deprecated}
 
 ## Developer resources

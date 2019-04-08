@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-10-29"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2018-10-29"
 IBM is committed to providing our clients and partners with innovative data privacy, security and governance solutions.
 {: shortdesc}
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/information-security.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-information-security) instead.
 {: deprecated}
 
 **Notice:**

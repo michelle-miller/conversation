@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-10-16"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2018-10-16"
 Use the {{site.data.keyword.conversationshort}} tool to create your dialog.
 {: shortdesc}
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/dialog-build.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-build) instead.
 {: deprecated}
 
 ## Dialog node limits

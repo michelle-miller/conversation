@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-09-27"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2018-09-27"
 Understand how your dialog is processed when a person interacts with your instance of the deployed {{site.data.keyword.conversationshort}} service at run time.
 {: shortdesc}
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/dialog-runtime.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-runtime) instead.
 {: deprecated}
 
 ## Anatomy of a dialog call

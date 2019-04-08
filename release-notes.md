@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-12"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 ---
 
 {:shortdesc: .shortdesc}
@@ -19,7 +19,7 @@ lastupdated: "2018-11-12"
 
 # Release notes
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/release-notes.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-release-notes) instead.
 {: deprecated}
 
 ## Service API Versioning

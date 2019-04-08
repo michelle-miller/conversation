@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-10-29"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-10-29"
 The Improve component of {{site.data.keyword.conversationshort}} provides a history of interactions with users of your application. You can use this history to improve your application's understanding of users' inputs.
 {: shortdesc}
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/logs_intro.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-logs-intro) instead.
 {: deprecated}
 
 Sections of the **Improve** panel:

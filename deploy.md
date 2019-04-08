@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-06-07"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-06-07"
 
 After you have configured your workspace and built a working dialog, you can deploy your application by connecting the workspace to the interface your customers will use. You can also connect your workspace to other services (including other {{site.data.keyword.watson}} services).
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/add-integrations.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-deploy-integration-add) instead.
 {: deprecated}
 
 There are various ways you can do this.

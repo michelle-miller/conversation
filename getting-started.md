@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-10-02"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -26,7 +26,7 @@ lastupdated: "2018-10-02"
 In this short tutorial, we introduce the {{site.data.keyword.conversationshort}} tool and go through the process of creating your first assistant.
 {: shortdesc}
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/getting-started.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-getting-started) instead.
 {: deprecated}
 
 ## Before you begin
