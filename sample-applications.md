@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-01"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-08-01"
 Explore our sample applications to understand what you can develop with {{site.data.keyword.conversationshort}}.
 {: shortdesc}
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/sample-applications.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-sample-apps) instead.
 {: deprecated}
 
 ## Simple chat app

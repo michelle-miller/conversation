@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-01-09"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -19,6 +19,9 @@ lastupdated: "2018-01-09"
 
 # Planning your intents and entities
 {: #planning-your-entities}
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-skills) instead.
+{: deprecated}
 
 To plan the *intents* for your application, you need to consider what your customers might want to do, and what you want your application to be able to handle. Choosing the correct intent for a user's input is the first step in providing a useful response. The intents you identify for your application will determine the dialog flows you need to create; they also might determine which back-end systems your application needs to integrate with in order to complete customer requests (such as customer databases or payment-processing systems).
 

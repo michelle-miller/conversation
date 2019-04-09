@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-03-19"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2018-03-19"
 In this tutorial, you will see firsthand how digressions work.
 {: shortdesc}
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/tutorial-digressions.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-tutorial-digressions) instead.
 {: deprecated}
 
 ## Learning objectives

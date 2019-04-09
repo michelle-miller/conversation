@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-03-14"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-03-14"
 
 After you have developed your workspace, you can use the Conversation connector to quickly connect it to a communication channel such as Slack or Facebook Messenger. The Conversation connector is a set of {{site.data.keyword.openwhisk}} components that mediate communication between your {{site.data.keyword.conversationshort}} workspace and a Slack or Facebook app you own, storing session data in a Cloudant database.
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/deploy-slack.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-deploy-slack) instead.
 {: deprecated}
 
 By connecting your workspace to a channel app, you can make it available as a chat bot that Slack or Facebook Messenger users can interact with. The responses from your dialog can include multimedia and interactive responses such as images and clickable buttons.

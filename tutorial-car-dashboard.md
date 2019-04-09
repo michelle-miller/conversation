@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-27"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2018-08-27"
 In this tutorial, you will use the {{site.data.keyword.conversationshort}} service to create a dialog that helps users interact with a cognitive car dashboard.
 {: shortdesc}
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/tutorial-car-dashboard.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-tutorial-car-dashboard) instead.
 {: deprecated}
 
 ## Learning objectives

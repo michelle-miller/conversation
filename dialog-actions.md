@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-10-04"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2018-10-04"
 Define actions that can make programmatic calls to external applications or services and get back a result as part of the processing that occurs within a dialog turn.
 {: shortdesc}
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/dialog-actions.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-actions) instead.
 {: deprecated}
 
 You can use an external service to validate information that you collected from the user, or perform calculations or string manipulations on the input which are too complex to be handled by using supported SpEL expressions and methods. Or you can interact with an external web service to get information, such as an air traffic service to check on a flight's expected arrival time or a weather service to get a forecast. You can even interact with an external application, such as a restaurant reservation site, to complete a simple transaction on the user's behalf.

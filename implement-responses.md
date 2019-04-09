@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-17"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-07-17"
 
 A dialog node can respond to users with a response that includes text, images, or interactive elements such as clickable options. If you are building your own client application, you must implement the correct display of all response types returned by your dialog. (For more information about dialog responses, see [Responses](dialog-overview.html#responses)).
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/api-dialog-responses.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-api-responses) instead.
 {: deprecated}
 
 ## Response output format

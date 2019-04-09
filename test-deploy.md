@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-01-24"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -18,6 +18,9 @@ lastupdated: "2018-01-24"
 {:swift: .ph data-hd-programlang='swift'}
 
 # Testing in Slack
+
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-deploy-slack) instead.
+{: deprecated}
 
 You can use the test deployment tool to integrate your {{site.data.keyword.conversationshort}} workspace into a Slack team as a bot user. Use this method if you want to quickly test using a Slack bot as the user interface for your workspace.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-07-03"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-07-03"
 
 # Time zones supported by system entities
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/supported-timezones.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-time-zones) instead.
 {: deprecated}
 
 This list of supported time zones can be used with the time zone functions related to the [@sys-date and @sys-time entities](system-entities.html#sys-datetime).

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-18"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-07-18"
 
 In some situations, you might need to define responses using the JSON editor. (For more information about dialog responses, see [Responses](dialog-overview.html#responses)). Editing the response JSON gives you direct access to the data that will be returned to the communication channel or custom application.
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/dialog-responses-json.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-responses-json) instead.
 {: deprecated}
 
 ## Generic JSON format

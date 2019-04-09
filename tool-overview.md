@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-03-13"
+  years: 2015, 2019
+lastupdated: "2019-04-08"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-03-13"
 # Video: Tool overview for {{site.data.keyword.conversationshort}}
 {: #tool-video}
 
-This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://console.bluemix.net/docs/services/assistant/tool-overview.html) instead.
+This version of the {{site.data.keyword.conversationshort}} documentation is deprecated. Go [here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-tool-overview) instead.
 {: deprecated}
 
 With the {{site.data.keyword.conversationshort}} tool, you can create and manage your {{site.data.keyword.conversationshort}} workspace. Watch this video to learn about different areas of the tool.
